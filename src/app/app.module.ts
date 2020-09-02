@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { BrianPhotoComponent} from './brian-photo/brian-photo.component';
+import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
 import { HostsliceComponent } from './hostmod/hostslice/hostslice.component';
 import { HostheaderComponent } from './hostmod/hostheader/hostheader.component';
 import { LefthostbodyComponent } from './hostmod/lefthostbody/lefthostbody.component';
@@ -15,7 +15,6 @@ import { HostduringyourstayComponent } from './hostmod/hostduringyourstay/hostdu
 import { HostsuperhostexplainationComponent } from './hostmod/hostsuperhostexplaination/hostsuperhostexplaination.component';
 import { HostlanguageandresponserateComponent } from './hostmod/hostlanguageandresponserate/hostlanguageandresponserate.component';
 import { HostbuttonsandsercurityComponent } from './hostmod/hostbuttonsandsercurity/hostbuttonsandsercurity.component';
-
 
 @NgModule({
   declarations: [
@@ -30,12 +29,10 @@ import { HostbuttonsandsercurityComponent } from './hostmod/hostbuttonsandsercur
     HostduringyourstayComponent,
     HostsuperhostexplainationComponent,
     HostlanguageandresponserateComponent,
-    HostbuttonsandsercurityComponent
+    HostbuttonsandsercurityComponent,
   ],
-  imports: [
-    BrowserModule, RouterModule
-  ],
+  imports: [BrowserModule, RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
