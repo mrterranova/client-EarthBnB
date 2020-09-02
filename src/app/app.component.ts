@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {HostsliceComponent} from './hostslice/hostslice.component'
-import { BrianPhotoComponent} from './brian-photo/brian-photo.component';
+
 
 @Component({
   selector: 'app-root',
