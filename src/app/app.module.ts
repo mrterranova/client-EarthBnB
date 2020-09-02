@@ -12,7 +12,7 @@ import { HostbioComponent } from './hostmod/hostbio/hostbio.component';
 import { HostduringyourstayComponent } from './hostmod/hostduringyourstay/hostduringyourstay.component';
 import { HostsuperhostexplainationComponent } from './hostmod/hostsuperhostexplaination/hostsuperhostexplaination.component';
 import { HostlanguageandresponserateComponent } from './hostmod/hostlanguageandresponserate/hostlanguageandresponserate.component';
-import { HostbuttonsandsercurityComponent } from './hostmod/hostbuttonsandsercurity/hostbuttonsandsercurity.component';
+import { HostbuttonsandsecurityComponent } from './hostmod/hostbuttonsandsecurity/hostbuttonsandsecurity.component';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { HostbuttonsandsercurityComponent } from './hostmod/hostbuttonsandsercur
     HostduringyourstayComponent,
     HostsuperhostexplainationComponent,
     HostlanguageandresponserateComponent,
-    HostbuttonsandsercurityComponent
+    HostbuttonsandsecurityComponent
   ],
   imports: [
     BrowserModule, RouterModule
