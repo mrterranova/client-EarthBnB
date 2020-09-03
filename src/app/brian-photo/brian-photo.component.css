@@ -1,3 +1,100 @@
-.brianPhotos{
-    border:3px solid green;
+.brianPhotos {
+  border: 3px solid green;
+  margin: 100px 10px;
+  padding: 2px;
+}
+
+.mainPhotoBox {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.bigPictureBox {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: 1% 40% 5% 20% 5% 20% 1%;
+  grid-template-rows: 10px 150px 2px 150px 10px;
+  justify-items: stretch;
+}
+
+.largePic {
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  grid-row-end: span 5;
+}
+
+.bigMainPic {
+  max-width: 300px;
+  border: 5px solid rgb(224, 20, 20);
+}
+
+.lop {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.lttp {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.ltttp {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.lfp {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* .littlePics{
+    
+} */
+
+/* .smallPic{
+
+} */
+
+.littleOnePic,
+.littleTwoPic,
+.littleThreePic,
+.littleFourPic {
+  max-width: 200px;
+  max-height: 148px;
+}
+
+.lastLine {
+  display: grid;
+  grid-template-columns: 20px 70px 70px 70px auto 40px 70px 70px 70px;
+  grid-template-rows: 5px 50px 5px;
+}
+
+.blBackBtn {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.blNextBtn {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.blShowAllBtn {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
