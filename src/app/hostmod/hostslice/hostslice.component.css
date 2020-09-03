@@ -1,0 +1,32 @@
+.hostOuterContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0px 80px;
+    height: 666px;
+}
+.hostInnerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 48px 0px;
+    border-top: 1px #dddddd solid;
+    border-bottom: 1px #dddddd solid;
+    width: 100%;
+    max-width: 1120px;
+    height: 665px;
+}
+.hostBodyHolder{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px -8px;
+}
+app-lefthostbody, app-righthostbody{
+    padding: 0px 8px;
+    width: 40%
+}
+app-righthostbody{
+    margin-left:8.33%;
+}
+
