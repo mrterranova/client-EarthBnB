@@ -1,0 +1,16 @@
+.hostSubtitle{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+p{
+    margin: 0px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-word;
+}
+.duringstay{
+    margin-bottom: 24px;
+}
