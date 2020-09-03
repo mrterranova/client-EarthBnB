@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HostsliceComponent} from './hostmod/hostslice/hostslice.component'
+
 
 @Component({
   selector: 'app-root',
