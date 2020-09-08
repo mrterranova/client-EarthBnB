@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
@@ -15,6 +18,8 @@ import { HostduringyourstayComponent } from './hostmod/hostduringyourstay/hostdu
 import { HostsuperhostexplainationComponent } from './hostmod/hostsuperhostexplaination/hostsuperhostexplaination.component';
 import { HostlanguageandresponserateComponent } from './hostmod/hostlanguageandresponserate/hostlanguageandresponserate.component';
 import { HostbuttonsandsecurityComponent } from './hostmod/hostbuttonsandsecurity/hostbuttonsandsecurity.component';
+import { HostDataService } from './host-data-service/host-data.service';
+
 
 @NgModule({
   declarations: [
@@ -31,9 +36,9 @@ import { HostbuttonsandsecurityComponent } from './hostmod/hostbuttonsandsecurit
     HostlanguageandresponserateComponent,
     HostbuttonsandsecurityComponent,
   ],
-  imports: [BrowserModule, RouterModule],
+  imports: [BrowserModule, RouterModule, HttpClientModule, ],
 
-  providers: [],
+  providers: [HostDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

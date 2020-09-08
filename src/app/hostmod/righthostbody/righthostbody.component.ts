@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-righthostbody',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./righthostbody.component.css']
 })
 export class RighthostbodyComponent implements OnInit {
-
+   @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
   constructor() { }
 
   ngOnInit(): void {

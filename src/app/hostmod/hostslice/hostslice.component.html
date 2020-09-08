@@ -1,9 +1,20 @@
 <div class="hostOuterContainer">
     <div class="hostInnerContainer">
-        <app-hostheader class="hostHeaderHolder"></app-hostheader>
+        <app-hostheader class="hostHeaderHolder"
+            [hostdata]="hostdata"
+        >
+        </app-hostheader>
         <div class="hostBodyHolder">
-            <app-lefthostbody ></app-lefthostbody>
-            <app-righthostbody ></app-righthostbody>
+            <app-lefthostbody 
+                [hostdata]="hostdata"
+            >
+
+            </app-lefthostbody>
+            <app-righthostbody 
+                [hostdata]="hostdata"
+            >
+
+            </app-righthostbody>
         </div>
     </div>
 </div>

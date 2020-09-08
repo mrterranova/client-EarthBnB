@@ -1,5 +1,11 @@
 <div class="hostBody leftHostBody">
-    <app-hosticons></app-hosticons>
-    <app-hostbio></app-hostbio>
-    <app-hostduringyourstay></app-hostduringyourstay>
+    <app-hosticons
+        [hostdata]="hostData"
+    ></app-hosticons>
+    <app-hostbio
+        [hostdata]="hostData"
+    ></app-hostbio>
+    <app-hostduringyourstay
+        [hostdata]="hostData"
+    ></app-hostduringyourstay>
 </div>
