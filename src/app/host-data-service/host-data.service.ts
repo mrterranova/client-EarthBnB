@@ -8,7 +8,7 @@ export class HostDataService {
   ) {}
 
   getHostData() {
-    return this.http.get(`http://localhost:8080/hostdata/1`);
+    return this.http.get(`http://localhost:8080/api/v1/hostdata/6`);
   }
 
 }

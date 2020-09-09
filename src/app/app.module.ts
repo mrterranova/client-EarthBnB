@@ -23,6 +23,10 @@ import { HouseRulesComponent } from './things-to-know/house-rules/houserules.com
 import { HealthSafetyComponent } from './things-to-know/health&safety/health&safety.component';
 import { CancellationComponent } from './things-to-know/cancellation-policy/cancellation.component';
 import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontainer.component';
+import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
+import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
+import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +46,9 @@ import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontain
     HealthSafetyComponent,
     CancellationComponent,
     TtkContainerComponent,
+    TitleMptsComponent,
+    MptsComponentComponent,
+    CardMptsComponent,
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, ],
 

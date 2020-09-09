@@ -12,11 +12,11 @@ h2, h3{
     width: 56px;
     background-color: green;
     border-radius: 100px;
+    object-fit: cover;
 }
 .hostColorfulSuperHostIconDiv{
     height: 24px;
     width: 14px;
-    background-color: red;
     position: relative;
     right: -48px;
     bottom: 24px;
