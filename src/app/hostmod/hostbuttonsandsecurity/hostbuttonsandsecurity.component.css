@@ -36,3 +36,9 @@ p{
     font-size: 12px;
     line-height: 16px;
 }
+img{
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+
+}
