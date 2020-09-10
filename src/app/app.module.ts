@@ -26,6 +26,13 @@ import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontain
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
+import { ListingInfoContainerComponent } from './listingInfo/listing-info-container/listing-info-container.component';
+import { TitleInfoComponent } from './listingInfo/title-info/title-info.component';
+import { StayDescriptorComponent } from './listingInfo/stay-descriptor/stay-descriptor.component';
+import { QuickInfoComponent } from './listingInfo/quick-info/quick-info.component';
+import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-info.component';
+import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
+import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 
 
 
@@ -50,6 +57,13 @@ import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
     TitleMptsComponent,
     MptsComponentComponent,
     CardMptsComponent,
+    ListingInfoContainerComponent,
+    TitleInfoComponent,
+    StayDescriptorComponent,
+    QuickInfoComponent,
+    BioBlurbInfoComponent,
+    SleepingArrangementsInfoComponent,
+    AmenitiesInfoComponent,
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
