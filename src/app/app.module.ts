@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { AppRoutingModule } from './app-routing/app-routing.module'
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -24,6 +24,7 @@ import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.com
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,7 @@ import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
     MptsComponentComponent,
     CardMptsComponent,
   ],
-  imports: [BrowserModule, RouterModule, HttpClientModule, ],
+  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
   providers: [HostDataService],
   bootstrap: [AppComponent],
