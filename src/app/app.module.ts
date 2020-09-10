@@ -26,6 +26,7 @@ import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontain
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
+import { LocationComponent } from './location/location.component';
 
 
 
@@ -50,6 +51,7 @@ import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
     TitleMptsComponent,
     MptsComponentComponent,
     CardMptsComponent,
+    LocationComponent,
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
