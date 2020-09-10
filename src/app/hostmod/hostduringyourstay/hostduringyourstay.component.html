@@ -2,8 +2,10 @@
     <div class="hostSubtitle">
         During your Stay
     </div>
-    <p>
-        {{hostData.duringstay}}
-    </p>
+    <p *ngIf="show">
+        {{stringShortener(hostData.biography,260,show)}}
+        <button (click)="show = !show" *ngIf="show">{{show ? '' : ''}}read more</button>
+        <p *ngIf="!show">{{hostData.biography}} 
+        </p>
 </div>
-<app-hostsuperhostexplaination></app-hostsuperhostexplaination>
+<app-hostsuperhostexplaination *ngIf="true"></app-hostsuperhostexplaination>

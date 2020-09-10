@@ -1,1 +1,5 @@
-<p>{{hostData.biography}}</p>
+    <p *ngIf="show">
+        {{stringShortener(hostData.biography,160,show)}}
+        <button (click)="show = !show" *ngIf="show">{{show ? '' : ''}}read more</button>
+        <p *ngIf="!show">{{hostData.biography}} 
+        </p>
