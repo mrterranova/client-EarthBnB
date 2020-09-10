@@ -33,6 +33,8 @@ import { QuickInfoComponent } from './listingInfo/quick-info/quick-info.componen
 import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-info.component';
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
+import { LocationComponent } from './location/location.component';
+
 
 
 
@@ -57,13 +59,14 @@ import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-i
     TitleMptsComponent,
     MptsComponentComponent,
     CardMptsComponent,
+    LocationComponent,
     ListingInfoContainerComponent,
     TitleInfoComponent,
     StayDescriptorComponent,
     QuickInfoComponent,
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
-    AmenitiesInfoComponent,
+    AmenitiesInfoComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
