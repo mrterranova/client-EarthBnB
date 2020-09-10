@@ -8,7 +8,17 @@ import { Data } from '@angular/router';
 })
 export class HostduringyourstayComponent implements OnInit {
   @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
+  show: boolean = true;
   constructor() { }
+  stringShortener(longString:string, length:number): string{
+    let finalBio:string ="bio"
+    if(longString.length>length){
+      finalBio = longString.slice(0,length)+"...."
+    } else {
+      finalBio = longString
+    }
+    return finalBio
+  }
 
   ngOnInit(): void {
   }
