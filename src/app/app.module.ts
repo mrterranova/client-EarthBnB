@@ -70,7 +70,7 @@ import { LocationComponent } from './location/location.component';
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
-  providers: [HostDataService],
+  providers: [HostDataService], 
   bootstrap: [AppComponent],
 })
 export class AppModule {}
