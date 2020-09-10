@@ -12,5 +12,5 @@ export class HostlanguageandresponserateComponent implements OnInit {
   @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
   ngOnInit(): void {
   }
-
+  
 }
