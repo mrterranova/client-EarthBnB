@@ -8,4 +8,8 @@
         <p *ngIf="!show">{{hostData.biography}} 
         </p>
 </div>
-<app-hostsuperhostexplaination *ngIf="true"></app-hostsuperhostexplaination>
+<!-- add logic to host ng if -->
+<app-hostsuperhostexplaination 
+    *ngIf="true"
+    [hostdata]="hostData"
+></app-hostsuperhostexplaination>
