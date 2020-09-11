@@ -8,16 +8,15 @@ import { Data } from '@angular/router';
   styleUrls: ['./reviews.component.css'],
 })
 export class ReviewsComponent implements OnInit {
-  public reviews: Data = {};
-  public categoryArr: number[];
+  public reviews: Data;
+  public categoryArr: number[] = [2.0, 3.5, 5.0, 4.8, 4.7];
   progressValue: number = 0;
 
   constructor(private reviewsService: ReviewsService) {}
 
   ngOnInit(): void {
     this.getReviews();
-    this.categoryArr = this.processReviewCatAvg();
-    console.log(this.categoryArr);
+    // this.categoryArr = this.processReviewCatAvg();
   }
   getReviews(): void {
     this.reviewsService.getReviews().subscribe(
@@ -28,7 +27,7 @@ export class ReviewsComponent implements OnInit {
       () => console.log('reviews loaded')
     );
   }
-
+  /*
   processReviewCatAvg(): number[] {
     let arrCategories: number[] = [];
     let catClean: number,
@@ -38,6 +37,7 @@ export class ReviewsComponent implements OnInit {
       catCheck: number,
       catVal: number = 0;
     let count: number = 0;
+
     this.reviews.forEach((element: any) => {
       count++;
       catClean += element.category_cleanliness;
@@ -59,5 +59,5 @@ export class ReviewsComponent implements OnInit {
       avgArray.push(element / count);
     });
     return avgArray;
-  }
+  } */
 }
