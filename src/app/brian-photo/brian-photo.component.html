@@ -4,48 +4,49 @@
       <div class="largePic">
         <img
           class="bigMainPic"
-          src="https://i.etsystatic.com/12310347/r/il/b4602c/1888402529/il_1588xN.1888402529_n58f.jpg"
-          alt="alt text"
+          src="{{photo.pic1url}}"
+          alt="{{photo.pic1alt}}"
         />
       </div>
       <div class="lop">
         <img
           class="littleOnePic"
-          src="https://i.etsystatic.com/12310347/r/il/ba8519/1840915590/il_794xN.1840915590_rlm7.jpg"
-          alt="alt text"
+          src="{{photo.pic2url}}"
+          alt="{{photo.pic2alt}}"
         />
       </div>
       <div class="lttp">
         <img
           class="littleTwoPic"
-          src="https://i.etsystatic.com/12310347/r/il/339a27/1840915688/il_794xN.1840915688_8i58.jpg"
-          alt="alt text"
+          src="{{photo.pic3url}}"
+          alt="{{photo.pic3alt}}"
         />
       </div>
       <div class="ltttp">
         <img
           class="littleThreePic"
-          src="https://i.etsystatic.com/12310347/r/il/b30b5b/1888403009/il_794xN.1888403009_q3ml.jpg"
-          alt="alt text"
+          src="{{photo.pic4url}}"
+          alt="{{photo.pic4alt}}"
         />
       </div>
       <div class="lfp">
         <img
           class="littleFourPic"
-          src="https://i.etsystatic.com/12310347/r/il/140e47/1840916124/il_794xN.1840916124_gvw6.jpg"
-          alt="alt text"
+          src="{{photo.pic5url}}"
+          alt="{{photo.pic5alt}}"
         />
       </div>
     </div>
     <p #bwl>brian-photo works!</p>
-    <h5>pics from : 'Little Brick Lane an Etsy shop'</h5>
+    <h5>pics from : '{{photo.sauce}}'</h5>
     <h3>pictures go here</h3>
     
     <div class="lastLine">
       <button class="blBackBtn" (click)="clickDown()" >Prev</button>
       <button class="blNextBtn" (click)="clickUp()" >Next</button>
-      <button class="blShowAllBtn">Show All</button>
+      <button class="blShowAllBtn" (click)="gallery()" >Show All</button>
     </div>
     <h3>House # {{page}}</h3>
+    <h4>test  {{photo.sauce}}</h4>
   </div>
 </div>
