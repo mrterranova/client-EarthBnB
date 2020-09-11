@@ -1,13 +1,16 @@
 <div class="hostIconSection">
-    <div class="hostIconSectionDiv">
+    <!-- add logic for > zero review -->
+    <!-- add count of host reviews -->
+    <div class="hostIconSectionDiv" *ngIf="1>0"> 
         <img class="hostIconSectionLeft" src="/assets/img/imageshost/star.png">
-        <span class="hostIconSectionRight">XXX Reviews</span> 
+        <span class="hostIconSectionRight">{{hostData.id}} Review(s)</span> 
     </div>
-    <div class="hostIconSectionDiv">
+    <div class="hostIconSectionDiv" *ngIf="hostData.idverifieded==true">
         <img class="hostIconSectionLeft"  src="/assets/img/imageshost/sheild.png">
         <span class="hostIconSectionRight">Identity Verified</span> 
     </div>
-    <div class="hostIconSectionDiv">
+    <!-- add logic for is Superhost review -->
+    <div class="hostIconSectionDiv" *ngIf="true==true">
         <img class="hostIconSectionLeft"  src="/assets/img/imageshost/shmedal.png">
         <span class="hostIconSectionRight">Superhost</span> 
     </div>

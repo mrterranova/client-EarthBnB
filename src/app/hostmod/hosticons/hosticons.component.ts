@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-hosticons',
@@ -9,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
   `
 })
 export class HosticonsComponent implements OnInit {
-  @Input('hostdata') hostData: string; // tslint:disable-line: no-input-rename
+  @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
   constructor() { }
 
   ngOnInit(): void {
