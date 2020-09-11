@@ -8,6 +8,7 @@ import { HostDataService } from '../../host-data-service/host-data.service';
   styleUrls: ['./hostslice.component.css']
 })
 export class HostsliceComponent implements OnInit {
+  
   constructor(private hostDataService: HostDataService) {}
   hostdata = {};
   loadHostData(){
