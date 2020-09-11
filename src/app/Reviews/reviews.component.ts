@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReviewsService } from '../services/ReviewsService/reviews.service';
+import { ReviewsService } from '../services/reviews.service';
 import { Data } from '@angular/router';
 
 @Component({
