@@ -23,6 +23,7 @@ import { HouseRulesComponent } from './things-to-know/house-rules/houserules.com
 import { HealthSafetyComponent } from './things-to-know/health&safety/health&safety.component';
 import { CancellationComponent } from './things-to-know/cancellation-policy/cancellation.component';
 import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontainer.component';
+import { TtkDataService } from './things-to-know/ttk-data-service/ttk-data.service';
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
@@ -70,7 +71,7 @@ import { LocationComponent } from './location/location.component';
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
-  providers: [HostDataService], 
+  providers: [HostDataService, TtkDataService], 
   bootstrap: [AppComponent],
 })
 export class AppModule {}

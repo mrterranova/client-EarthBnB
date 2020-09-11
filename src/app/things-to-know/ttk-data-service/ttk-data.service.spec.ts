@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TtkServiceService } from './ttk-service.service';
+import { TtkDataService } from './ttk-data.service';
 
-describe('HostDataService', () => {
-  let service: TtkServiceService;
+describe('TtkDataService', () => {
+  let service: TtkDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TtkServiceService);
+    service = TestBed.inject(TtkDataService);
   });
 
   it('should be created', () => {
