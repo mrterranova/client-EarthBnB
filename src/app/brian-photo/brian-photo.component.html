@@ -40,11 +40,12 @@
     <p #bwl>brian-photo works!</p>
     <h5>pics from : 'Little Brick Lane an Etsy shop'</h5>
     <h3>pictures go here</h3>
-    <h3>House # 1</h3>
+    
     <div class="lastLine">
-      <button class="blBackBtn">Prev</button>
-      <button class="blNextBtn">Next</button>
+      <button class="blBackBtn" (click)="clickDown()" >Prev</button>
+      <button class="blNextBtn" (click)="clickUp()" >Next</button>
       <button class="blShowAllBtn">Show All</button>
     </div>
+    <h3>House # {{page}}</h3>
   </div>
 </div>
