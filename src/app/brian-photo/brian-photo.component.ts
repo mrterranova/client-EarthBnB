@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotosService } from '../services/photos.service';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-brian-photo',
@@ -8,31 +8,31 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./brian-photo.component.css'],
 })
 export class BrianPhotoComponent implements OnInit {
-  ///// typescript .... smhh....  am i right....
-
   public photos;
   public photo;
   page = 1;
- 
 
-  constructor(private photosService: PhotosService, private route: ActivatedRoute) {}
+  constructor(
+    private photosService: PhotosService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getPhotos(); /// get all
+    // this.getPhotos(); /// get all
     this.getPictureById(this.page); /// get one
   }
 
-  getPhotos(){
-    this.photosService.getPhotos().subscribe(
-      data => {this.photos = data},
-      err => console.log(err),
-      () => console.log(this.photos),
+  // getPhotos() {
+  //   this.photosService.getPhotos().subscribe(
+  //     (data) => {
+  //       this.photos = data;
+  //     },
+  //     (err) => console.log(err),
+  //     () => console.log(this.photos)
+  //   );
+  // }
 
-    );
-  }
-
-
-  getPictureById(id:number) {
+  getPictureById(id: number) {
     this.photosService.getPictureById(id).subscribe(
       (data) => {
         this.photo = data;
@@ -62,8 +62,7 @@ export class BrianPhotoComponent implements OnInit {
     }
   }
 
-  gallery(){
-    alert("a gallery modal is coming soon when you click me");
+  gallery() {
+    alert('a gallery modal is coming soon when you click me');
   }
-
 }
