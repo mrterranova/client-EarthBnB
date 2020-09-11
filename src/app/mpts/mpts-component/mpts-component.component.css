@@ -13,9 +13,9 @@
 }
 .mpts-pg-btn{
     -webkit-box-pack: center !important;
-    -webkit-box-align: center !important;
-    appearance: none !important;
-    display: inline-flex !important;
+    -webkit-box-align: center ;
+    appearance: none ;
+    display: inline-flex ;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
     outline: 0px !important;
@@ -24,11 +24,11 @@
     cursor: pointer !important;
     touch-action: manipulation !important;
     align-items: center !important;
-    justify-content: center !important;
-    background-clip: padding-box !important;
+    justify-content: center ;
+    background-clip: padding-box ;
     box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px;
+    height: 32px;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s, transform 0.25s ease 0s !important;
 }
 .mpts-pg-btn:hover{
@@ -39,3 +39,7 @@
 .mpts-pg-btn-left{
     margin-right: 1em;
 }
+
+::-webkit-scrollbar { 
+    display: none; 
+    }
