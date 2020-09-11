@@ -1,0 +1,81 @@
+<div class="container">
+	<hr
+		style="height: 1px; border: none; color: #333; background-color: #333;"
+	/>
+	<span>{{ '{' }}*{{ '}' }} Reviews #.##</span>
+	<div class="categories">
+		<div class="row">
+			<!-- avgs of all reviews per location -->
+			<ul class="column">
+				<li id="cat-cleanliness">
+					<span>
+						<progress value="{{categoryArr[0]}}" max="5"></progress>
+						{{categoryArr[0]}}
+					</span>
+				</li>
+				<li id="cat-accuracy">
+					<span>
+						<progress value="{{categoryArr[1]}}" max="5"></progress>
+						{{categoryArr[1]}}
+					</span>
+				</li>
+				<li id="cat-communication">
+					<span>
+						<progress value="{{categoryArr[2]}}" max="5"></progress>
+						{{categoryArr[2]}}
+					</span>
+				</li>
+				<li id="cat-location">
+					<span>
+						<progress value="{{categoryArr[3]}}" max="5"></progress>
+						{{categoryArr[3]}}
+					</span>
+				</li>
+				<li id="cat-checkin">
+					<span>
+						<progress
+							value="{{(categoryArr[4])}}"
+							max="5"
+						></progress>
+						{{categoryArr[4]}}
+					</span>
+				</li>
+				<li id="cat-value">
+					<span>
+						<progress
+							value="{{(categoryArr[5])}}"
+							max="5"
+						></progress>
+						{{categoryArr[4]}}
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<br />
+	<div class="review-card" *ngFor="let review of reviews">
+		<div class="profile-img">
+			<span>{{ reviews.userProfile }}</span>
+		</div>
+		<div class="username">
+			<div>{{ review.userName }}</div>
+		</div>
+		<div class="posted-date">
+			<div>{{ review.postedDate }}</div>
+		</div>
+		<div class="review-text">
+			<div>{{ review.reviewText }}</div>
+		</div>
+		<div class="location-id">
+			<div>{{ review.locationReviewed }}</div>
+		</div>
+	</div>
+	<button class="btn btn-primary">
+		<span>Next Location</span>
+	</button>
+	<button class="btn btn-primary">
+		<span>Previous Location</span>
+	</button>
+	<hr />
+</div>
