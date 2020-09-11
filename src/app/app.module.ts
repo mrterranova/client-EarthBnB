@@ -20,6 +20,7 @@ import { HostsuperhostexplainationComponent } from './hostmod/hostsuperhostexpla
 import { HostlanguageandresponserateComponent } from './hostmod/hostlanguageandresponserate/hostlanguageandresponserate.component';
 import { HostbuttonsandsecurityComponent } from './hostmod/hostbuttonsandsecurity/hostbuttonsandsecurity.component';
 import { HostDataService } from './host-data-service/host-data.service';
+import { CohostDataService } from './cohost-data-service/cohost-data.service';
 import { HouseRulesComponent } from './things-to-know/house-rules/houserules.component';
 import { HealthSafetyComponent } from './things-to-know/health&safety/health&safety.component';
 import { CancellationComponent } from './things-to-know/cancellation-policy/cancellation.component';
@@ -27,6 +28,9 @@ import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontain
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
+
+import { HostcohostComponent } from './hostmod/hostcohost/hostcohost.component';
+
 import { ListingInfoContainerComponent } from './listingInfo/listing-info-container/listing-info-container.component';
 import { TitleInfoComponent } from './listingInfo/title-info/title-info.component';
 import { StayDescriptorComponent } from './listingInfo/stay-descriptor/stay-descriptor.component';
@@ -67,11 +71,13 @@ import { LocationComponent } from './location/location.component';
     QuickInfoComponent,
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
-    AmenitiesInfoComponent
+    AmenitiesInfoComponent,
+    HostcohostComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
-  providers: [HostDataService,PhotosService ],
+  providers: [HostDataService,PhotosService,CohostDataService ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
