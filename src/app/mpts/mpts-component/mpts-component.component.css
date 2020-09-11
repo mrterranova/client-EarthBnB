@@ -1,9 +1,10 @@
 .mpts-container {
   background-color: rgb(247, 247, 247);
-  padding: 50px;
+  padding: 0 50px;
+  margin-top: 30px;
 }
 .mpts-header {
-  padding-bottom: 50px;
+  padding-bottom: 5px;
 }
 .mpts-pagination-container {
   float: right;
