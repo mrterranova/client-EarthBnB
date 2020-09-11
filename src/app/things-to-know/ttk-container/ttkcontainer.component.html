@@ -1,10 +1,25 @@
-<div class="ttkmain">
-    <div class="ttkmainsec">
-        <strong><h3>Things To Know</h3></strong>
-        <div class="ttkRows">
-            <app-houserules></app-houserules>
-            <app-healthsafety></app-healthsafety>
-            <app-cancellation></app-cancellation>
+<div class="ttkmaincontainer">
+    <div>
+        <div style="padding-bottom: 24px;">
+            <section>
+            <h1 class="container-header"><b>Things To Know</b></h1>
+            </section>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><div class="comp-header1"><b>House rules</b></div></td>
+                    <td><div class="health-safety"><b>Health & safety</b></div></td>
+                    <td><div class="cancel-policy"><b>Cancellation policy</b></div></td>
+                </tr>
+                
+
+                <tr>
+                    <td><app-houserules></app-houserules></td>
+                    <td><app-healthsafety></app-healthsafety></td>
+                    <td><app-cancellation></app-cancellation></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

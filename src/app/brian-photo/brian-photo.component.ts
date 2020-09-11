@@ -11,17 +11,19 @@ export class BrianPhotoComponent implements OnInit {
 ///// typescript .... smhh....  am i right.... 
 
 public photos;
+page = 1;
 
   constructor(private photosService: PhotosService) {}
 
   ngOnInit(): void {
-    this.getPhotos();
+    // this.getPhotos();
+    this.getPictureById();
   }
 
   // altBigPic:"alt text"
 
-  getPhotos(){
-    this.photosService.getPhotos().subscribe(
+  getPictureById(){
+    this.photosService.getPictureById().subscribe(
       data => {this.photos = data},
       err => console.log(err),
       () => console.log(this.photos),
