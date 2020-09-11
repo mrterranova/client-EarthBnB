@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PhotosService} from '../services/photos.service';
 
 @Component({
   selector: 'app-brian-photo',
@@ -9,10 +10,23 @@ export class BrianPhotoComponent implements OnInit {
 
 ///// typescript .... smhh....  am i right.... 
 
-  constructor() {}
+public photos;
 
-  ngOnInit(): void {}I
+  constructor(private photosService: PhotosService) {}
 
-  altBigPic:"alt text"
+  ngOnInit(): void {
+    this.getPhotos();
+  }
+
+  // altBigPic:"alt text"
+
+  getPhotos(){
+    this.photosService.getPhotos().subscribe(
+      data => {this.photos = data},
+      err => console.log(err),
+      () => console.log(this.photos),
+     
+    );
+  }
 
 }
