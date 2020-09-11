@@ -1,50 +1,51 @@
 <div class="brianPhotos">
   <div class="mainPhotoBox">
-    <!--       
-      images courtsey of little brick lane an etsy shop
-      https://www.etsy.com/shop/LittleBrickLane?ref=simple-shop-header-name&listing_id=697582391 -->
-
     <div class="bigPictureBox">
       <div class="largePic">
-        <img class="bigMainPic" src="{{ bigPic }}" alt="{{ altBigPic }}" />
+        <img
+          class="bigMainPic"
+          src="https://i.etsystatic.com/12310347/r/il/b4602c/1888402529/il_1588xN.1888402529_n58f.jpg"
+          alt="alt text"
+        />
       </div>
       <div class="lop">
         <img
           class="littleOnePic"
-          src="{{smallPicTopLeft}}"
-          alt="{{altSmallPicTopLeft}}"
+          src="https://i.etsystatic.com/12310347/r/il/ba8519/1840915590/il_794xN.1840915590_rlm7.jpg"
+          alt="alt text"
         />
       </div>
       <div class="lttp">
         <img
           class="littleTwoPic"
-          src="{{smallPicTopRight}}"
-          alt="{{altSmallPicTopRight}}"
+          src="https://i.etsystatic.com/12310347/r/il/339a27/1840915688/il_794xN.1840915688_8i58.jpg"
+          alt="alt text"
         />
       </div>
       <div class="ltttp">
         <img
           class="littleThreePic"
-          src="{{smallPicBotLeft}}"
-          alt="{{altSmallPicBotLeft}}"
+          src="https://i.etsystatic.com/12310347/r/il/b30b5b/1888403009/il_794xN.1888403009_q3ml.jpg"
+          alt="alt text"
         />
       </div>
       <div class="lfp">
         <img
           class="littleFourPic"
-          src="{{smallPicBotRight}}"
-          alt="{{altSmallPicBotRight}}"
+          src="https://i.etsystatic.com/12310347/r/il/140e47/1840916124/il_794xN.1840916124_gvw6.jpg"
+          alt="alt text"
         />
       </div>
     </div>
     <p #bwl>brian-photo works!</p>
-    <h5>pics from : {{src}}</h5>
+    <h5>pics from : 'Little Brick Lane an Etsy shop'</h5>
     <h3>pictures go here</h3>
-    <h3>House # {{ page }}</h3>
+    
     <div class="lastLine">
-      <button class="blBackBtn" ng-click="clickDown">Prev</button>
-      <button class="blNextBtn" ng-click="clickUp">Next</button>
+      <button class="blBackBtn" (click)="clickDown()" >Prev</button>
+      <button class="blNextBtn" (click)="clickUp()" >Next</button>
       <button class="blShowAllBtn">Show All</button>
     </div>
+    <h3>House # {{page}}</h3>
   </div>
 </div>
