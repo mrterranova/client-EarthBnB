@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotosService } from '../services/photos.service';
 
 @Component({
   selector: 'app-brian-photo',
@@ -6,60 +7,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brian-photo.component.css'],
 })
 export class BrianPhotoComponent implements OnInit {
-  bigPic =
-    'https://i.etsystatic.com/12310347/r/il/b4602c/1888402529/il_1588xN.1888402529_n58f.jpg';
-  altBigPic = 'lego house front view from etsy page';
+  ///// typescript .... smhh....  am i right....
 
-  smallPicTopLeft =
-    'https://i.etsystatic.com/12310347/r/il/ba8519/1840915590/il_794xN.1840915590_rlm7.jpg';
-  altSmallPicTopLeft = 'lego house front angle';
+  public photos;
+  page = 1;
 
-  smallPicTopRight =
-    'https://i.etsystatic.com/12310347/r/il/339a27/1840915688/il_794xN.1840915688_8i58.jpg';
-  altSmallPicTopRight = 'lego house backyard angle';
+  constructor(private photosService: PhotosService) {}
 
-  smallPicBotLeft =
-    'https://i.etsystatic.com/12310347/r/il/b30b5b/1888403009/il_794xN.1888403009_q3ml.jpg';
-  altSmallPicBotLeft = 'lego house back porch angle';
+  ngOnInit(): void {
+    // this.getPhotos(); /// get all
+    this.getPictureById(); /// get one
+  }
 
-  smallPicBotRight =
-    'https://i.etsystatic.com/12310347/r/il/140e47/1840916124/il_794xN.1840916124_gvw6.jpg';
-  altSmallPicBotRight = 'lego house side angle';
+  // getPhotos(){
+  //   this.photosService.getPhotos().subscribe(
+  //     data => {this.photos = data},
+  //     err => console.log(err),
+  //     () => console.log(this.photos),
 
-  // page: number;
-  // constructor(value: number) {
-  //   this.page = 1;
+  //   );
   // }
 
-  src = 'little brick lane Etsy shop';
-  page: number = 1;
+  getPictureById() {
+    this.photosService.getPictureById().subscribe(
+      (data) => {
+        this.photos = data;
+      },
+      (err) => console.log(err),
+      () => console.log(this.photos)
+    );
+  }
 
-  constructor() {}
+  clickUp() {
+    if (this.page <= 19) {
+      this.page += 1;
+    } else {
+      this.page = 1;
+    }
+  }
 
-  ngOnInit(): void {}
+  clickDown() {
+    if (this.page >= 2) {
+      this.page -= 1;
+    } else {
+      this.page = 20;
+    }
+  }
 }
-
-
-// let page = this.page;
-
-  function clickUp(){
-    console.log("clickup");
-    // if(page <=19){
-    //   page++;
-    // } else if (page === 20){
-    //   page =1;
-    // } else{
-    //   page++;
-    // }
-  }
-
-  function clickDown(){
-    console.log("down down down");
-    // if(page <=20){
-    //   page--;
-    // } else if (page === 1){
-    //   page =20;
-    // } else{
-    //   page--;
-    // }
-  }

@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
+import { PhotosService } from './services/photos.service';
 import { HostsliceComponent } from './hostmod/hostslice/hostslice.component';
 import { HostheaderComponent } from './hostmod/hostheader/hostheader.component';
 import { LefthostbodyComponent } from './hostmod/lefthostbody/lefthostbody.component';
@@ -33,6 +34,8 @@ import { QuickInfoComponent } from './listingInfo/quick-info/quick-info.componen
 import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-info.component';
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
+import { LocationComponent } from './location/location.component';
+
 
 
 
@@ -57,17 +60,18 @@ import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-i
     TitleMptsComponent,
     MptsComponentComponent,
     CardMptsComponent,
+    LocationComponent,
     ListingInfoContainerComponent,
     TitleInfoComponent,
     StayDescriptorComponent,
     QuickInfoComponent,
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
-    AmenitiesInfoComponent,
+    AmenitiesInfoComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
-  providers: [HostDataService],
+  providers: [HostDataService,PhotosService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
