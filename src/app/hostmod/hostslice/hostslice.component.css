@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     padding:0px 80px;
-    height: 666px;
 }
 .hostInnerContainer{
     display: flex;
@@ -14,7 +13,6 @@
     border-bottom: 1px #dddddd solid;
     width: 100%;
     max-width: 1120px;
-    height: 665px;
 }
 .hostBodyHolder{
     display: flex;
@@ -29,4 +27,22 @@ app-lefthostbody, app-righthostbody{
 app-righthostbody{
     margin-left:8.33%;
 }
-
+/* breakpoint743 */
+@media only screen and (max-width: 743px) {
+    .hostBodyHolder{
+        display: flex;
+        flex-direction: column;
+    }
+    app-lefthostbody, app-righthostbody{
+        padding: 0px 8px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .superhostbottom {
+        margin-bottom: 24px;
+    }
+    .hostOuterContainer {
+        margin: 0px 24px;
+        padding: 0px;
+    }
+  }
