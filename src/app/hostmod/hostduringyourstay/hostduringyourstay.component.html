@@ -8,8 +8,9 @@
         <p *ngIf="!show">{{hostData.duringstay}} 
         </p>
 </div>
-<!-- add logic to host ng if -->
-<app-hostsuperhostexplaination 
-    *ngIf="true"
+
+<app-hostsuperhostexplaination *ngIf="true"
     [hostdata]="hostData"
+    [mptsdata]="mptsdata"
+
 ></app-hostsuperhostexplaination>
