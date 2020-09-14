@@ -62,7 +62,14 @@ export class BrianPhotoComponent implements OnInit {
     }
   }
 
-  gallery() {
-    alert('a gallery modal is coming soon when you click me');
+  galleryOpen() {
+    // alert('a gallery modal is coming soon when you click me');
+    const gal = document.getElementById('photoGallery');
+    gal.style.display = 'block';
+  }
+
+  closeGallery(){
+    const gal = document.getElementById('photoGallery');
+    gal.style.display = 'none';
   }
 }
