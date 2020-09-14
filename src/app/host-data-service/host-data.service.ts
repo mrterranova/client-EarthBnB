@@ -10,5 +10,7 @@ export class HostDataService {
   getHostData() {
     return this.http.get(`http://localhost:8080/api/v1/hostdata/20`);
   }
-
+  getMptsData() {
+    return this.http.get(`http://localhost:8080/api/v1/mpts/15`)
+  }
 }

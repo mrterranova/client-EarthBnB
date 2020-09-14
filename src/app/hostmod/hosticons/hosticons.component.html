@@ -1,13 +1,13 @@
 <div class="hostIconSection">
     <div class="hostIconSectionDiv">
         <img class="hostIconSectionLeft" src="/assets/img/imageshost/star.png">
-        <span class="hostIconSectionRight">XXX Reviews</span> 
+        <span class="hostIconSectionRight">{{mptsdata.numberofratings}} Reviews</span> 
     </div>
-    <div class="hostIconSectionDiv">
+    <div class="hostIconSectionDiv" *ngIf="hostData.idverifieded">
         <img class="hostIconSectionLeft"  src="/assets/img/imageshost/sheild.png">
         <span class="hostIconSectionRight">Identity Verified</span> 
     </div>
-    <div class="hostIconSectionDiv">
+    <div class="hostIconSectionDiv" *ngIf="mptsdata.superhost">
         <img class="hostIconSectionLeft"  src="/assets/img/imageshost/shmedal.png">
         <span class="hostIconSectionRight">Superhost</span> 
     </div>

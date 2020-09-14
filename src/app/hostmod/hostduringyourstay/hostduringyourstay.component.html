@@ -8,4 +8,7 @@
         <p *ngIf="!show">{{hostData.biography}} 
         </p>
 </div>
-<app-hostsuperhostexplaination *ngIf="true"></app-hostsuperhostexplaination>
+<app-hostsuperhostexplaination *ngIf="true"
+    [hostdata]="hostData"
+    [mptsdata]="mptsdata"
+></app-hostsuperhostexplaination>

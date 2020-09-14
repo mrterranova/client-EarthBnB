@@ -7,7 +7,8 @@ import { Data } from '@angular/router';
   styleUrls: ['./hostduringyourstay.component.css']
 })
 export class HostduringyourstayComponent implements OnInit {
-  @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
+  @Input('hostdata') hostData: string; // tslint:disable-line: no-input-rename
+  @Input('mptsdata') mptsdata: string; // tslint:disable-line: no-input-rename
   show: boolean = true;
   constructor() { }
   stringShortener(longString:string, length:number): string{
