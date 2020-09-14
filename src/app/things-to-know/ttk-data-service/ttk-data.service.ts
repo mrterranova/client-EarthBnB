@@ -8,7 +8,7 @@ export class TtkDataService {
   ) {}
 
   getTtkData() {
-    return this.http.get(`http://localhost:8080/1`);
+    return this.http.get(`http://localhost:8080/ttk/1`);
   }
 
 }

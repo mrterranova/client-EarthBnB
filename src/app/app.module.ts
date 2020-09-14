@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
@@ -38,7 +39,6 @@ import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-in
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
-
 
 
 
