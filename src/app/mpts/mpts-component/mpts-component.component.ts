@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MptsServiceService } from '../mpts-service/mpts-service.service'
-// import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-mpts-component',
@@ -36,13 +35,15 @@ page:number =1;
   
   scrollLeft(){
     console.log("Scrolling Left");
-    document.getElementById("pag-mpts-clickable").scrollLeft -= window.outerWidth;
+    document.getElementById("pag-mpts-clickable").scrollLeft -= window.innerWidth-165;
     console.log(document.getElementById("pgnum1").innerHTML)
+    document.getElementById("pgnum1").innerHTML
   }
 
   scrollRight(){
     console.log("Scrolling Right");
-    document.getElementById("pag-mpts-clickable").scrollLeft += window.outerWidth;
+    document.getElementById("pag-mpts-clickable").scrollLeft += window.innerWidth-165;
+    
     // document.getElementById("pgnum1").innerHTML.replace()
   }
 }
