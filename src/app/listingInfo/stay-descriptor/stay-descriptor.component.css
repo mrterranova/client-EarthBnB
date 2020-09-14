@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  width: 100%;
+}
+
+.child {
+  padding: 5px;
+  width: auto;
+}
+
+.child:first-child {
+  width: 80%;
+  margin-bottom: -40px;
+}
+
+.pushRight {
+  margin-left: auto;
+}
