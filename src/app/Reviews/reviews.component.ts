@@ -8,7 +8,7 @@ import { Data } from '@angular/router';
   styleUrls: ['./reviews.component.css'],
 })
 export class ReviewsComponent implements OnInit {
-  public reviews: Data;
+  public reviews: any;
   public categoryArr: number[] = [2.0, 3.5, 5.0, 4.8, 4.7];
   progressValue: number = 0;
 
