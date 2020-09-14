@@ -1,5 +1,7 @@
 <div class="hostIconSection">
-    <div class="hostIconSectionDiv">
+    <!-- add logic for > zero review -->
+    <!-- add count of host reviews -->
+    <div class="hostIconSectionDiv" *ngIf="1>0"> 
         <img class="hostIconSectionLeft" src="/assets/img/imageshost/star.png">
         <span class="hostIconSectionRight">{{mptsdata.numberofratings}} Reviews</span> 
     </div>

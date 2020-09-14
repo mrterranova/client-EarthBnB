@@ -5,12 +5,10 @@ h2, h3{
     height: 56px;
     width: 56px;
     margin-right: 16px;
-    background-color: aqua;
 }
 .hostProfilePicImage{
     height: 56px;
     width: 56px;
-    background-color: green;
     border-radius: 100px;
     object-fit: cover;
 }
@@ -43,5 +41,8 @@ h3{
     font-size: 14px;
     line-height: 18px;
     padding-top: 8px;
+}
+img{
+    object-fit: cover;
 }
 

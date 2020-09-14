@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
+import { PhotosService } from './services/photos.service';
 import { HostsliceComponent } from './hostmod/hostslice/hostslice.component';
 import { HostheaderComponent } from './hostmod/hostheader/hostheader.component';
 import { LefthostbodyComponent } from './hostmod/lefthostbody/lefthostbody.component';
@@ -19,6 +20,7 @@ import { HostsuperhostexplainationComponent } from './hostmod/hostsuperhostexpla
 import { HostlanguageandresponserateComponent } from './hostmod/hostlanguageandresponserate/hostlanguageandresponserate.component';
 import { HostbuttonsandsecurityComponent } from './hostmod/hostbuttonsandsecurity/hostbuttonsandsecurity.component';
 import { HostDataService } from './host-data-service/host-data.service';
+import { CohostDataService } from './cohost-data-service/cohost-data.service';
 import { HouseRulesComponent } from './things-to-know/house-rules/houserules.component';
 import { HealthSafetyComponent } from './things-to-know/health&safety/health&safety.component';
 import { CancellationComponent } from './things-to-know/cancellation-policy/cancellation.component';
@@ -26,6 +28,18 @@ import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontain
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
+
+import { HostcohostComponent } from './hostmod/hostcohost/hostcohost.component';
+
+import { ListingInfoContainerComponent } from './listingInfo/listing-info-container/listing-info-container.component';
+import { TitleInfoComponent } from './listingInfo/title-info/title-info.component';
+import { StayDescriptorComponent } from './listingInfo/stay-descriptor/stay-descriptor.component';
+import { QuickInfoComponent } from './listingInfo/quick-info/quick-info.component';
+import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-info.component';
+import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
+import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
+import { LocationComponent } from './location/location.component';
+
 
 
 
@@ -50,10 +64,20 @@ import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
     TitleMptsComponent,
     MptsComponentComponent,
     CardMptsComponent,
+    LocationComponent,
+    ListingInfoContainerComponent,
+    TitleInfoComponent,
+    StayDescriptorComponent,
+    QuickInfoComponent,
+    BioBlurbInfoComponent,
+    SleepingArrangementsInfoComponent,
+    AmenitiesInfoComponent,
+    HostcohostComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
 
-  providers: [HostDataService],
+  providers: [HostDataService,PhotosService,CohostDataService ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

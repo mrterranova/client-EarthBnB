@@ -10,6 +10,7 @@ export class HostduringyourstayComponent implements OnInit {
   @Input('hostdata') hostData: string; // tslint:disable-line: no-input-rename
   @Input('mptsdata') mptsdata: string; // tslint:disable-line: no-input-rename
   show: boolean = true;
+  stringShortLength: number = 260;
   constructor() { }
   stringShortener(longString:string, length:number): string{
     let finalBio:string ="bio"
