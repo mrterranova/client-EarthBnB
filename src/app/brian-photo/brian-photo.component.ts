@@ -12,7 +12,8 @@ export class BrianPhotoComponent implements OnInit {
   public photo;
   page = 1;
   mark = 1;
-  pics = [];
+  pics: any;
+  // pics = [];
 
   constructor(
     private photosService: PhotosService,
@@ -40,8 +41,8 @@ export class BrianPhotoComponent implements OnInit {
       (data) => {
         this.photo = data;
       },
-      (err) => console.log(err),
-      () => console.log(this.photo)
+      (err) => console.log(err)
+      // () => console.log(this.photo)
     );
   }
 
