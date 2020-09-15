@@ -39,6 +39,7 @@ import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-in
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
+import { DirectoryComponent } from './directory/directory.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { LocationComponent } from './location/location.component';
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
     AmenitiesInfoComponent,
-    HostcohostComponent
+    HostcohostComponent,
+    DirectoryComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
