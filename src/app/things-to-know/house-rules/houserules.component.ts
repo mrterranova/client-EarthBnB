@@ -9,10 +9,7 @@ import { Data } from '@angular/router';
 export class HouseRulesComponent implements OnInit {
   @Input('ttkdata') ttkData: Data;
 
-
   ngOnInit(): void {
   }
-
-
 
 }
