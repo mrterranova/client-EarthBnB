@@ -41,8 +41,6 @@ import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-i
 import { LocationComponent } from './location/location.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +72,7 @@ import { LocationComponent } from './location/location.component';
     AmenitiesInfoComponent,
     HostcohostComponent
   ],
-  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
+  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
   providers: [HostDataService,PhotosService,CohostDataService ],
 
