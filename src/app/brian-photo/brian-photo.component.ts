@@ -71,6 +71,7 @@ export class BrianPhotoComponent implements OnInit {
     // alert('a gallery modal is coming soon when you click me');
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'block';
+    this.showDivs(this.mark);
   }
 
   closeGallery() {
@@ -79,19 +80,22 @@ export class BrianPhotoComponent implements OnInit {
     this.mark = 1;
   }
 
-  markUp() {
-    if (this.mark <= 7) {
-      this.mark++;
-    } else {
-      this.mark = 1;
-    }
+  plusDivs(n) {
+    this.showDivs((this.mark += n));
   }
 
-  markDown() {
-    if (this.mark >= 2) {
-      this.mark--;
-    } else {
-      this.mark = 8;
+  showDivs(n) {
+    var i = 0;
+    var x = document.getElementsByClassName('bwlSliderz');
+    if (n > x.length) {
+      this.mark = 1;
     }
+    if (n < 1) {
+      this.mark = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none'; /// you say it's an error, it doesn't exist - but it works so who is laughing now?
+    }
+    x[this.mark - 1].style.display = 'block';
   }
 }

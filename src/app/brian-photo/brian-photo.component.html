@@ -56,16 +56,63 @@
       <span class="leftTop">share</span> <span class="farTopLeft">heart</span>
     </div>
     <br />
-    <img
-      style="max-width: 60%; max-height: 50%; padding: 5% 20% 5% 35%"
-      src="{{ photo.pic1url }}"
-      alt="{{ photo.pic1alt }}"
-    />
+    <!-- using k instead of c so bootstrap doesn't interfere -->
+    <div class="konTent konTainer">
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic1url }}"
+        alt="{{ photo.pic1alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic2url }}"
+        alt="{{ photo.pic2alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic3url }}"
+        alt="{{ photo.pic3alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic4url }}"
+        alt="{{ photo.pic4alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic5url }}"
+        alt="{{ photo.pic5alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic6url }}"
+        alt="{{ photo.pic6alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic7url }}"
+        alt="{{ photo.pic7alt }}"
+      />
+      <img
+        class="bwlSliderz"
+        style="width: 35vw; height: 40vh; padding: 1% 20% 1% 35%"
+        src="{{ photo.pic8url }}"
+        alt="{{ photo.pic8alt }}"
+      />
+
+    </div>
     <br />
-    <h5 class="modalGalDescription">{{ photo.pic1alt }}</h5>
+    <h5 class="modalGalDescription">{{ photo.sauce }}</h5>
     <div class="galFooter">
-      <button class="modalBtn" (click)="markDown()">backward</button>
-      <button class="modalBtn" (click)="markUp()">forward</button>
+      <button class="modalBtn" (click)="plusDivs(-1)">backward</button>
+      <button class="modalBtn" (click)="plusDivs(1)">forward</button>
     </div>
     <br />
     <div class="highHeels">.</div>
