@@ -130,6 +130,7 @@
 .modalBtn {
   border-radius: 20%;
   padding: 10px;
+  z-index: 22222;
 }
 
 .modalGalDescription {
@@ -156,4 +157,7 @@
   display: none;
   max-width: 60%;
   max-height: 50%;
+  border:5px solid red;
+  z-index: 22222;
+  margin:10px 40px 0;
 }
