@@ -84,10 +84,10 @@ export class BrianPhotoComponent implements OnInit {
   plusDivs(n) {
     this.showDivs((this.mark += n));
   }
-
+  /// you say it's an error,  but it works so who is laughing now?
   showDivs(n) {
-    var i = 0;
-    var x = document.getElementsByClassName('bwlSliderz');
+    let i;
+    const x = Array.from(document.getElementsByClassName('bwlSliderz') as HTMLCollectionOf<HTMLElement>)
     if (n > x.length) {
       this.mark = 1;
     }
@@ -95,7 +95,7 @@ export class BrianPhotoComponent implements OnInit {
       this.mark = x.length;
     }
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none'; /// you say it's an error, it doesn't exist - but it works so who is laughing now?
+      x[i].style.display = 'none';
     }
     x[this.mark - 1].style.display = 'block';
   }
