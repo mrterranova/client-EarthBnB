@@ -54,23 +54,23 @@
 	</div>
 	<hr />
 	<br />
-	<div class="review-card" *ngFor="let review of reviews">
-		<div class="profile-img">
-			<span>{{ review.userProfile }}</span>
-		</div>
-		<div class="username">
-			<div>{{ review.userName }}</div>
-		</div>
-		<div class="posted-date">
-			<div>{{ review.postedDate }}</div>
-		</div>
-		<div class="review-text">
-			<div>{{ review.reviewText }}</div>
-		</div>
-		<div class="location-id">
-			<div>{{ review.locationReviewed }}</div>
+	<div class="review-panel-main">
+		<div class="review-card" *ngFor="let review of reviews">
+			<div class="profile-img">
+				<span>{{ review.userProfile }}</span>
+			</div>
+			<div class="username">
+				<span>{{ review.userName }}</span>
+			</div>
+			<div class="posted-date">
+				<span>{{ review.postedDate }}</span>
+			</div>
+			<div class="review-text">
+				<p>{{ review.reviewText }}</p>
+			</div>
 		</div>
 	</div>
+
 	<button class="btn btn-primary">
 		<span>Next Location</span>
 	</button>

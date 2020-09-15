@@ -2,19 +2,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #eee;
+  background: rgb(130, 190, 150);
+}
+.container {
+  background: rgb(130, 190, 150) !important;
 }
 
 .container > *:nth-child(odd) {
-  background: #ddd;
+  background: rgb(182, 230, 198);
+}
+
+.review-panel-main {
+  display: grid;
+  overflow-y: hidden;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  height: 455px;
+  min-height: 0;
+  min-width: 0;
+  gap: 0.2em;
+}
+
+.review-panel-main > * :nth-child(even) {
+  background: rgb(130, 190, 150);
 }
 
 .review-card {
-  background: #ddd;
+  border: 2px solid rgb(51, 65, 56);
+  background: rgb(182, 230, 198) !important;
+  position: relative;
+  min-width: 0;
 }
 
-.review-card > * :nth-child(even) {
-  background: #eee;
+.review-card > * {
+  background: rgb(182, 230, 198) !important;
+}
+
+.review-text p {
+  position: relative;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  -webkit-line-clamp: 5 !important; /* number of lines to show */
+}
+
+.review-text {
+  width: 100%;
+  white-space: nowrap !important;
+  overflow: hidden !important;
 }
 
 /* Clear floats after the columns */
@@ -23,20 +56,20 @@
   display: table;
   clear: both;
 }
-ul {
-  /*   -webkit-columns: 2;
+.column {
+  /*-webkit-columns: 2;
   -moz-columns: 2;
   columns: 2; */
   list-style-position: inside;
 }
 
-ul li {
+.column li {
   float: left;
   width: 50%;
 }
 
-ul li > * {
-  display: inline;
+.column li > * {
+  display: inline-block;
 }
 
 #cat-cleanliness {
@@ -64,8 +97,8 @@ hr {
   color: #333; /* old IE */
   background-color: #333; /* Modern Browsers */
 }
-/* 
-progress[value] {
+
+/* progress[value] {
   appearance: none;
 
   border: none;
@@ -110,5 +143,5 @@ progress[value]::-moz-progress-bar {
 
   background-size: 35px 20px, 100% 100%, 100% 100%;
   border-radius: 3px;
-
-} */
+}
+ */
