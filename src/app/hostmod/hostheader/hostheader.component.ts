@@ -9,6 +9,7 @@ import { Data } from '@angular/router';
 })
 export class HostheaderComponent implements OnInit {
   @Input('hostdata') hostData: Data; // tslint:disable-line: no-input-rename
+  @Input('mptsdata') mptsdata: Data; // tslint:disable-line: no-input-rename
 
   julianParseFunction(excelDate:number): string {
     //array of months to return month

@@ -1,9 +1,13 @@
 .mpts-container {
   background-color: rgb(247, 247, 247);
-  padding: 50px;
+  padding: 0 50px;
+  margin-top: 60px;
+  scroll-behavior: smooth;
+  
 }
 .mpts-header {
-  padding-bottom: 50px;
+  padding-bottom: 5px;
+  padding-top: 50px;
 }
 .mpts-pagination-container {
   float: right;
@@ -45,4 +49,8 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+#pag-mpts-clickable{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }

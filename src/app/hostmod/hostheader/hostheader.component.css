@@ -46,3 +46,12 @@ img{
     object-fit: cover;
 }
 
+/* breakpoint743 */
+@media only screen and (max-width: 743px) {
+    .hostHeaderParentContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+  }

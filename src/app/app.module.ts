@@ -73,8 +73,7 @@ import { LocationComponent } from './location/location.component';
     AmenitiesInfoComponent,
     HostcohostComponent
   ],
-
-  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
+  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
   providers: [HostDataService, PhotosService, CohostDataService, TtkDataService ],
 
