@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TtkDataService } from '../ttk-data-service/ttk-data.service';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-ttkcontainer',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ttkcontainer.component.css']
 })
 export class TtkContainerComponent implements OnInit {
-  constructor() { }
+  constructor(private ttkDataService: TtkDataService) {}
+  ttkdata: Data = {};
+  loadTtkData(){
+    this.ttkDataService.getTtkData().subscribe(data => this.ttkdata = data);
+    () => console.log("loadeddd")
+  }
 
-  ngOnInit(): void {
+
+
+  ngOnInit() {
+    this.loadTtkData();
   }
 
 }

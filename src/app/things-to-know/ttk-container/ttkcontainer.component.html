@@ -2,7 +2,7 @@
     <div>
         <div style="padding-bottom: 24px;">
             <section>
-            <h1 class="container-header"><b>Things To Know</b></h1>
+            <h2 class="container-header"><b>Things To Know</b></h2>
             </section>
         </div>
         <div>
@@ -15,9 +15,9 @@
                 
 
                 <tr>
-                    <td><app-houserules></app-houserules></td>
-                    <td><app-healthsafety></app-healthsafety></td>
-                    <td><app-cancellation></app-cancellation></td>
+                    <td><app-houserules [ttkdata]="ttkdata"></app-houserules></td>
+                    <td><app-healthsafety [ttkdata]="ttkdata"></app-healthsafety></td>
+                    <td><app-cancellation [ttkdata]="ttkdata"></app-cancellation></td>
                 </tr>
             </table>
         </div>
