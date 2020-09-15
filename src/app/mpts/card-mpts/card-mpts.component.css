@@ -3,11 +3,17 @@
   overflow: hidden;
   margin: 0px 10px;
 }
+.card{
+  border:none;
+  background-color: none;
+  margin-top: 10px;
+  background-color: rgb(247, 247, 247);
+}
 .mpts-img-cover-display {
-  height: 42px;
-  width: 225px;
+  height: 0px;
+  width: 97%;
   position: sticky;
-  top: 55px;
+  top: 25px;
   padding: 8px;
   z-index: 1;
 }
@@ -39,11 +45,11 @@
   height: 24px;
   width: 24px;
   stroke: rgb(255, 255, 255);
-  stroke-width: 4;
+  stroke-width: 2;
   overflow: visible;
 }
 .mpts-heart-button:hover {
-  cursor: w-resize;
+  cursor: pointer;
 }
 .mpts-heart-button:active + .mpts-heart-svg:active {
   height: 20px;
@@ -57,7 +63,7 @@
 .mpts-img {
   width: 100%;
   object-fit: cover;
-  height: 165px;
+  height: 170px;
   border-radius: 12px;
 }
 .mpts-ratings-container {
