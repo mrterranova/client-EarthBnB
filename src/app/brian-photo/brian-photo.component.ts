@@ -11,6 +11,8 @@ export class BrianPhotoComponent implements OnInit {
   public photos;
   public photo;
   page = 1;
+  mark = 1;
+  pics = [];
 
   constructor(
     private photosService: PhotosService,
@@ -18,19 +20,20 @@ export class BrianPhotoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.getPhotos(); /// get all
+    this.getPhotos(); /// get all
     this.getPictureById(this.page); /// get one
   }
 
-  // getPhotos() {
-  //   this.photosService.getPhotos().subscribe(
-  //     (data) => {
-  //       this.photos = data;
-  //     },
-  //     (err) => console.log(err),
-  //     () => console.log(this.photos)
-  //   );
-  // }
+  getPhotos() {
+    this.photosService.getPhotos().subscribe(
+      (data) => {
+        this.photos = data;
+      },
+      (err) => console.log(err),
+      // () => console.log(this.photos),
+      () => (this.pics = this.photos)
+    );
+  }
 
   getPictureById(id: number) {
     this.photosService.getPictureById(id).subscribe(
@@ -62,14 +65,33 @@ export class BrianPhotoComponent implements OnInit {
     }
   }
 
+  ///   modal functions below
+
   galleryOpen() {
     // alert('a gallery modal is coming soon when you click me');
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'block';
   }
 
-  closeGallery(){
+  closeGallery() {
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'none';
+    this.mark = 1;
+  }
+
+  markUp() {
+    if (this.mark <= 7) {
+      this.mark++;
+    } else {
+      this.mark = 1;
+    }
+  }
+
+  markDown() {
+    if (this.mark >= 2) {
+      this.mark--;
+    } else {
+      this.mark = 8;
+    }
   }
 }

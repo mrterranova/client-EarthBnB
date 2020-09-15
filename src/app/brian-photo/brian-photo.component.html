@@ -50,16 +50,24 @@
   </div>
 
   <div class="modelGallery" id="photoGallery">
-
-    <h5 class="modalGalTitle">{{ page }} / 8</h5>
+    <div class="galHeader">
+      <button class="modalBtn" (click)="closeGallery()">close</button>
+      <h5 class="modalGalTitle">{{ mark }} / 8</h5>
+      <span class="leftTop">share</span> <span class="farTopLeft">heart</span>
+    </div>
+    <br />
     <img
-      style="max-width: 60%; max-height: 60%; padding:5% 20%;"
+      style="max-width: 60%; max-height: 50%; padding: 5% 20% 5% 35%"
       src="{{ photo.pic1url }}"
       alt="{{ photo.pic1alt }}"
     />
     <br />
-    <button (click)="closeGallery()">close</button>
-    <button>forward</button>
-    <button>backward</button>
+    <h5 class="modalGalDescription">{{ photo.pic1alt }}</h5>
+    <div class="galFooter">
+      <button class="modalBtn" (click)="markDown()">backward</button>
+      <button class="modalBtn" (click)="markUp()">forward</button>
+    </div>
+    <br />
+    <div class="highHeels">.</div>
   </div>
 </div>
