@@ -39,7 +39,7 @@
     <div *ngFor="let locate of locates">
       <div
         *ngFor="let img of imges"
-        style="width: 900%"
+        [ngStyle]="{'width': dynamicWidth()}"
       >
         <app-card-mpts
           [locate]="locate"
