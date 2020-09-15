@@ -14,7 +14,7 @@
 
 .review-panel-main {
   display: grid;
-  overflow-y: hidden;
+  overflow-y: scroll;
   grid-template-columns: repeat(2, minmax(auto, 50%));
   height: 455px;
   min-height: 0;
@@ -27,7 +27,7 @@
 }
 
 .review-card {
-  border: 2px solid rgb(51, 65, 56);
+  /*   border: 2px solid rgb(51, 65, 56); */
   background: rgb(182, 230, 198) !important;
   position: relative;
   min-width: 0;
@@ -39,15 +39,16 @@
 
 .review-text p {
   position: relative;
-  white-space: nowrap !important;
+  white-space: break-spaces !important;
   overflow: hidden !important;
-  -webkit-line-clamp: 5 !important; /* number of lines to show */
+  -webkit-line-clamp: 4 !important; /* number of lines to show */
 }
 
 .review-text {
   width: 100%;
   white-space: nowrap !important;
-  overflow: hidden !important;
+  overflow: auto !important;
+  height: 100px;
 }
 
 /* Clear floats after the columns */
