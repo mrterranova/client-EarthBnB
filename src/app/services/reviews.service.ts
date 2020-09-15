@@ -15,4 +15,8 @@ export class ReviewsService {
   getReviews() {
     return this.http.get(`http://localhost:8080/api/v1/reviews/`);
   }
+
+  getReviewsById(id: number) {
+    return this.http.get(`http://localhost:8080/api/v1/reviews/` + id);
+  }
 }

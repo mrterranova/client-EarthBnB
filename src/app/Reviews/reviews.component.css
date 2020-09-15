@@ -24,9 +24,9 @@
   clear: both;
 }
 ul {
-  -webkit-columns: 2;
+  /*   -webkit-columns: 2;
   -moz-columns: 2;
-  columns: 2;
+  columns: 2; */
   list-style-position: inside;
 }
 
@@ -64,24 +64,19 @@ hr {
   color: #333; /* old IE */
   background-color: #333; /* Modern Browsers */
 }
-
+/* 
 progress[value] {
-  /* Get rid of the default appearance */
   appearance: none;
 
-  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
   border: none;
 
-  /* Add dimensions */
   width: 100%;
   height: 20px;
 
-  /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
   background-color: whiteSmoke;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
 
-  /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
   color: royalblue;
 
   position: relative;
@@ -102,7 +97,6 @@ progress[value]::-webkit-progress-value {
 }
 
 progress[value]::-moz-progress-bar {
-  /* Gradient background with Stripes */
   background-image: -moz-linear-gradient(
       135deg,
       transparent,
@@ -117,5 +111,4 @@ progress[value]::-moz-progress-bar {
   background-size: 35px 20px, 100% 100%, 100% 100%;
   border-radius: 3px;
 
-  /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
-}
+} */

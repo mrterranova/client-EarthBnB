@@ -9,55 +9,69 @@ import { Data } from '@angular/router';
 })
 export class ReviewsComponent implements OnInit {
   public reviews: any;
-  public categoryArr: number[] = [2.0, 3.5, 5.0, 4.8, 4.7];
-  progressValue: number = 0;
+  public categoryArr: number[];
+  public totalReview: number = 0;
 
   constructor(private reviewsService: ReviewsService) {}
 
   ngOnInit(): void {
     this.getReviews();
-    // this.categoryArr = this.processReviewCatAvg();
+  }
+  getReviewTotal(...avgArray: number[]): number {
+    let total: number = avgArray.reduce((total, arg) => total + arg, 0);
+    return total;
   }
   getReviews(): void {
     this.reviewsService.getReviews().subscribe(
       (data) => {
         this.reviews = data;
+        this.categoryArr = this.processReviewCatAvg(this.reviews);
       },
       (err) => console.error(err),
-      () => console.log('reviews loaded')
+      () => console.log(this.reviews, this.categoryArr)
     );
   }
-  /*
-  processReviewCatAvg(): number[] {
+
+  processReviewCatAvg(data: Array<object>): number[] {
     let arrCategories: number[] = [];
-    let catClean: number,
-      catAcc: number,
-      catComm: number,
-      catLoc: number,
-      catCheck: number,
+    let catClean: number = 0,
+      catAcc: number = 0,
+      catComm: number = 0,
+      catLoc: number = 0,
+      catCheck: number = 0,
       catVal: number = 0;
-    let count: number = 0;
 
-    this.reviews.forEach((element: any) => {
-      count++;
-      catClean += element.category_cleanliness;
-      catAcc += element.category_accuracy;
-      catComm += element.category_communication;
-      catLoc += element.category_location;
-      catCheck += element.category_checkin;
-      catVal += element.category_value;
-    });
+    for (let i = 0; i < data.length; i++) {
+      const element: {} = data[i];
+      catClean += +element['cleanliness'];
+      catAcc += +element['accuracy'];
+      catComm += +element['communication'];
+      catLoc += +element['location'];
+      catCheck += +element['checkIn'];
+      catVal += +element['value'];
+    }
 
-    arrCategories.push(catClean, catAcc, catComm, catLoc, catCheck, catVal);
-    // console.log(arrCategories);
-    return this.getCategoryAvgs(arrCategories, count);
+    arrCategories.push(
+      +catClean.toFixed(2),
+      +catAcc.toFixed(2),
+      +catComm.toFixed(2),
+      +catLoc.toFixed(2),
+      +catCheck.toFixed(2),
+      +catVal.toFixed(2)
+    );
+    console.log(arrCategories);
+    return this.getCategoryAvgs(arrCategories, data.length);
   }
 
   getCategoryAvgs(arrCategories: number[], count: number): number[] {
     let avgArray: number[] = [];
     arrCategories.forEach((element) => {
-      avgArray.push(element / count);
+      avgArray.push(+(element / count).toFixed(2));
     });
+
+    this.totalReview = this.getReviewTotal(...avgArray) / 6;
+    console.log(`totalReview before divide: ${this.totalReview}`);
+
     return avgArray;
-  } */
+  }
 }
