@@ -12,4 +12,10 @@ p{
     line-height: 24px;
     word-break: break-word;
 }
+/* breakpoint743 */
+@media only screen and (max-width: 743px) {
+    .superhostbottom {
+        margin-bottom: 24px;
+    }
+  }
 

@@ -21,3 +21,15 @@ img{
     height: 24px;
     object-fit: contain;
 }
+
+/* breakpoint743 */
+@media only screen and (max-width: 743px) {
+    .hostIconSection{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+    .hostIconSectionDiv{
+        margin-bottom: 12px;
+    }
+  }
