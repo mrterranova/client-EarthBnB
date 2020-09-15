@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-cancellation',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cancellation.component.css']
 })
 export class CancellationComponent implements OnInit {
+  @Input('ttkdata') ttkData: Data;
+  
   constructor() { }
 
   ngOnInit(): void {

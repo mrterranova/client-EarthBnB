@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotosService } from '../services/photos.service';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-brian-photo',
@@ -8,37 +8,41 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./brian-photo.component.css'],
 })
 export class BrianPhotoComponent implements OnInit {
-  ///// typescript .... smhh....  am i right....
-
   public photos;
   public photo;
   page = 1;
- 
+  mark = 1;
+  pics: any;
+  // pics = [];
 
-  constructor(private photosService: PhotosService, private route: ActivatedRoute) {}
+  constructor(
+    private photosService: PhotosService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.getPhotos(); /// get all
     this.getPictureById(this.page); /// get one
   }
 
-  getPhotos(){
+  getPhotos() {
     this.photosService.getPhotos().subscribe(
-      data => {this.photos = data},
-      err => console.log(err),
-      () => console.log(this.photos),
-
+      (data) => {
+        this.photos = data;
+      },
+      (err) => console.log(err),
+      // () => console.log(this.photos),
+      () => (this.pics = this.photos)
     );
   }
 
-
-  getPictureById(id:number) {
+  getPictureById(id: number) {
     this.photosService.getPictureById(id).subscribe(
       (data) => {
         this.photo = data;
       },
-      (err) => console.log(err),
-      () => console.log(this.photo)
+      (err) => console.log(err)
+      // () => console.log(this.photo)
     );
   }
 
@@ -62,8 +66,37 @@ export class BrianPhotoComponent implements OnInit {
     }
   }
 
-  gallery(){
-    alert("a gallery modal is coming soon when you click me");
+  ///   modal functions below
+
+  galleryOpen() {
+    // alert('a gallery modal is coming soon when you click me');
+    const gal = document.getElementById('photoGallery');
+    gal.style.display = 'block';
+    this.showDivs(this.mark);
   }
 
+  closeGallery() {
+    const gal = document.getElementById('photoGallery');
+    gal.style.display = 'none';
+    this.mark = 1;
+  }
+
+  plusDivs(n) {
+    this.showDivs((this.mark += n));
+  }
+
+  showDivs(n) {
+    var i = 0;
+    var x = document.getElementsByClassName('bwlSliderz');
+    if (n > x.length) {
+      this.mark = 1;
+    }
+    if (n < 1) {
+      this.mark = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none'; /// you say it's an error, it doesn't exist - but it works so who is laughing now?
+    }
+    x[this.mark - 1].style.display = 'block';
+  }
 }
