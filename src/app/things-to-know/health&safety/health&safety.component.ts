@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '@angular/router';
 
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./health&safety.component.css']
 })
 export class HealthSafetyComponent implements OnInit {
+  @Input('ttkdata') ttkData: Data;
+
   constructor() { }
 
   ngOnInit(): void {

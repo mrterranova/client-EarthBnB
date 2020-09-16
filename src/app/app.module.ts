@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
@@ -25,12 +26,11 @@ import { HouseRulesComponent } from './things-to-know/house-rules/houserules.com
 import { HealthSafetyComponent } from './things-to-know/health&safety/health&safety.component';
 import { CancellationComponent } from './things-to-know/cancellation-policy/cancellation.component';
 import { TtkContainerComponent } from './things-to-know/ttk-container/ttkcontainer.component';
+import { TtkDataService } from './things-to-know/ttk-data-service/ttk-data.service';
 import { TitleMptsComponent } from './mpts/title-mpts/title-mpts.component';
 import { MptsComponentComponent } from './mpts/mpts-component/mpts-component.component';
 import { CardMptsComponent } from './mpts/card-mpts/card-mpts.component';
-
 import { HostcohostComponent } from './hostmod/hostcohost/hostcohost.component';
-
 import { ListingInfoContainerComponent } from './listingInfo/listing-info-container/listing-info-container.component';
 import { TitleInfoComponent } from './listingInfo/title-info/title-info.component';
 import { StayDescriptorComponent } from './listingInfo/stay-descriptor/stay-descriptor.component';
@@ -39,7 +39,7 @@ import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-in
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
-
+import { DirectoryComponent } from './directory/directory.component';
 
 
 
@@ -72,11 +72,12 @@ import { LocationComponent } from './location/location.component';
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
     AmenitiesInfoComponent,
-    HostcohostComponent
+    HostcohostComponent,
+    DirectoryComponent
   ],
-  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule ],
+  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
-  providers: [HostDataService,PhotosService,CohostDataService ],
+  providers: [HostDataService, PhotosService, CohostDataService, TtkDataService ],
 
   bootstrap: [AppComponent],
 })

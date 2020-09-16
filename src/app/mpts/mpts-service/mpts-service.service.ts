@@ -10,6 +10,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MptsServiceService {
+  Location = {
+
+  }
 
   constructor(private http: HttpClient) { 
 
@@ -22,5 +25,7 @@ export class MptsServiceService {
   getImgs() {
     return this.http.get('http://localhost:8080/api/v1/photos')
   }
+  // updateLocates(locates: Location): Observable<Location> {
+  // }
   
 }
