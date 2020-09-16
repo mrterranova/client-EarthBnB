@@ -38,6 +38,8 @@ import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrang
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { ReviewsComponent } from './Reviews/reviews.component';
+import { ReviewsService } from './services/reviews.service';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,7 @@ import { DirectoryComponent } from './directory/directory.component';
     AmenitiesInfoComponent,
     HostcohostComponent,
     DirectoryComponent,
+    ReviewsComponent,
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
@@ -78,6 +81,7 @@ import { DirectoryComponent } from './directory/directory.component';
     PhotosService,
     CohostDataService,
     TtkDataService,
+    ReviewsService,
   ],
 
   bootstrap: [AppComponent],
