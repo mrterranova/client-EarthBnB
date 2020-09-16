@@ -11,7 +11,7 @@ export class BrianPhotoComponent implements OnInit {
   public photos;
   public photo;
   page = 1;
-  mark = 1;
+  slideIndex = 1;
   pics: any;
   // pics = [];
 
@@ -69,34 +69,41 @@ export class BrianPhotoComponent implements OnInit {
   ///   modal functions below
 
   galleryOpen() {
-    // alert('a gallery modal is coming soon when you click me');
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'block';
-    this.showDivs(this.mark);
+    this.showDivs(this.slideIndex);
   }
 
   closeGallery() {
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'none';
-    this.mark = 1;
+    this.slideIndex = 1;
   }
 
   plusDivs(n) {
-    this.showDivs((this.mark += n));
+    this.showDivs((this.slideIndex += n));
   }
 
   showDivs(n) {
-    var i = 0;
-    var x = document.getElementsByClassName('bwlSliderz');
+    let i;
+    const x = document.getElementsByClassName('bwlSliderz') as HTMLCollectionOf<
+      HTMLElement
+    >;
     if (n > x.length) {
-      this.mark = 1;
+      this.slideIndex = 1;
+      console.log(x);
     }
     if (n < 1) {
-      this.mark = x.length;
+      this.slideIndex = x.length;
+      console.log(x);
     }
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none'; /// you say it's an error, it doesn't exist - but it works so who is laughing now?
+      x[i].style.display = 'none';
+      console.log(x);
     }
-    x[this.mark - 1].style.display = 'block';
+    x[this.slideIndex - 1].style.display = 'block';
+    console.log(x);
   }
 }
+
+///  const x = document.getElementsByClassName('bwlSliderz');

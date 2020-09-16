@@ -13,6 +13,9 @@
   grid-template-columns: 1% 40% 5% 20% 5% 20% 1%;
   grid-template-rows: 10px 150px 2px 150px 10px;
   justify-items: stretch;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
 }
 
 .largePic {
@@ -23,8 +26,15 @@
 }
 
 .bigMainPic {
-  max-width: 300px;
+  width: 300px;
   border: 3px solid rgb(224, 20, 20);
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  grid-row-end: span 5;
+  object-fit: cover;
+  height: 302px;
+  overflow: hidden;
 }
 
 .lop {
@@ -33,6 +43,10 @@
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
 }
 .lttp {
   border: 3px solid green;
@@ -40,6 +54,10 @@
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 3;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .ltttp {
@@ -48,6 +66,10 @@
   grid-column-end: 5;
   grid-row-start: 4;
   grid-row-end: 5;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .lfp {
@@ -56,6 +78,10 @@
   grid-column-end: 7;
   grid-row-start: 4;
   grid-row-end: 5;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 /* .littlePics{
@@ -70,35 +96,26 @@
 .littleTwoPic,
 .littleThreePic,
 .littleFourPic {
-  max-width: 200px;
-  max-height: 148px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .lastLine {
-  display: grid;
-  grid-template-columns: 20px 70px 70px 70px auto 40px 70px 70px 70px;
-  grid-template-rows: 5px 50px 5px;
+ 
+  z-index: 15;
 }
 
 .blBackBtn {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 
 .blNextBtn {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 
 .blShowAllBtn {
-  grid-column-start: 7;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  position: absolute;
+margin: 240px 0 0 75%;
 }
 
 .modelGallery {
@@ -106,7 +123,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
   height: 100%;
   border: blue 3px solid;
@@ -130,6 +147,7 @@
 .modalBtn {
   border-radius: 20%;
   padding: 10px;
+  z-index: 200;
 }
 
 .modalGalDescription {
@@ -154,6 +172,13 @@
 
 .bwlSliderz {
   display: none;
-  max-width: 60%;
-  max-height: 50%;
+  object-fit: cover;
+  width: 400px;
+  border: 5px solid red;
+  z-index: 200;
+  margin: 10px 40px 0;
 }
+
+/* 
+max-width: 60%;
+max-height: 50%; */
