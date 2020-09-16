@@ -2,7 +2,12 @@
 	<hr
 		style="height: 1px; border: none; color: #333; background-color: #333;"
 	/>
-	<span>{{ '{' }}*{{ '}' }} Reviews {{totalReview.toFixed(2)}}</span>
+	<span class="review-total" style="font-size: large;"
+		>{{'{'}} star {{'}'}}
+		<strong>
+			{{totalReview.toFixed(2)}} {{'('}}{{reviews.length}} reviews{{')'}}
+		</strong>
+	</span>
 	<div class="categories">
 		<div class="row">
 			<!-- avgs of all reviews per location -->
@@ -56,15 +61,36 @@
 	<br />
 	<div class="review-panel-main">
 		<div class="review-card" *ngFor="let review of reviews">
-			<div class="profile-img">
-				<span>{{ review.userProfile }}</span>
+			<div
+				class="name-date"
+				style="
+					display: inline-block;
+					line-height: 1em;
+					position: relative;
+					min-width: 100%;
+					margin-bottom: 0.5em;
+				"
+			>
+				<button
+					class="profile-link"
+					style="border-radius: 50%; float: inline-start;"
+				>
+					{{ review.userProfile }}
+				</button>
+
+				<div class="name-and-date">
+					<div class="username" style="font-weight: bold;">
+						<span>{{ review.userName }}</span>
+					</div>
+					<div
+						class="posted-date"
+						style="font-style: italic; font-size: medium;"
+					>
+						<span>{{ review.postedDate }}</span>
+					</div>
+				</div>
 			</div>
-			<div class="username">
-				<span>{{ review.userName }}</span>
-			</div>
-			<div class="posted-date">
-				<span>{{ review.postedDate }}</span>
-			</div>
+
 			<div class="review-text">
 				<p>{{ review.reviewText }}</p>
 			</div>
