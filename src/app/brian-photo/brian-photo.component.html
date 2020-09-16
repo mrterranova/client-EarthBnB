@@ -1,51 +1,68 @@
 <div class="brianPhotos">
   <div class="mainPhotoBox">
-    <div class="bigPictureBox">
+    <div class="bigPictureBox"  (click)="galleryOpen()" >
       <div class="lastLine">
-        <button class="blBackBtn" (click)="clickDown()">Prev</button>
-        <button class="blNextBtn" (click)="clickUp()">Next</button>
-        <button class="blShowAllBtn" (click)="galleryOpen()">Show All</button>
+
+        <button class="blShowAllBtn" (click)="galleryOpen()">Show all photos</button>
       </div>
       <div class="largePic">
+        <div class="overlay"></div>
         <img
           class="bigMainPic"
           src="{{ photo.pic1url }}"
           alt="{{ photo.pic1alt }}"
         />
       </div>
-      <div class="lop">
-        <img
-          class="littleOnePic"
-          src="{{ photo.pic2url }}"
-          alt="{{ photo.pic2alt }}"
-        />
-      </div>
-      <div class="lttp">
-        <img
-          class="littleTwoPic"
-          src="{{ photo.pic3url }}"
-          alt="{{ photo.pic3alt }}"
-        />
-      </div>
-      <div class="ltttp">
-        <img
-          class="littleThreePic"
-          src="{{ photo.pic4url }}"
-          alt="{{ photo.pic4alt }}"
-        />
-      </div>
-      <div class="lfp">
-        <img
-          class="littleFourPic"
-          src="{{ photo.pic5url }}"
-          alt="{{ photo.pic5alt }}"
-        />
+      <div class="littlePics">
+        <div class="topLilPics">
+          <div class="lop">
+            <div class="overlay"></div>
+            <img
+              class="littleOnePic"
+              src="{{ photo.pic2url }}"
+              alt="{{ photo.pic2alt }}"
+            />
+          </div>
+          <div class="lttp">
+            <div class="overlay"></div>
+            <img
+              class="littleTwoPic"
+              src="{{ photo.pic3url }}"
+              alt="{{ photo.pic3alt }}"
+            />
+          </div>
+        </div>
+        <div class="bottomlilPics">
+          <div class="ltttp">
+            <div class="overlay"></div>
+            <img
+              class="littleThreePic"
+              src="{{ photo.pic4url }}"
+              alt="{{ photo.pic4alt }}"
+            />
+          </div>
+          <div class="lfp">
+            <div class="overlay"></div>
+            <img
+              class="littleFourPic"
+              src="{{ photo.pic5url }}"
+              alt="{{ photo.pic5alt }}"
+            />
+          </div>
+        </div>
       </div>
     </div>
     <p #bwl>brian-photo works!</p>
     <h5>pics from : '{{ photo.sauce }}'</h5>
     <h3>House # {{ page }}</h3>
+    <button class="blBackBtn" (click)="clickDown()">Prev</button>
+    <button class="blNextBtn" (click)="clickUp()">Next</button>
   </div>
+
+
+
+
+
 
   <div class="modelGallery" id="photoGallery">
     <div class="galHeader">
@@ -54,8 +71,6 @@
       <span class="leftTop">share</span> <span class="farTopLeft">heart</span>
     </div>
     <br />
-
-  
 
     <!-- using k instead of c so bootstrap doesn't interfere -->
     <div class="konTent konTainer">
@@ -119,7 +134,6 @@
       <h5>{{ photo.pic6alt }}</h5>
       <h5>{{ photo.pic7alt }}</h5>
       <h5>{{ photo.pic8alt }}</h5> -->
-
     </div>
     <br />
     <div class="galFooter">
