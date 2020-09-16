@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app-routing/app-routing.module'
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -39,7 +39,9 @@ import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-in
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
-
+import { ReviewsComponent } from './Reviews/reviews.component';
+import { ReviewsService } from './services/reviews.service';
+import { DirectoryComponent } from './directory/directory.component';
 
 
 @NgModule({
@@ -71,11 +73,19 @@ import { LocationComponent } from './location/location.component';
     BioBlurbInfoComponent,
     SleepingArrangementsInfoComponent,
     AmenitiesInfoComponent,
-    HostcohostComponent
+    HostcohostComponent,
+    DirectoryComponent,
+    ReviewsComponent,
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
-  providers: [HostDataService, PhotosService, CohostDataService, TtkDataService ],
+  providers: [
+    HostDataService,
+    PhotosService,
+    CohostDataService,
+    TtkDataService,
+    ReviewsService,
+  ],
 
   bootstrap: [AppComponent],
 })

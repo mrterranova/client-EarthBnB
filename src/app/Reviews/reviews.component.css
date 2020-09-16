@@ -1,0 +1,148 @@
+.container > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(130, 190, 150);
+}
+.container {
+  background: rgb(130, 190, 150) !important;
+}
+
+.container > *:nth-child(odd) {
+  background: rgb(182, 230, 198);
+}
+
+.review-panel-main {
+  display: grid;
+  overflow-y: scroll;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  height: 455px;
+  min-height: 0;
+  min-width: 0;
+  gap: 0.2em;
+}
+
+.review-panel-main > * :nth-child(even) {
+  background: rgb(130, 190, 150);
+}
+
+.review-card {
+  /*   border: 2px solid rgb(51, 65, 56); */
+  background: rgb(182, 230, 198) !important;
+  position: relative;
+  min-width: 0;
+}
+
+.review-card > * {
+  background: rgb(182, 230, 198) !important;
+}
+
+.review-text p {
+  position: relative;
+  white-space: break-spaces !important;
+  overflow: hidden !important;
+  -webkit-line-clamp: 4 !important; /* number of lines to show */
+}
+
+.review-text {
+  width: 100%;
+  white-space: nowrap !important;
+  overflow: auto !important;
+  height: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  /*-webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2; */
+  list-style-position: inside;
+}
+
+.column li {
+  float: left;
+  width: 50%;
+}
+
+.column li > * {
+  display: inline-block;
+}
+
+#cat-cleanliness {
+  list-style-type: "Cleanliness  ";
+}
+#cat-communication {
+  list-style-type: "Communication";
+}
+#cat-location {
+  list-style-type: "Location     ";
+}
+#cat-accuracy {
+  list-style-type: "Accuracy     ";
+}
+#cat-checkin {
+  list-style-type: "Check-in     ";
+}
+#cat-value {
+  list-style-type: "Value          ";
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
+}
+
+/* progress[value] {
+  appearance: none;
+
+  border: none;
+
+  width: 100%;
+  height: 20px;
+
+  background-color: whiteSmoke;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+
+  color: royalblue;
+
+  position: relative;
+  margin: 0 0 1.5em;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  position: relative;
+
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 3px;
+}
+
+progress[value]::-moz-progress-bar {
+  background-image: -moz-linear-gradient(
+      135deg,
+      transparent,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+    -moz-linear-gradient(left, #09c, #f44);
+
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 3px;
+}
+ */
