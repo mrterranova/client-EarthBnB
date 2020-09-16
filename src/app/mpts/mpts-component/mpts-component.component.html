@@ -4,7 +4,7 @@
     <span class="mpts-pagination-container">
       <span class="mpts-page-count">
           <span id="pgnum1">1</span>
-        /  <span id="pgnum2">4</span></span>
+        /  <span id="pgnum2">5</span></span>
       <button class="mpts-pg-btn mpts-pg-btn-left">
         <svg
           viewBox="0 0 18 18"
@@ -39,7 +39,7 @@
     <div *ngFor="let locate of locates">
       <div
         *ngFor="let img of imges"
-        style="width: 300%"
+        [ngStyle]="{'width': dynamicWidth()}"
       >
         <app-card-mpts
           [locate]="locate"

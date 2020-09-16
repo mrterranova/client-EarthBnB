@@ -48,3 +48,9 @@ img{
     display: flex;
     align-self: center;
 }
+/* breakpoint743 */
+@media only screen and (max-width: 743px) {
+    button, .hostLowerDiv {
+        width: 100%;
+    }
+  }
