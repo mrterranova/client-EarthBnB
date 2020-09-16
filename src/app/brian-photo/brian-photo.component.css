@@ -8,14 +8,14 @@
 }
 
 .bigPictureBox {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: grid;
-  grid-template-columns: 1% 40% 5% 20% 5% 20% 1%;
-  grid-template-rows: 10px 150px 2px 150px 10px;
+  grid-template-columns: 1% 40% 2% 20% 2% 20% 1%;
+  grid-template-rows: 10px 200px 2px 200px 10px;
   justify-items: stretch;
   overflow: hidden;
   width: 100%;
-  height: 400px;
+  height: 430px;
 }
 
 .largePic {
@@ -26,62 +26,66 @@
 }
 
 .bigMainPic {
-  width: 300px;
-  border: 3px solid rgb(224, 20, 20);
+  width: 530px;
+  /* border: 3px solid rgb(224, 20, 20); */
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
   grid-column-start: 2;
   grid-column-end: span 3;
   grid-row-start: 2;
   grid-row-end: span 5;
   object-fit: cover;
-  height: 302px;
+  height: 380px;
   overflow: hidden;
 }
 
 .lop {
-  border: 3px solid orange;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  /* border: 3px solid orange; */
+  grid-column-start: 5;
+  grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 3;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   overflow: hidden;
 }
 .lttp {
-  border: 3px solid green;
-  grid-column-start: 6;
-  grid-column-end: 7;
+  /* border: 3px solid green; */
+  grid-column-start: 7;
+  grid-column-end: 8;
   grid-row-start: 2;
   grid-row-end: 3;
   width: 150px;
   height: 150px;
   object-fit: cover;
   overflow: hidden;
+  border-top-right-radius: 10%;
 }
 
 .ltttp {
-  border: 3px solid pink;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  /* border: 3px solid pink; */
+  grid-column-start: 5;
+  grid-column-end: 6;
   grid-row-start: 4;
-  grid-row-end: 5;
-  width: 150px;
-  height: 150px;
+  grid-row-end: 6;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   overflow: hidden;
 }
 
 .lfp {
-  border: 3px solid yellow;
-  grid-column-start: 6;
-  grid-column-end: 7;
+  /* border: 3px solid yellow; */
+  grid-column-start: 7;
+  grid-column-end: 8;
   grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-end: 6;
   width: 150px;
   height: 150px;
   object-fit: cover;
   overflow: hidden;
+  border-bottom-right-radius:10%;
 }
 
 /* .littlePics{
@@ -103,19 +107,22 @@
 }
 
 .lastLine {
- 
   z-index: 15;
 }
 
 .blBackBtn {
+  position: absolute;
+  margin:400px 10px 0 0;
 }
 
 .blNextBtn {
+  position: absolute;
+  margin:400px 0 0 85%;
 }
 
 .blShowAllBtn {
   position: absolute;
-margin: 240px 0 0 75%;
+  margin: 260px 0 0 80%;
 }
 
 .modelGallery {

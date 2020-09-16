@@ -41,13 +41,9 @@
           alt="{{ photo.pic5alt }}"
         />
       </div>
-      
     </div>
     <p #bwl>brian-photo works!</p>
     <h5>pics from : '{{ photo.sauce }}'</h5>
-    <h3>pictures go here</h3>
-
-
     <h3>House # {{ page }}</h3>
   </div>
 
@@ -59,8 +55,7 @@
     </div>
     <br />
 
-    <!--  -->
-    <!--  -->
+  
 
     <!-- using k instead of c so bootstrap doesn't interfere -->
     <div class="konTent konTainer">
@@ -115,14 +110,22 @@
     </div>
 
     <br />
-    <div class="konTent konTainer">
+    <div class="konText konTaxer">
+      <h5>{{ photo.pic1alt }}</h5>
+      <!-- <h5>{{ photo.pic2alt }}</h5>
+      <h5>{{ photo.pic3alt }}</h5>
+      <h5>{{ photo.pic4alt }}</h5>
+      <h5>{{ photo.pic5alt }}</h5>
+      <h5>{{ photo.pic6alt }}</h5>
+      <h5>{{ photo.pic7alt }}</h5>
+      <h5>{{ photo.pic8alt }}</h5> -->
+
     </div>
-    <br/>
+    <br />
     <div class="galFooter">
       <button class="modalBtn" (click)="plusDivs(-1)">backward</button>
       <button class="modalBtn" (click)="plusDivs(1)">forward</button>
     </div>
     <br />
- 
   </div>
 </div>
