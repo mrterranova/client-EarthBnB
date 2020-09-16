@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewsService } from '../services/reviews.service';
 import { Data } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-reviews',
@@ -9,12 +10,19 @@ import { Data } from '@angular/router';
 })
 export class ReviewsComponent implements OnInit {
   public reviews: any;
+  public locId: number = 1;
   public categoryArr: number[];
   public totalReview: number = 0;
 
-  constructor(private reviewsService: ReviewsService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private reviewsService: ReviewsService
+  ) {}
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.locId = params['id'];
+    });
     this.getReviews();
   }
   getReviewTotal(...avgArray: number[]): number {
