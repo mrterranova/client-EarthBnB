@@ -82,12 +82,13 @@ export class BrianPhotoComponent implements OnInit {
 
   plusDivs(n) {
     this.showDivs((this.slideIndex += n));
-    
   }
 
   showDivs(n) {
     let i;
-    const x = (document.getElementsByClassName('bwlSliderz') as HTMLCollectionOf<HTMLElement>);
+    const x = document.getElementsByClassName('bwlSliderz') as HTMLCollectionOf<
+      HTMLElement
+    >;
     if (n > x.length) {
       this.slideIndex = 1;
       console.log(x);
@@ -104,6 +105,5 @@ export class BrianPhotoComponent implements OnInit {
     console.log(x);
   }
 }
-
 
 ///  const x = document.getElementsByClassName('bwlSliderz');
