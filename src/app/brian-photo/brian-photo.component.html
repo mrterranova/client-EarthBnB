@@ -66,9 +66,9 @@
 
   <div class="modelGallery" id="photoGallery">
     <div class="galHeader">
-      <button class="modalBtn" (click)="closeGallery()">close</button>
+      <button class="modalBtn" (click)="closeGallery()"> X close</button>
       <h5 class="modalGalTitle">{{ slideIndex }} / 8</h5>
-      <span class="leftTop">share</span> <span class="farTopLeft">heart</span>
+      <span class="leftTop">📩 Share</span> <span class="farTopLeft">❤ Save</span>
     </div>
     <br />
 
@@ -126,19 +126,19 @@
 
     <br />
     <div class="konText konTaxer">
-      <h5>{{ photo.pic1alt }}</h5>
-      <!-- <h5>{{ photo.pic2alt }}</h5>
-      <h5>{{ photo.pic3alt }}</h5>
-      <h5>{{ photo.pic4alt }}</h5>
-      <h5>{{ photo.pic5alt }}</h5>
-      <h5>{{ photo.pic6alt }}</h5>
-      <h5>{{ photo.pic7alt }}</h5>
-      <h5>{{ photo.pic8alt }}</h5> -->
+      <h5 class="bwlTexterz" >{{ photo.pic1alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic2alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic3alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic4alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic5alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic6alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic7alt }}</h5>
+      <h5 class="bwlTexterz" >{{ photo.pic8alt }}</h5>
     </div>
     <br />
     <div class="galFooter">
-      <button class="modalBtn" (click)="plusDivs(-1)">backward</button>
-      <button class="modalBtn" (click)="plusDivs(1)">forward</button>
+      <button class="modalBtn" (click)="plusDivs(-1)" (click)="plusWords(-1)">backward</button>
+      <button class="modalBtn" (click)="plusDivs(1)" (click)="plusWords(1)">forward</button>
     </div>
     <br />
   </div>

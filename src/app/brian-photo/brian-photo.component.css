@@ -101,7 +101,7 @@
   width: 100%;
   height: 100%;
   border: blue 3px solid;
-  background-color: cornsilk;
+  background-color: rgb(255, 254, 249);
 }
 
 .galHeader {
@@ -143,7 +143,13 @@
   display: none;
   object-fit: cover;
   width: 400px;
-  border: 5px solid red;
+  /* border: 5px solid red; */
   z-index: 200;
-  margin: 10px 40px 0;
+  margin: 10px 40% 0;
+}
+
+.bwlTexterz {
+  display: none;
+  text-align: center;
+  width: 90%;
 }
