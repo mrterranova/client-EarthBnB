@@ -110,9 +110,8 @@ export class BrianPhotoComponent implements OnInit {
     // console.log(x);
   }
 
-
-  plusWords(t){
-    this.showTextWords((this.wordIndex+=t))
+  plusWords(t) {
+    this.showTextWords((this.wordIndex += t));
   }
 
   showTextWords(t) {
