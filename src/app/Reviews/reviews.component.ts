@@ -17,15 +17,19 @@ export class ReviewsComponent implements OnInit {
 
   constructor(
     private reviewsService: ReviewsService,
-    private activatedRoute: ActivatedRoute
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     //this.getReviews();
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.locationId = +params['id'];
-      console.log(this.locationId);
+    // this.locationId = +this.route.snapshot.params.id;
+    //also this way
+    this.route.paramMap.subscribe((params) => {
+      this.locationId = +params.get('id');
+
+      console.log(`locationid = ${this.locationId}`);
     });
+
     this.getReviewsByLocation();
   }
   getReviewTotal(...avgArray: number[]): number {
