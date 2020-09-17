@@ -12,6 +12,7 @@ export class BrianPhotoComponent implements OnInit {
   public photo;
   page = 1;
   slideIndex = 1;
+  wordIndex = 1;
   pics: any;
   // pics = [];
 
@@ -72,17 +73,21 @@ export class BrianPhotoComponent implements OnInit {
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'block';
     this.showDivs(this.slideIndex);
+    this.showTextWords(this.wordIndex);
   }
 
   closeGallery() {
     const gal = document.getElementById('photoGallery');
     gal.style.display = 'none';
     this.slideIndex = 1;
+    this.wordIndex = 1;
   }
-
+  // function on buttons that changes pics in modal gallery
   plusDivs(n) {
     this.showDivs((this.slideIndex += n));
   }
+
+  // function that cycles through all the pics and sets the active one to display and hides the rest
 
   showDivs(n) {
     let i;
@@ -91,19 +96,38 @@ export class BrianPhotoComponent implements OnInit {
     >;
     if (n > x.length) {
       this.slideIndex = 1;
-      console.log(x);
+      // console.log(x);
     }
     if (n < 1) {
       this.slideIndex = x.length;
-      console.log(x);
+      // console.log(x);
     }
     for (i = 0; i < x.length; i++) {
       x[i].style.display = 'none';
-      console.log(x);
+      // console.log(x);
     }
     x[this.slideIndex - 1].style.display = 'block';
-    console.log(x);
+    // console.log(x);
+  }
+
+  plusWords(t) {
+    this.showTextWords((this.wordIndex += t));
+  }
+
+  showTextWords(t) {
+    let j;
+    const y = document.getElementsByClassName('bwlTexterz') as HTMLCollectionOf<
+      HTMLElement
+    >;
+    if (t > y.length) {
+      this.wordIndex = 1;
+    }
+    if (t < 1) {
+      this.wordIndex = y.length;
+    }
+    for (j = 0; j < y.length; j++) {
+      y[j].style.display = 'none';
+    }
+    y[this.wordIndex - 1].style.display = 'block';
   }
 }
-
-///  const x = document.getElementsByClassName('bwlSliderz');
