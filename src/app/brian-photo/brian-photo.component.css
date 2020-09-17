@@ -8,109 +8,100 @@
 }
 
 .bigPictureBox {
-  border: 1px solid blue;
-  display: grid;
-  grid-template-columns: 1% 40% 5% 20% 5% 20% 1%;
-  grid-template-rows: 10px 150px 2px 150px 10px;
-  justify-items: stretch;
-}
-
-.largePic {
-  grid-column-start: 2;
-  grid-column-end: span 3;
-  grid-row-start: 2;
-  grid-row-end: span 5;
+  /* border: 1px solid blue; */
+  display: flex;
+  overflow: hidden;
+  width: 95%;
+  height: auto;
+  cursor: pointer;
 }
 
 .bigMainPic {
-  max-width: 300px;
-  border: 3px solid rgb(224, 20, 20);
+  /* border: 3px solid rgb(224, 20, 20); */
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  object-fit: cover;
+  overflow: hidden;
+  height: 440px;
+  width: 600px;
+  margin-top: 7px;
 }
 
 .lop {
-  border: 3px solid orange;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  border: 7px solid white;
+  position: absolute;
+  margin: 0 0 0 5%;
 }
 .lttp {
-  border: 3px solid green;
-  grid-column-start: 6;
-  grid-column-end: 7;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  border: 7px solid white;
+  border-top-right-radius: 10%;
+  position: absolute;
+  margin: 0 0 0 30%;
 }
 
 .ltttp {
-  border: 3px solid pink;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  border: 7px solid white;
+  position: absolute;
+  margin: 15% 0 0 5%;
 }
 
 .lfp {
-  border: 3px solid yellow;
-  grid-column-start: 6;
-  grid-column-end: 7;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  border: 7px solid white;
+  border-bottom-right-radius: 10%;
+  position: absolute;
+  margin: 15% 0 0 30%;
 }
 
-/* .littlePics{
-    
-} */
-
-/* .smallPic{
-
-} */
+.bigMainPic:hover,
+.littleOnePic:hover,
+.littleTwoPic:hover,
+.littleThreePic:hover,
+.littleFourPic:hover {
+  opacity: 80%;
+}
 
 .littleOnePic,
 .littleTwoPic,
 .littleThreePic,
 .littleFourPic {
-  max-width: 200px;
-  max-height: 148px;
+  width: 350px;
+  height: 230px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
+.littleTwoPic {
+  border-top-right-radius: 10%;
+}
+
+.littleFourPic {
+  border-bottom-right-radius: 10%;
+}
+
+/* buttons for gallery on main view */
 .lastLine {
-  display: grid;
-  grid-template-columns: 20px 70px 70px 70px auto 40px 70px 70px 70px;
-  grid-template-rows: 5px 50px 5px;
-}
-
-.blBackBtn {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.blNextBtn {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  z-index: 15;
 }
 
 .blShowAllBtn {
-  grid-column-start: 7;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  position: absolute;
+  margin: 360px 1% 1% 88%;
+  border-radius: 10px;
+  padding: 7px;
 }
+
+/* css for the pop up modal gallery when click show all */
 
 .modelGallery {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
   height: 100%;
-  border: blue 3px solid;
-  background-color: cornsilk;
+  /* border: blue 3px solid; */
+  background-color: rgb(255, 254, 249);
 }
 
 .galHeader {
@@ -130,6 +121,7 @@
 .modalBtn {
   border-radius: 20%;
   padding: 10px;
+  z-index: 200;
 }
 
 .modalGalDescription {
@@ -147,13 +139,33 @@
   margin: 0 10px 30px 10px;
 }
 
-.highHeels {
-  height: 20px;
+/* holds the pictures in the pop up modal */
+.bwlSliderz {
+  display: none;
+  object-fit: cover;
+  width: 400px;
+  /* border: 5px solid red; */
+  z-index: 200;
+  margin: 10px 32% 0 35%;
+}
+/* holds the text in the modal pop up */
+.bwlTexterz {
+  display: none;
+  text-align: center;
   width: 100%;
 }
 
-.bwlSliderz {
-  display: none;
-  max-width: 60%;
-  max-height: 50%;
+/* 
+all buttons same */
+
+.blShowAllBtn,
+.blBackBtn,
+.modalBtn {
+  background-color: rgb(216, 214, 214);
+}
+
+.blShowAllBtn:hover,
+.blBackBtn:hover,
+.modalBtn:hover {
+  background-color: rgb(167, 166, 166);
 }
