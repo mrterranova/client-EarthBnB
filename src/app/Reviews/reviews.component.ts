@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewsService } from '../services/reviews.service';
 import { Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-reviews',
@@ -9,13 +10,23 @@ import { Data } from '@angular/router';
 })
 export class ReviewsComponent implements OnInit {
   public reviews: any;
+  public reviewsByLocation: any;
+  public locationId: number = 1;
   public categoryArr: number[];
   public totalReview: number = 0;
 
-  constructor(private reviewsService: ReviewsService) {}
+  constructor(
+    private reviewsService: ReviewsService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getReviews();
+    //this.getReviews();
+    this.activatedRoute.queryParams.subscribe((params) => {
+      this.locationId = +params['id'];
+      console.log(this.locationId);
+    });
+    this.getReviewsByLocation();
   }
   getReviewTotal(...avgArray: number[]): number {
     let total: number = avgArray.reduce((total, arg) => total + arg, 0);
@@ -23,6 +34,17 @@ export class ReviewsComponent implements OnInit {
   }
   getReviews(): void {
     this.reviewsService.getReviews().subscribe(
+      (data) => {
+        this.reviews = data;
+        this.categoryArr = this.processReviewCatAvg(this.reviews);
+      },
+      (err) => console.error(err),
+      () => console.log(this.reviews, this.categoryArr)
+    );
+  }
+
+  getReviewsByLocation(): void {
+    this.reviewsService.getReviewsByLocation(this.locationId).subscribe(
       (data) => {
         this.reviews = data;
         this.categoryArr = this.processReviewCatAvg(this.reviews);
