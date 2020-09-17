@@ -1,15 +1,23 @@
-.container > * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgb(130, 190, 150);
 }
 .container {
-  background: rgb(130, 190, 150) !important;
+  background: #eeeeee !important;
+  padding-left: 5px;
 }
 
-.container > *:nth-child(odd) {
+/* .container > *:nth-child(odd) {
   background: rgb(182, 230, 198);
+} */
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
+  margin-bottom: 5px !important;
 }
 
 .review-panel-main {
@@ -19,23 +27,30 @@
   height: 455px;
   min-height: 0;
   min-width: 0;
-  gap: 0.2em;
+  gap: 0.5em;
+  scrollbar-width: thin;
+  scrollbar-color: #6d8d78 #b6e6c6;
+}
+.review-panel-main::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-.review-panel-main > * :nth-child(even) {
+/* .review-panel-main > * :nth-child(even) {
   background: rgb(130, 190, 150);
-}
+} */
 
 .review-card {
-  /*   border: 2px solid rgb(51, 65, 56); */
-  background: rgb(182, 230, 198) !important;
+  border: 2px solid #249c34;
+  border-radius: 5px;
+  background: #e2e2e2 !important;
   position: relative;
   min-width: 0;
 }
 
-.review-card > * {
-  background: rgb(182, 230, 198) !important;
-}
+/* .review-card > * {
+  background: rgb(130, 190, 150) !important;
+} */
 
 .review-text p {
   position: relative;
@@ -43,12 +58,33 @@
   overflow: hidden !important;
   -webkit-line-clamp: 4 !important; /* number of lines to show */
 }
+.review-text p::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 
 .review-text {
+  padding-left: 2%;
   width: 100%;
   white-space: nowrap !important;
   overflow: auto !important;
   height: 100px;
+  scrollbar-width: thin;
+  scrollbar-color: #b6e6c6 !important;
+}
+
+.profile-link {
+  overflow: hidden;
+  /* word-wrap: break-word; */
+  display: inline-block;
+  max-height: 100%;
+  max-width: 8%;
+}
+
+.name-and-date {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
 }
 
 /* Clear floats after the columns */
@@ -62,6 +98,12 @@
   -moz-columns: 2;
   columns: 2; */
   list-style-position: inside;
+}
+
+.categories {
+  margin-top: 5px !important;
+  margin-left: 10% !important;
+  margin-right: 10% !important;
 }
 
 .column li {
@@ -91,58 +133,3 @@
 #cat-value {
   list-style-type: "Value          ";
 }
-
-hr {
-  border: none;
-  height: 1px;
-  color: #333; /* old IE */
-  background-color: #333; /* Modern Browsers */
-}
-
-/* progress[value] {
-  appearance: none;
-
-  border: none;
-
-  width: 100%;
-  height: 20px;
-
-  background-color: whiteSmoke;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
-
-  color: royalblue;
-
-  position: relative;
-  margin: 0 0 1.5em;
-}
-
-progress[value]::-webkit-progress-bar {
-  background-color: whiteSmoke;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
-}
-
-progress[value]::-webkit-progress-value {
-  position: relative;
-
-  background-size: 35px 20px, 100% 100%, 100% 100%;
-  border-radius: 3px;
-}
-
-progress[value]::-moz-progress-bar {
-  background-image: -moz-linear-gradient(
-      135deg,
-      transparent,
-      transparent 33%,
-      rgba(0, 0, 0, 0.1) 33%,
-      rgba(0, 0, 0, 0.1) 66%,
-      transparent 66%
-    ),
-    -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-    -moz-linear-gradient(left, #09c, #f44);
-
-  background-size: 35px 20px, 100% 100%, 100% 100%;
-  border-radius: 3px;
-}
- */
