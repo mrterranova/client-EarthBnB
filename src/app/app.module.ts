@@ -40,6 +40,8 @@ import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrang
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
 import { LocationComponent } from './location/location.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainpgComponent } from './AdditionalPgs/mainpg/mainpg.component';
 
 
 
@@ -73,7 +75,9 @@ import { DirectoryComponent } from './directory/directory.component';
     SleepingArrangementsInfoComponent,
     AmenitiesInfoComponent,
     HostcohostComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    FooterComponent,
+    MainpgComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
