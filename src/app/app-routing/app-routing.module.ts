@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from '../app.component';
 import { DirectoryComponent } from '../directory/directory.component';
 
 const routes: Routes = [
-  {
-    path: '/',
-    component: AppComponent,
-  },
+  { path: '', redirectTo: 'rooms/1', pathMatch: 'full' },
   {
     path: 'rooms/:id',
     component: DirectoryComponent,
