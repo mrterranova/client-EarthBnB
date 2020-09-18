@@ -18,11 +18,11 @@ describe('BrianPhotoComponent', () => {
     fixture.detectChanges();
   });
 
-
+///////////////////////////
 /////////////////////////
   // don't know why these fail now that it's getting fake data fro  our api - will research if time permits
 /////////////////////////
-
+///////////////////////////
 
 
 
