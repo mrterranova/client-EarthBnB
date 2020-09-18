@@ -3,8 +3,11 @@
     <app-title-mpts></app-title-mpts>
     <span class="mpts-pagination-container">
       <span class="mpts-page-count">
-          <span id="pgnum1">1</span>
-        /  <span id="pgnum2">5</span></span>
+        <!-- Page number logic -->
+        <span id="pgnum1">1</span>
+        / <span id="pgnum2">5</span></span
+      >
+      <!-- Button to scroll left - Please see ts file for logic -->
       <button class="mpts-pg-btn mpts-pg-btn-left">
         <svg
           viewBox="0 0 18 18"
@@ -19,6 +22,7 @@
           ></path>
         </svg>
       </button>
+      <!-- Button to scroll right - Please see ts file for logic -->
       <button class="mpts-pg-btn mpts-pg-btn-right">
         <svg
           viewBox="0 0 18 18"
@@ -35,18 +39,24 @@
       </button>
     </span>
   </div>
-  <div class="locations" style="overflow-x: auto; width: 87vw" id="pag-mpts-clickable">
+  <!-- wraps the card div -->
+  <div
+    class="locations"
+    style="overflow-x: auto; width: 87vw"
+    id="pag-mpts-clickable"
+  >
+    <!-- double forloop in order to grab data from both the location and images tables -->
     <div *ngFor="let locate of locates">
-      <div
-        *ngFor="let img of imges"
-        [ngStyle]="{'width': dynamicWidth()}"
-      >
+      <div *ngFor="let img of imges" [ngStyle]="{ width: dynamicWidth() }">
+        <!-- See card component where all information being sent -->
         <app-card-mpts
           [locate]="locate"
           [img]="img"
+          [revarr]="revarr"
           *ngIf="img.id === locate.id"
         ></app-card-mpts>
+      </div>
     </div>
-</div>
   </div>
 </div>
+<hr/>

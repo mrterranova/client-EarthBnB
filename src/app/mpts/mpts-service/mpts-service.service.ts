@@ -18,14 +18,30 @@ export class MptsServiceService {
 
   }
 
+  //location table
   getLocates() {
-    return this.http.get('http://localhost:8080/api/v1/mpts')
+    return this.http.get('http://localhost:8080/api/v1/mpts');
   }
 
-  getImgs() {
-    return this.http.get('http://localhost:8080/api/v1/photos')
+  //individual locations - using this service for footer component
+  getLocate(id : number){
+    return this.http.get(`http://localhost:8080/api/v1/mpts/` + id)
   }
-  // updateLocates(locates: Location): Observable<Location> {
-  // }
+
+  //images table
+  getImgs() {
+    return this.http.get('http://localhost:8080/api/v1/photos');
+  }
+
+  //review table
+  getReviews() {
+    return this.http.get('http://localhost:8080/api/v1/reviews/');
+  }
+
+  updateLocate(newspeaker, id: number) {
+    let body = JSON.stringify(newspeaker)
+    console.log("You are updating!")
+    return this.http.put('http://localhost:8080/api/v1/mpts/'+id, body, httpOptions)
+  }
   
 }
