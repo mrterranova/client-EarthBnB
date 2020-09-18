@@ -9,23 +9,12 @@ import {Pipe, PipeTransform} from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 
-// @Pipe({ name: 'evenodd' })
-// export class EvenOddPipe implements PipeTransform {
-//   transform(value:any[], filter:string) {
-//     if(!value || (filter !== 'even' && filter !== 'odd')) {
-//       return value;
-//     }
-//     return value.filter((item, idx) => filter === 'even' ? idx % 2 === 1 : idx % 2 === 0 );
-//   }
-// }
-
-
 export class FooterComponent implements OnInit {
   constructor(
     private mptsService: MptsServiceService,
     private route: ActivatedRoute
   ) {}
-  public thelocate = {};
+  public location;
   public locates = {};
   public lArr = [];
 
@@ -35,21 +24,21 @@ export class FooterComponent implements OnInit {
   }
 
   getLocate(id: number) {
-    this.mptsService.getLocate(id).subscribe((data) => {
-      this.thelocate = data;
+    this.mptsService.getLocate(id).subscribe( loc => {
+      this.location = loc;
     });
   }
 
   getLocates() {
     this.mptsService.getLocates().subscribe((data) => {
       this.locates = data;
-      var temp = [];
-      data.map(val => temp.push(val.state_territory));
-      this.lArr = temp.filter((c, index) => {
-        return temp.indexOf(c) === index;
-      })
-      // console.log(this.lArr)
-    });
-  }
+    //   var temp = [];
+    //   this.locates.map(val => temp.push(val.state_territory));
+    //   this.lArr = temp.filter((c, index) => {
+    //     return temp.indexOf(c) === index;
+    //   })
+    //   console.log(this.lArr)
+     });
+   }
   
 }

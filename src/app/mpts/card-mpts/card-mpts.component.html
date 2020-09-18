@@ -4,7 +4,7 @@
     <div class="mpts-superhost-tag" *ngIf="locate.superhost">
       <strong>SUPERHOST</strong>
     </div>
-    <form [formGroup]="updateForm" (click)="submitHeart(locate.id)" novalidate>
+    <!-- <form [formGroup]="updateForm" (click)="submitHeart(locate.id)" novalidate> -->
       <div class="mpts-heart-button" type="submit">
         <svg
           class="mpts-heart-svg"
@@ -22,7 +22,7 @@
           ></path>
         </svg>
       </div>
-    </form>
+    <!-- </form> -->
   </div>
   <!-- Image is not in it's own div -->
   <a href="/rooms/{{ locate.id }}">
@@ -45,7 +45,7 @@
         </svg>
       </span>
       <!-- Section based upon reviews and switching parameters - 1st line of text EarthBnB -->
-      <span class="mpts-ratings" *ngIf="revarr[locate.id] > 2">{{
+      <!-- <span class="mpts-ratings" *ngIf="revarr[locate.id] > 2">{{
         locate.rating
       }}</span>
       <span class="mpts-num-reviews" *ngIf="revarr[locate.id] == null">
@@ -59,7 +59,7 @@
       </span>
       <span class="mpts-num-reviews" *ngIf="revarr[locate.id] > 2"
         >({{ revarr[locate.id] }})</span
-      >
+      > -->
     </div>
   </a>
   <!-- Remaining details about the renting space - 2nd line of text EarthBnB -->
