@@ -74,6 +74,8 @@
 
     <!-- using k instead of c so bootstrap doesn't interfere -->
     <div class="konTent konTainer">
+      <button class="modalBtn galNavBtnBack" (click)="plusDivs(-1)" (click)="plusWords(-1)">backward</button>
+     
       <img
         style="height: 400px"
         class="bwlSliderz"
@@ -122,6 +124,7 @@
         src="{{ photo.pic8url }}"
         alt="{{ photo.pic8alt }}"
       />
+      <button class="modalBtn galNavBtnForward" (click)="plusDivs(1)" (click)="plusWords(1)">forward</button>
     </div>
 
     <br />
@@ -136,10 +139,9 @@
       <h5 class="bwlTexterz" >{{ photo.pic8alt }}</h5>
     </div>
     <br />
-    <div class="galFooter">
-      <button class="modalBtn" (click)="plusDivs(-1)" (click)="plusWords(-1)">backward</button>
-      <button class="modalBtn" (click)="plusDivs(1)" (click)="plusWords(1)">forward</button>
-    </div>
+
+
+
     <br />
   </div>
 </div>
