@@ -22,20 +22,23 @@ export class BrianPhotoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getPhotos(); /// get all
+    // this.getPhotos(); /// get all
+    this.route.paramMap.subscribe((params)=>{
+      this.page = +params.get('id');
+    });
     this.getPictureById(this.page); /// get one
   }
 
-  getPhotos() {
-    this.photosService.getPhotos().subscribe(
-      (data) => {
-        this.photos = data;
-      },
-      (err) => console.log(err),
-      // () => console.log(this.photos),
-      () => (this.pics = this.photos)
-    );
-  }
+  // getPhotos() {
+  //   this.photosService.getPhotos().subscribe(
+  //     (data) => {
+  //       this.photos = data;
+  //     },
+  //     (err) => console.log(err),
+  //     // () => console.log(this.photos),
+  //     () => (this.pics = this.photos)
+  //   );
+  // }
 
   getPictureById(id: number) {
     this.photosService.getPictureById(id).subscribe(
