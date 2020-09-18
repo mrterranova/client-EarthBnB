@@ -8,6 +8,7 @@
   background-color: none;
   margin-top: 10px;
   background-color: rgb(247, 247, 247);
+  overflow: hidden;
 }
 .mpts-img-cover-display {
   height: 0px;

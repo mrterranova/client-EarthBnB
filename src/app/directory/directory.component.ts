@@ -9,16 +9,16 @@ export class DirectoryComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-  this.hideTheText();
+  // this.hideTheText();
   }
-  hideTheText() {
-    const words = document.getElementsByClassName(
-      'hideMeText'
-    ) as HTMLCollectionOf<HTMLElement>;
+  // hideTheText() {
+  //   const words = document.getElementsByClassName(
+  //     'hideMeText'
+  //   ) as HTMLCollectionOf<HTMLElement>;
 
-    words[0].style.display = 'none';
-    words[1].style.display = 'none';
-  }
+  //   words[0].style.display = 'none';
+  //   words[1].style.display = 'none';
+  // }
 }
 
 // hideMeText thought it would work but it can't grab the element from another component

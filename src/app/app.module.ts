@@ -40,6 +40,7 @@ import { LocationComponent } from './location/location.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
+import { FooterComponent } from './footer/footer.component'
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import { DirectoryComponent } from './directory/directory.component';
     HostcohostComponent,
     DirectoryComponent,
     ReviewsComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
 
