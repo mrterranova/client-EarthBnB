@@ -169,3 +169,62 @@ all buttons same */
 .modalBtn:hover {
   background-color: rgb(167, 166, 166);
 }
+
+/* media queries main photo */
+
+@media screen and (max-width: 1300px) {
+  /* .bigPictureBox {
+    border: 5px solid magenta;
+  } */
+
+  .littleOnePic,
+  .littleThreePic {
+    display: none;
+  }
+
+  .lfp {
+    margin: 15% 0 0 3%;
+  }
+  .lttp {
+    margin: 0 0 0 3%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  /* .bigPictureBox {
+    border: 5px solid rgb(81, 255, 0);
+  } */
+
+  .littleTwoPic,
+  .littleFourPic {
+    display: none;
+  }
+
+  .bigMainPic {
+    border-radius: 7%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  /* .bigPictureBox {
+    border: 5px solid rgb(17, 0, 255);
+  } */
+
+  .bigMainPic {
+    width: 70%;
+    height: auto;
+  }
+  .blShowAllBtn {
+    margin: 100px 10% 1% 10%;
+  }
+}
+
+/* media queries modal gallery */
+
+@media screen and (max-width: 1100px) {
+  .bwlSliderz {
+    width: 70%;
+    max-height: 300px;
+    margin: 5%;
+  }
+}
