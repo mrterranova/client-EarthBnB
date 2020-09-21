@@ -43,8 +43,10 @@ import { CityComponent } from './location/city/city.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -80,6 +82,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     AmenitiesInfoComponent,
     HostcohostComponent,
     DirectoryComponent,
+    HeaderComponent
     ReviewsComponent,
     FooterComponent,
   ],
