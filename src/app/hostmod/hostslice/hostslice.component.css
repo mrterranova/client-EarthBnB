@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     padding:0px 80px;
+
 }
 .hostInnerContainer{
     display: flex;
@@ -27,6 +28,8 @@ app-lefthostbody, app-righthostbody{
 app-righthostbody{
     margin-left:8.33%;
 }
+
+
 /* breakpoint743 */
 @media only screen and (max-width: 743px) {
     .hostBodyHolder{
@@ -44,5 +47,6 @@ app-righthostbody{
     .hostOuterContainer {
         margin: 0px 24px;
         padding: 0px;
+
     }
   }

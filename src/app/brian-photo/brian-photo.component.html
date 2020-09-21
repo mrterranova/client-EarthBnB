@@ -1,9 +1,10 @@
 <div class="brianPhotos">
   <div class="mainPhotoBox">
-    <div class="bigPictureBox"  (click)="galleryOpen()" >
+    <div class="bigPictureBox" (click)="galleryOpen()">
       <div class="lastLine">
-
-        <button class="blShowAllBtn" (click)="galleryOpen()">Show all photos</button>
+        <button class="blShowAllBtn" (click)="galleryOpen()">
+          Show all photos
+        </button>
       </div>
       <div class="largePic">
         <div class="overlay"></div>
@@ -59,21 +60,24 @@
     <button class="blBackBtn" (click)="clickUp()">Next</button>
   </div>
 
-
-
-
-
-
   <div class="modelGallery" id="photoGallery">
     <div class="galHeader">
-      <button class="modalBtn" (click)="closeGallery()"> X close</button>
+      <button class="modalBtn" (click)="closeGallery()">X close</button>
       <h5 class="modalGalTitle">{{ slideIndex }} / 8</h5>
-      <span class="leftTop">📩 Share</span> <span class="farTopLeft">❤ Save</span>
+      <span class="leftTop">📩 Share</span>
+      <span class="farTopLeft">❤ Save</span>
     </div>
     <br />
 
     <!-- using k instead of c so bootstrap doesn't interfere -->
     <div class="konTent konTainer">
+      <button
+        class="modalBtn galNavBtnBack"
+        (click)="plusDivs(-1)"
+        (click)="plusWords(-1)"
+      >
+        &#60;
+      </button>
       <img
         style="height: 400px"
         class="bwlSliderz"
@@ -122,24 +126,30 @@
         src="{{ photo.pic8url }}"
         alt="{{ photo.pic8alt }}"
       />
+      <button
+        class="modalBtn galNavBtnForward"
+        (click)="plusDivs(1)"
+        (click)="plusWords(1)"
+      >
+        &#62;
+      </button>
     </div>
 
     <br />
     <div class="konText konTaxer">
-      <h5 class="bwlTexterz" >{{ photo.pic1alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic2alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic3alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic4alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic5alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic6alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic7alt }}</h5>
-      <h5 class="bwlTexterz" >{{ photo.pic8alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic1alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic2alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic3alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic4alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic5alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic6alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic7alt }}</h5>
+      <h5 class="bwlTexterz">{{ photo.pic8alt }}</h5>
     </div>
     <br />
-    <div class="galFooter">
-      <button class="modalBtn" (click)="plusDivs(-1)" (click)="plusWords(-1)">backward</button>
-      <button class="modalBtn" (click)="plusDivs(1)" (click)="plusWords(1)">forward</button>
-    </div>
+    <div class="galFooter"></div>
     <br />
   </div>
 </div>
+
+<!-- //// the code never lies but comments sometimes do -->
