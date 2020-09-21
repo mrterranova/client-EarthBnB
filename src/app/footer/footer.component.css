@@ -1,0 +1,22 @@
+.footer-container {
+   padding: 50px;
+}
+.footer-table1 {
+    width:90vw;
+}
+.container {
+    margin-top: 100px;
+}
+.footer-table2 {
+    width:90vw;
+}
+.footer-tag-left {
+    float: left;
+}
+.footer-tag-right {
+    float:right;
+    width:20%;
+}
+.footer-money {
+    float: left;
+}
