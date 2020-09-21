@@ -82,7 +82,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     AmenitiesInfoComponent,
     HostcohostComponent,
     DirectoryComponent,
-    HeaderComponent
+    HeaderComponent,
     ReviewsComponent,
     FooterComponent,
   ],
