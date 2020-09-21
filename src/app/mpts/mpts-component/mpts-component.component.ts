@@ -13,6 +13,8 @@ public imges;
 public reviews;
 public revarr = [];
 public count = 0;
+public len = 0;
+public num = 78;
 
   constructor(private mptsService: MptsServiceService) { }
 
@@ -25,10 +27,9 @@ public count = 0;
   //get locations from location table
   getLocates()  {
       this.mptsService.getLocates().subscribe(
-        data => { this.locates = data },
+        data => { this.locates = data; this.len = this.locates.length},
         () => {
           for (var i=0; i < this.locates.length; +i++){
-            console.log(i)
           }
         }
       );
@@ -39,7 +40,6 @@ public count = 0;
     this.mptsService.getImgs().subscribe(
       data => { this.imges = data }, 
       err => {console.log("Imgs errrrrr")},
-      () => {console.log(this.imges.length)}
     )
   }
 
@@ -81,7 +81,6 @@ public count = 0;
       count = parseInt(document.getElementById("pgnum2").innerHTML);
       document.getElementById("pag-mpts-clickable").scrollLeft = 4992;
     }
-
       document.getElementById("pgnum1").innerHTML = count+"";
   }
 
@@ -108,7 +107,12 @@ public count = 0;
 
   //trying out dynamic styling - it works!
   dynamicWidth(){
-    return '390rem'
+    this.endPgCount(this.len/4)
+    return this.num*(this.len/4)+'rem'
+  }
+
+  endPgCount(pgcount){
+    document.getElementById("pgnum2").innerHTML = Math.ceil(pgcount)+"";
   }
 }
 

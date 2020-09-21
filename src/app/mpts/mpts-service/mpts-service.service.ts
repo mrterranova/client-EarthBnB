@@ -10,9 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MptsServiceService {
-  Location = {
-
-  }
+  Location = {}
 
   constructor(private http: HttpClient) { 
 
