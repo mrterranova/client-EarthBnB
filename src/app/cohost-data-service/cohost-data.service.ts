@@ -9,8 +9,8 @@ export class CohostDataService {
     private http: HttpClient
   ) {}
 
-  getCohostData() {
-    return this.http.get(`http://localhost:8080/api/v1/cohostdata/15`);
+  getCohostData(id : number) {
+    return this.http.get(`http://localhost:8080/api/v1/cohostdata/`+ id);
   }
 
 }
