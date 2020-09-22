@@ -7,8 +7,8 @@
 .ttd-btn-container{
     float:right;
 }
-.inner-ttd-container {
-}
+/* .inner-ttd-container {
+} */
 #card-ttd {
     height: 400px;
     margin-top: 40px;
@@ -22,4 +22,9 @@
 #pag-ttd-clickable{
     overflow-x: scroll;
     scroll-behavior: smooth;
+  }
+
+
+  .slideRightSome{
+      margin:0 0 0 80px;
   }
