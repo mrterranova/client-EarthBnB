@@ -43,8 +43,9 @@ import { CityComponent } from './location/city/city.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
+import { ListingInfoService } from './services/listingInfo.service';
 import { FooterComponent } from './footer/footer.component';
-import { BrianTtdComponent } from './brian-ttd/brian-ttd.component'
+import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
 import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 
@@ -101,6 +102,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CohostDataService,
     TtkDataService,
     ReviewsService,
+    ListingInfoService,
   ],
 
   bootstrap: [AppComponent],

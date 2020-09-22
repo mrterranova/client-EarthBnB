@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-amenities-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./amenities-info.component.css']
 })
 export class AmenitiesInfoComponent implements OnInit {
+  // tslint:disable-next-line: no-input-rename
+  @Input('amenitiesdata') amenitiesData: Data;
 
   constructor() { }
 
