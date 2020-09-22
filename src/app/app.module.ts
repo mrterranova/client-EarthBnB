@@ -42,6 +42,7 @@ import { LocationComponent } from './location/location.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
+import { ListingInfoService } from './services/listingInfo.service';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { DirectoryComponent } from './directory/directory.component';
     CohostDataService,
     TtkDataService,
     ReviewsService,
+    ListingInfoService,
   ],
 
   bootstrap: [AppComponent],
