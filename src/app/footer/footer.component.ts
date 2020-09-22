@@ -17,6 +17,7 @@ export class FooterComponent implements OnInit {
   public location;
   public locates = {};
   public lArr = [];
+  public state = "";
 
   ngOnInit(): void {
     this.getLocate(this.route.snapshot.params.id);
@@ -26,19 +27,57 @@ export class FooterComponent implements OnInit {
   getLocate(id: number) {
     this.mptsService.getLocate(id).subscribe( loc => {
       this.location = loc;
+      this.fullStateName(this.location.state_territory)
     });
   }
 
   getLocates() {
     this.mptsService.getLocates().subscribe((data) => {
       this.locates = data;
-    //   var temp = [];
-    //   this.locates.map(val => temp.push(val.state_territory));
-    //   this.lArr = temp.filter((c, index) => {
-    //     return temp.indexOf(c) === index;
-    //   })
-    //   console.log(this.lArr)
      });
+   }
+
+   fullStateName( state ) {
+     switch (state){
+       case "AL":
+         this.state = "Alabama";
+         break;
+       case "AK":
+         this.state = "Alaska";
+         break;
+       case "FL":
+         this.state = "Florida";
+         break;
+       case "GA":
+         this.state = "Georgia";
+         break;
+       case "CO":
+         this.state = "Colorado";
+         break;
+       case "NY":
+         this.state = "New York";
+         break;
+       case "CA":
+         this.state = "California";
+         break;
+       case "MO":
+         this.state = "Missouri";
+       case "VT":
+         this.state = "Vermont";
+         break;
+       case "SD":
+         this.state = "South Dakota";
+         break;
+       case "TN":
+         this.state = "Tennessee";
+         break;
+       case "WY":
+         this.state = "Wyoming";
+         break;
+       case "TX":
+         this.state = "Texas";
+         break;
+     }
    }
   
 }
