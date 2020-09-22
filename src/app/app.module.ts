@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 import { AppComponent } from './app.component';
 
 import { BrianPhotoComponent } from './brian-photo/brian-photo.component';
@@ -38,12 +36,18 @@ import { QuickInfoComponent } from './listingInfo/quick-info/quick-info.componen
 import { BioBlurbInfoComponent } from './listingInfo/bio-blurb-info/bio-blurb-info.component';
 import { SleepingArrangementsInfoComponent } from './listingInfo/sleeping-arrangements-info/sleeping-arrangements-info.component';
 import { AmenitiesInfoComponent } from './listingInfo/amenities-info/amenities-info.component';
-import { LocationComponent } from './location/location.component';
+import { LocationComponent } from './location/location/location.component';
+import { MapComponent } from './location/map/map.component';
+import { PointsComponent } from './location/points/points.component';
+import { CityComponent } from './location/city/city.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
 import { ListingInfoService } from './services/listingInfo.service';
-
+import { FooterComponent } from './footer/footer.component';
+import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
+import { HeaderComponent } from './header/header.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -67,6 +71,9 @@ import { ListingInfoService } from './services/listingInfo.service';
     MptsComponentComponent,
     CardMptsComponent,
     LocationComponent,
+    MapComponent,
+    PointsComponent,
+    CityComponent,
     ListingInfoContainerComponent,
     TitleInfoComponent,
     StayDescriptorComponent,
@@ -76,9 +83,18 @@ import { ListingInfoService } from './services/listingInfo.service';
     AmenitiesInfoComponent,
     HostcohostComponent,
     DirectoryComponent,
+    HeaderComponent,
     ReviewsComponent,
+    FooterComponent,
+    BrianTtdComponent
   ],
-  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    HttpClientModule,
+    AppRoutingModule,
+    GoogleMapsModule,
+  ],
 
   providers: [
     HostDataService,

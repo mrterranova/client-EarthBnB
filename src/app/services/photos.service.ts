@@ -14,4 +14,12 @@ export class PhotosService {
   getPictureById(id: number) {
     return this.http.get(`http://localhost:8080/api/v1/photos/` + id);
   }
+
+  getTTds() {
+    return this.http.get(`http://localhost:8080/api/v1/ttd`);
+  }
+
+  getLocationByID(id:number){
+    return this.http.get(`http://localhost:8080/api/v1/mpts/`+id);
+  }
 }

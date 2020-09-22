@@ -1,0 +1,39 @@
+<div class="ttd-container">
+  <div class="ttd-btn-container">
+    <span class="mpts-page-count">
+      <!-- Page number logic -->
+      <span id="pgnumb1">1</span>
+      / <span id="pgnumb2"></span></span
+    >
+    <button class="ttd-pg-btn-left" (click)="sLeft()">Left</button> 
+    <button class=ttd-pg-btn-right (click)="sRight()">Right</button>
+  </div>
+  <div
+    class="clickable"
+    style="overflow-x: auto; width: 87vw"
+    id="pag-ttd-clickable"
+  >
+  <div class="container inner-ttd-container" *ngFor="let todo of locByState" [ngStyle]="{ width: dynamicWidth() }">
+    <div
+      class="card"
+      id="card-ttd"
+      style="width: 18rem; margin-right: 1.5rem; float: left"
+    >
+      <img
+        class="card-img-top"
+        id="ttd-img"
+        src="{{ todo.img }}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<hr />
