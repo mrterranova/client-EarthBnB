@@ -86,7 +86,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HeaderComponent,
     ReviewsComponent,
     FooterComponent,
-    BrianTtdComponent
+    BrianTtdComponent,
   ],
   imports: [
     BrowserModule,
