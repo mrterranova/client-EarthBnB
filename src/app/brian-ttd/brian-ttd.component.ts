@@ -33,7 +33,7 @@ export class BrianTtdComponent implements OnInit {
   }
 
   findingState(state) {
-    console.log('state', state.state_territory);
+    // console.log('state', state.state_territory);
     this.getTTDs(state.state_territory);
   }
 
