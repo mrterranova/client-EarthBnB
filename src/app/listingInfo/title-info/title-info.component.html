@@ -1,10 +1,10 @@
 <div class="titleContainer">
-  <div class="child"><h2>{{title}}</h2></div>
-  <div class="child">{{rating}}</div>
+  <div class="child"><h3>{{ listingData.title }}</h3></div>
+  <div class="child">⭐{{ " " + listingData.rating }}</div>
   <div class="child">.</div>
-  <div class="child">{{hostLevel}}</div>
+  <div class="child">{{ listingData.superHost == 1 ? 'superhost' : '' }}</div>
   <div class="child">.</div>
-  <div class="child"><a href="http://">{{listingLocation}}</a> </div>
+  <div class="child"><a href="http://">{{ listingData.city + ", " + listingData.stateTerritory + ", " + listingData.country }}</a> </div>
   <div class="child pushRight"><a href="http://">📩 Share</a></div>
   <div class="child "><a href="http://">❤ Save</a></div>
 </div>

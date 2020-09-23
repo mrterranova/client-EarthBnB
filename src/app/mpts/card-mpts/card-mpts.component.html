@@ -25,11 +25,11 @@
     <!-- </form> -->
   </div>
   <!-- Image is not in it's own div -->
-  <a href="/rooms/{{ locate.id }}">
+  <a href="/rooms/{{ locate.id }}" id="mptsa">
     <img class="mpts-img" src="{{ img.pic1url }}" alt="{{ img.pic1alt }}" />
   </a>
   <!-- Beginning 1st line EarthBnB -->
-  <a href="/rooms/{{ locate.id }}">
+  <a href="/rooms/{{ locate.id }}" id="mptsa">
     <div class="">
       <span class="mpts-star">
         <svg
@@ -45,26 +45,26 @@
         </svg>
       </span>
       <!-- Section based upon reviews and switching parameters - 1st line of text EarthBnB -->
-      <!-- <span class="mpts-ratings" *ngIf="revarr[locate.id] > 2">{{
+      <span class="mpts-ratings" *ngIf="makeInt(revarr[locate.id])> 2">{{
         locate.rating
       }}</span>
-      <span class="mpts-num-reviews" *ngIf="revarr[locate.id] == null">
+      <span class="mpts-num-reviews" *ngIf="makeInt(revarr[locate.id]) == null">
         New</span
       >
-      <span class="mpts-num-reviews" *ngIf="revarr[locate.id] == 1">
+      <span class="mpts-num-reviews" *ngIf="makeInt(revarr[locate.id]) == 1">
         1 review
       </span>
-      <span class="mpts-num-reviews" *ngIf="revarr[locate.id] == 2">
+      <span class="mpts-num-reviews" *ngIf="makeInt(revarr[locate.id]) == 2">
         2 reviews
       </span>
-      <span class="mpts-num-reviews" *ngIf="revarr[locate.id] > 2"
+      <span class="mpts-num-reviews" *ngIf="makeInt(revarr[locate.id]) > 2"
         >({{ revarr[locate.id] }})</span
-      > -->
+      >
     </div>
   </a>
   <!-- Remaining details about the renting space - 2nd line of text EarthBnB -->
   <div class="mpts-location-details">
-    <a href="/rooms/{{ locate.id }}">
+    <a href="/rooms/{{ locate.id }}" id="mptsa">
       <div class="mpts-details">
         {{ locate.roomspace }} &#183; {{ locate.beds }}
         <span *ngIf="locate.beds == 1"> bed</span>

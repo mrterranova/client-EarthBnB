@@ -45,11 +45,12 @@ import { CityComponent } from './location/city/city.component';
 import { ReviewsComponent } from './Reviews/reviews.component';
 import { ReviewsService } from './services/reviews.service';
 import { DirectoryComponent } from './directory/directory.component';
-import { HeaderComponent } from './header/header.component';
+import { ListingInfoService } from './services/listingInfo.service';
 import { FooterComponent } from './footer/footer.component';
+import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
+import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CalenderComponent } from './calender/calender.component';
-
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { CalenderComponent } from './calender/calender.component';
     ReviewsComponent,
     FooterComponent,
     CalenderComponent,
+    BrianTtdComponent,
   ],
   imports: [ 
     FormsModule,  
@@ -106,6 +108,7 @@ import { CalenderComponent } from './calender/calender.component';
     CohostDataService,
     TtkDataService,
     ReviewsService,
+    ListingInfoService,
   ],
 
   bootstrap: [AppComponent],

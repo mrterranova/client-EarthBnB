@@ -61,12 +61,17 @@ constructor(private mptsService: MptsServiceService, private route: ActivatedRou
   
   fillup(id){
     //works only to fill the star - does not unfill star
-    if(document.getElementById("heart"+id).dataset.toggle == "off"){
+    // if(document.getElementById("heart"+id).dataset.toggle == "off"){
       document.getElementById("heart"+id).style.fill = "#59ff59";
       document.getElementById("heart"+id).dataset.toggle = "on";
-    } else {
-      document.getElementById("heart"+id).style.fill = "rgba(0, 0, 0, 0.5);";
-      document.getElementById("heart"+id).dataset.toggle = "off";
-    }
+    // } else {
+    //   document.getElementById("heart"+id).style.fill = "rgba(0, 0, 0, 0.5);";
+    //   document.getElementById("heart"+id).dataset.toggle = "off";
+    // }
   };
+
+  //because it was whining on the ngIf reviews that it wasn't a number
+  makeInt(reviews){
+    return parseInt(reviews);
+  }
 }
