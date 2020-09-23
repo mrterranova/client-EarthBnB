@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -46,6 +48,7 @@ import { DirectoryComponent } from './directory/directory.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { CalenderComponent } from './calender/calender.component';
 
 
 @NgModule({
@@ -85,8 +88,11 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HeaderComponent,
     ReviewsComponent,
     FooterComponent,
+    CalenderComponent,
   ],
-  imports: [
+  imports: [ 
+    FormsModule,  
+    MbscModule, 
     BrowserModule,
     RouterModule,
     HttpClientModule,
