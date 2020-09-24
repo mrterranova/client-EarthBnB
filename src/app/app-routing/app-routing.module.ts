@@ -4,7 +4,7 @@ import { DirectoryComponent } from '../directory/directory.component';
 import { MainpgComponent } from '../mainpg/mainpg.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'rooms/1', pathMatch: 'full' },
+  { path: '', redirectTo: 'all', pathMatch: 'full' },
   {
     path: 'rooms/:id',
     component: DirectoryComponent,
