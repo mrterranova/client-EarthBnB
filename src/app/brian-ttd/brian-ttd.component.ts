@@ -52,7 +52,7 @@ export class BrianTtdComponent implements OnInit {
   sLeft() {
     //More dynamic solution but not fully fleshed out
     // document.getElementById("pag-mpts-clickable").scrollLeft -= window.innerWidth-175;
-    document.getElementById('pag-ttd-clickable').scrollLeft -= 1248;
+    document.getElementById('pag-ttd-clickable').scrollLeft -= 248;
 
     //this moves on computers full screen - hard coded solution
     var count = parseInt(document.getElementById('pgnumb1').innerHTML) - 1;
@@ -60,11 +60,11 @@ export class BrianTtdComponent implements OnInit {
     if (window.innerWidth == 1248) {
       console.log('-', window.innerWidth);
       count = parseInt(document.getElementById('pgnumb2').innerHTML);
-      document.getElementById('pag-ttd-clickable').scrollLeft = 4992;
+      document.getElementById('pag-ttd-clickable').scrollLeft = 292;
       //if the count reachs 0 then change the page count to the number of pages and scroll to the last page -hardcoded.
     } else if (count === 0) {
       count = parseInt(document.getElementById('pgnumb2').innerHTML);
-      document.getElementById('pag-ttd-clickable').scrollLeft = 4992;
+      document.getElementById('pag-ttd-clickable').scrollLeft = 2992;
     }
     document.getElementById('pgnumb1').innerHTML = count + '';
   }
@@ -75,7 +75,7 @@ export class BrianTtdComponent implements OnInit {
     // document.getElementById("pag-mpts-clickable").scrollLeft += window.innerWidth-175;
 
     //this moves on computers full screen - hard coded solution
-    document.getElementById('pag-ttd-clickable').scrollLeft += 1248;
+    document.getElementById('pag-ttd-clickable').scrollLeft += 448;
     // keeps track of the page numbering through variable count
     var count = 1 + parseInt(document.getElementById('pgnumb1').innerHTML);
     //if the count reaches the end of the document, then make sure the page number does not exceed the number of pages
