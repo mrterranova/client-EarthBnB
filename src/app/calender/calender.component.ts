@@ -15,8 +15,10 @@ export interface CalendarDate {
 })
 export class CalenderComponent implements OnInit {
   public currentDate: moment.Moment;
+  public nextlyMonth: moment.Moment = moment().add(1,'M')
   public namesOfDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   public weeks: Array<CalendarDate[]> = [];
+  public weeks2: Array<CalendarDate[]> = [];
 
   public selectedDate;
   public show: boolean;
@@ -29,7 +31,7 @@ export class CalenderComponent implements OnInit {
 
   ngOnInit() {
     this.currentDate = moment();
-    this.selectedDate = moment(this.currentDate).format('DD/MM/YYYY');
+    this.selectedDate = moment(this.currentDate.add(1,'d')).format('DD/MM/YYYY');
     this.generateCalendar();
   }
 
@@ -40,6 +42,9 @@ export class CalenderComponent implements OnInit {
       weeks.push(dates.splice(0, 7));
     }
     this.weeks = weeks;
+  }
+  private generateCalender1(): void {
+    
   }
 
   private fillDates(currentMoment: moment.Moment) {
@@ -91,7 +96,6 @@ export class CalenderComponent implements OnInit {
 
   public selectDate(date: CalendarDate) {
     this.selectedDate = moment(date.mDate).format('DD/MM/YYYY');
-
     this.generateCalendar();
     this.show = !this.show;
   }
