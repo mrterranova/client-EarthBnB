@@ -13,8 +13,8 @@
     style="overflow-x: auto; width: 87vw"
     id="pag-ttd-clickable"
   >
-  <h3 class="slideRightSome" >Things to do</h3>
-  <div class="container inner-ttd-container" *ngFor="let todo of locByState" [ngStyle]="{ width: dynamicWidth() }">
+  <h3 class="slideRightSome" >Things to do nearby</h3>
+  <div class="inner-ttd-container" *ngFor="let todo of locByState" [ngStyle]="{ width: dynamicWidth() }">
     <div
       class="card"
       id="card-ttd"
@@ -26,12 +26,13 @@
         src="{{ todo.img }}"
         alt="Card image cap"
       />
+      <h5 class="smidgeRight" > * {{todo.rating}} ({{todo.reviews}})</h5>
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title">{{todo.title}}</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {{todo.info}}
         </p>
+        <h6>From $ {{todo.price}} / per person</h6>
       </div>
     </div>
   </div>
