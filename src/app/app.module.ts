@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -48,7 +50,9 @@ import { FooterComponent } from './footer/footer.component';
 import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
 import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { CalenderComponent } from './calender/calender.component';
 import { MainpgComponent } from './mainpg/mainpg.component';
+
 
 @NgModule({
   declarations: [
@@ -87,10 +91,13 @@ import { MainpgComponent } from './mainpg/mainpg.component';
     HeaderComponent,
     ReviewsComponent,
     FooterComponent,
+    CalenderComponent,
     BrianTtdComponent,
     MainpgComponent,
   ],
-  imports: [
+  imports: [ 
+    FormsModule,  
+    MbscModule, 
     BrowserModule,
     RouterModule,
     HttpClientModule,
