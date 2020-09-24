@@ -51,6 +51,8 @@ import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
 import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CalenderComponent } from './calender/calender.component';
+import { MainpgComponent } from './mainpg/mainpg.component';
+
 
 @NgModule({
   declarations: [
@@ -91,6 +93,7 @@ import { CalenderComponent } from './calender/calender.component';
     FooterComponent,
     CalenderComponent,
     BrianTtdComponent,
+    MainpgComponent,
   ],
   imports: [ 
     FormsModule,  
