@@ -48,6 +48,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrianTtdComponent } from './brian-ttd/brian-ttd.component';
 import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MainpgComponent } from './mainpg/mainpg.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ReviewsComponent,
     FooterComponent,
     BrianTtdComponent,
+    MainpgComponent,
   ],
   imports: [
     BrowserModule,

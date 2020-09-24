@@ -92,7 +92,7 @@ export class BrianTtdComponent implements OnInit {
 
   //trying out dynamic styling - it works!
   dynamicWidth() {
-    console.log(this.len / 4);
+    // console.log(this.len / 4);
     this.endPgCount(this.len / 4);
     return this.num * (this.len / 4) + 'rem';
   }
