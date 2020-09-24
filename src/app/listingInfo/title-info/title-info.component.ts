@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TitlelistingService } from '../titlelisting-services/titlelisting.service'
+
 
 @Component({
   selector: 'app-title-info',
@@ -7,22 +9,36 @@ import { Data } from '@angular/router';
   styleUrls: ['./title-info.component.css']
 })
 export class TitleInfoComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('listingdata') listingData: Data;
 
-  public title: string = 'Title of Listing, Interpolated and also stuff - /awesome';
-  public rating: string = '⭐ 4.86 (68)';
-  public hostLevel: string = 'Superhost';
-  public listingLocation: string = 'Morongo Valley, California, United States';
+  //global variables
+  public location; 
+  public reviews;
+  public revCount = 0;
 
-  constructor() {}
-
+  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
   ngOnInit(): void {
-    this.getListings();
+    this.getLoc(this.route.snapshot.params.id);
+    this.getReviews();
   }
 
-  getListings = () => {
-    console.log(`oninitfromtitle-infocomponent`);
+  getLoc(id: number){
+    this.tlService.getLoc(id).subscribe(data => this.location = data);
+  }
+
+  getReviews(){
+    this.tlService.getReviews().subscribe(
+      data => {
+        this.reviews = data;
+        this.revlogic(data);
+    });
+  }
+
+  revlogic(revs){
+    revs.map( rev => {
+      if(rev.locationReviewed == this.location.id){
+        this.revCount++;
+      }
+    })
   }
 
 }

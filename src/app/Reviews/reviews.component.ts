@@ -26,8 +26,6 @@ export class ReviewsComponent implements OnInit {
     //also this way
     this.route.paramMap.subscribe((params) => {
       this.locationId = +params.get('id');
-
-      console.log(`locationid = ${this.locationId}`);
     });
 
     this.getReviewsByLocation();
@@ -42,8 +40,7 @@ export class ReviewsComponent implements OnInit {
         this.reviews = data;
         this.categoryArr = this.processReviewCatAvg(this.reviews);
       },
-      (err) => console.error(err),
-      () => console.log(this.reviews, this.categoryArr)
+      (err) => console.error(err)
     );
   }
 
@@ -53,8 +50,7 @@ export class ReviewsComponent implements OnInit {
         this.reviews = data;
         this.categoryArr = this.processReviewCatAvg(this.reviews);
       },
-      (err) => console.error(err),
-      () => console.log(this.reviews, this.categoryArr)
+      (err) => console.error(err)
     );
   }
 
@@ -85,7 +81,6 @@ export class ReviewsComponent implements OnInit {
       +catCheck.toFixed(2),
       +catVal.toFixed(2)
     );
-    console.log(arrCategories);
     return this.getCategoryAvgs(arrCategories, data.length);
   }
 
@@ -96,7 +91,6 @@ export class ReviewsComponent implements OnInit {
     });
 
     this.totalReview = this.getReviewTotal(...avgArray) / 6;
-    console.log(`totalReview before divide: ${this.totalReview}`);
 
     return avgArray;
   }
