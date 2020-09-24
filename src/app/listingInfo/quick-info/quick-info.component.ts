@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-quick-info',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quick-info.component.css']
 })
 export class QuickInfoComponent implements OnInit {
+  // tslint:disable-next-line: no-input-rename
+  @Input('listingdata') listingData: Data;
+
   listingType: string = 'Entire Home';
   listingTypeDescriptor: string = "You'll have the bungalow to yourself!";
   hostName: string = 'Peggy & Christopher';
