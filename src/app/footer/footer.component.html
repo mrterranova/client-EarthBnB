@@ -1,15 +1,21 @@
+<script>
+  $("[rel=tooltip]").tooltip({html:true});
+</script>
 <div class="footer-container">
-  <h2>Explore other options in and around {{ state }}</h2>
+  <p>Explore other options in and around {{ state }}</p>
   <p>More places to stay at EarthBnB:</p>
-  <p>Apartments · Bed and breakfasts · Lofts · Villas · Condominiums</p>
+  <p class="housing-options">Apartments · Bed and breakfasts · Lofts · Villas · Condominiums</p>
     <table class="footer-table1">
       <tr class="footer-t1-row footer-t1-r1">
-        <td>Alaska</td>
-        <td>Georgia</td>
+        <div *ngFor="let same of sameArr" rel="tooltip" data-toggle="tooltip" data-html= "true"
+        title='There are currently {{ sameArr.length - 1 }} other listings to choose from in this area!'>
+          <td>{{ same.city }}</td>
+        </div>
+        <!-- <td>Georgia</td>
         <td>North Carolina</td>
-        <td>South Dakota</td>
+        <td>South Dakota</td> -->
       </tr>
-      <tr class="footer-t1-row footer-t1-r2">
+      <!-- <tr class="footer-t1-row footer-t1-r2">
         <td>California</td>
         <td>Missouri</td>
         <td>Tennessee</td>
@@ -26,7 +32,7 @@
         <td></td>
         <td></td>
         <td></td>
-      </tr>
+      </tr> -->
     </table>
 </div>
 <hr />
@@ -184,3 +190,4 @@
     </div>
   </div>
 </div>
+
