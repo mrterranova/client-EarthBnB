@@ -31,7 +31,7 @@ export class BrianTtdComponent implements OnInit {
       this.location = data;
       this.findingState(data);
     });
-    console.log(this.locByState);
+    // console.log(this.locByState);
   }
 
   findingState(state) {
@@ -99,8 +99,8 @@ export class BrianTtdComponent implements OnInit {
 
   endPgCount(pgcount) {
     document.getElementById('pgnumb2').innerHTML = Math.ceil(pgcount - 21) + '';
-    console.log('page count down HERE !!!!');
-    console.log(pgcount);
+    // console.log('page count down HERE !!!!');
+    // console.log(pgcount);
   }
 
   // freebie(){
