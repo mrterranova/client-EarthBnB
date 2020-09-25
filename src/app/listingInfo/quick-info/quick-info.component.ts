@@ -15,6 +15,8 @@ export class QuickInfoComponent implements OnInit {
  public revCount = 0;
  public hostmessage;
  public spacediv = [];
+ public roomspace;
+ public house;
 
  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
  ngOnInit(): void {
@@ -24,12 +26,14 @@ export class QuickInfoComponent implements OnInit {
  getLoc(id: number){
    this.tlService.getLoc(id).subscribe(data => {
      this.location = data;
-     console.log(data);
+     this.roomspace = this.location.roomspace;
     });
  }
  getHostMessage(id: number){
    this.tlService.getHostMessage(id).subscribe(data =>{ 
      this.hostmessage = data; 
+     this.house = this.hostmessage.entirehouse;
+     console.log(data)
      this.spaceDiv(this.hostmessage.hostspace);
     })
 
