@@ -7,6 +7,16 @@
   color: dimgrey;
 }
 
+.join-family {
+  color: dimgrey;
+  text-decoration: underline;
+}
+
+.join-family:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
 .housing-options {
   color: dimgrey;
   text-decoration: none;

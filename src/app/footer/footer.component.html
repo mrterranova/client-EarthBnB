@@ -1,39 +1,23 @@
 <script>
   $("[rel=tooltip]").tooltip({html:true});
 </script>
-<div class="footer-container">
-  <p>Explore other options in and around {{ state }}</p>
+<div class="footer-container container">
+  <h3>Explore other options in and around <span rel="tooltip" data-toggle="tooltip" title="There are currently {{ sameArr.length }} listings in this state!" class="join-family">{{ state }}</span></h3>
   <p>More places to stay at EarthBnB:</p>
   <p class="housing-options">Apartments · Bed and breakfasts · Lofts · Villas · Condominiums</p>
-    <table class="footer-table1">
+    <table *ngIf="sameArr && sameArr.length; else lookingForMore"  class="footer-table1">
       <tr class="footer-t1-row footer-t1-r1">
         <div *ngFor="let same of sameArr" rel="tooltip" data-toggle="tooltip" data-html= "true"
         title='There are currently {{ sameArr.length - 1 }} other listings to choose from in this area!'>
           <td>{{ same.city }}</td>
         </div>
-        <!-- <td>Georgia</td>
-        <td>North Carolina</td>
-        <td>South Dakota</td> -->
       </tr>
-      <!-- <tr class="footer-t1-row footer-t1-r2">
-        <td>California</td>
-        <td>Missouri</td>
-        <td>Tennessee</td>
-        <td>Vermont</td>
-      </tr>
-      <tr class="footer-t1-row footer-t1-r3">
-        <td>Colorado</td>
-        <td>New York</td>
-        <td>Texas</td>
-        <td>Wyoming</td>
-      </tr>
-      <tr class="footer-t1-row footer-t1-r4">
-        <td>Florida</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr> -->
     </table>
+    <ng-template #lookingForMore>
+      <h2 class="looking">
+        We are currently looking for more hosts and locations in this area. Join our <span class="join-family">family</span>!
+      </h2>
+    </ng-template>
 </div>
 <hr />
 <div class="footer-container">
@@ -95,7 +79,7 @@
   </table>
 </div>
 <hr />
-<div class="footer-container">
+<div class="footer-container container">
   <div class="footer-tag-left">
     &copy;Earthbnb, Inc. All rights reserved &#183; Privacy &#183; Terms &#183;
     Sitemap
