@@ -14,6 +14,12 @@ export class TitleInfoComponent implements OnInit {
   public location; 
   public reviews;
   public revCount = 0;
+  public title;
+  public rating;
+  public superhost;
+  public city;
+  public state;
+  public country;
 
   constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
   ngOnInit(): void {
@@ -22,7 +28,14 @@ export class TitleInfoComponent implements OnInit {
   }
 
   getLoc(id: number){
-    this.tlService.getLoc(id).subscribe(data => this.location = data);
+    this.tlService.getLoc(id).subscribe(data => {this.location = data; 
+      this.title = this.location.title;
+      this.rating = this.location.rating;
+      this.superhost = this.location.superhost;
+      this.city = this.location.city;
+      this.state = this.location.state_territory;
+      this.country = this.location.country;
+    });
   }
 
   getReviews(){
