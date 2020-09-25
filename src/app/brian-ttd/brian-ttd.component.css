@@ -1,30 +1,45 @@
 .ttd-container {
-    width:100%;
-    height: 460px;
-    background-color: rgb(247,247,247);
-    top:0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(247, 247, 247);
+  top: 0;
 }
-.ttd-btn-container{
-    float:right;
+
+.ttd-btn-container {
+  float: right;
 }
-/* .inner-ttd-container {
-} */
+
+.inner-ttd-container {
+  margin: 0 0 0 90px;
+  max-height: 500px;
+  width: 100%;
+}
+
 #card-ttd {
-    height: 400px;
-    margin-top: 40px;
+  height: auto;
+  margin-top: 40px;
 }
 
 #ttd-img {
-    height:200px;
-    object-fit: cover;
+  height: 450px;
+  max-width: 340px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-#pag-ttd-clickable{
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-  }
+.middleCenter {
+  text-align: center;
+}
 
+#pag-ttd-clickable {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
 
-  .slideRightSome{
-      margin:0 0 0 80px;
-  }
+.slideRightSome {
+  margin: 0 0 0 80px;
+}
+
+.smidgeRight {
+  margin: 10px 0 0 20px;
+}
