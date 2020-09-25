@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { TitlelistingService } from '../titlelisting-services/titlelisting.service'
+
 
 @Component({
   selector: 'app-stay-descriptor',
@@ -7,21 +9,21 @@ import { Data } from '@angular/router';
   styleUrls: ['./stay-descriptor.component.css']
 })
 export class StayDescriptorComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('listingdata') listingData: Data;
 
-  stayDescriptor: string = 'Cute Bungalow Stay';
-  hostName: string = 'Adam and Liz';
-  hostImage: string = 'HostImage';
-  guestNum: string = '4 guests';
-  bedroomNum: string = '1 bedroom';
-  bedCountNum: string = '2 beds';
-  bathNum: string = '1 bath';
-
-
-  constructor() { }
+  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
+  public location;
+  public host;
 
   ngOnInit(): void {
+    this.getLoc(this.route.snapshot.params.id);
+    this.getHost(this.route.snapshot.params.id);
   }
 
+  getLoc(id: number){
+    this.tlService.getLoc(id).subscribe(data => this.location = data);
+  }
+
+  getHost(id: number){
+    this.tlService.getHost(id).subscribe(data => {this.host = data;})
+  }
 }

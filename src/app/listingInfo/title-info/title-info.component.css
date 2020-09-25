@@ -4,6 +4,8 @@
   flex-direction: row;
   width: 100%;
   align-items: baseline;
+  height:100px;
+  margin-bottom: -50px;
 
 }
 .pushRight {
