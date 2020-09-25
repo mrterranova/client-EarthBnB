@@ -16,5 +16,16 @@
 }
 
 .pushRight {
-  margin-left: auto;
+  float: right;
+}
+.info-title {
+  width:100%;
+  height: 1px;
+}
+
+.hostProfilePicImage{
+  height: 56px;
+  width: 56px;
+  border-radius: 100px;
+  object-fit: cover;
 }

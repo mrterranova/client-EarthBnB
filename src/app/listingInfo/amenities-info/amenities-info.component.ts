@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { TitlelistingService } from '../titlelisting-services/titlelisting.service'
 
 @Component({
   selector: 'app-amenities-info',
@@ -7,12 +8,17 @@ import { Data } from '@angular/router';
   styleUrls: ['./amenities-info.component.css']
 })
 export class AmenitiesInfoComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('amenitiesdata') amenitiesData: Data;
+  public amenities;
+  public count= 0;
 
-  constructor() { }
+  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getAmeni(this.route.snapshot.params.id)
+  }
+
+  getAmeni(id: number){
+    this.tlService.getAmeni(id).subscribe( data => {this.amenities = data; this.amenities.map(tc => {if(tc) this.count++})})
   }
 
 }

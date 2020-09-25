@@ -27,5 +27,23 @@ export class TitlelistingService {
       return this.http.get('http://localhost:8080/api/v1/sleepingarrs/');
     }
 
+   getReviews(){
+     return this.http.get('http://localhost:8080/api/v1/reviews/');
+   }
    
+   getHost(id: number){
+     return this.http.get('http://localhost:8080/api/v1/hostdata/' + id);
+   }
+
+   getMessage(id: number){
+     return this.http.get('http://localhost:8080/api/v1/hostmessage' + id)
+   }
+
+   getHostMessage(id: number){
+     return this.http.get('http://localhost:8080/api/v1/hostmessage/' + id )
+   }
+
+   getAmeni(id: number){
+     return this.http.get('http://localhost:8080/api/v1/amenities/'+id)
+   }
 }
