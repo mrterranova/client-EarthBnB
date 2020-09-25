@@ -28,7 +28,6 @@ export class ListingInfoContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('listingOuterContainer oninit fired');
     this.loadListingData(this.route.snapshot.params.id);
     this.loadAmenitiesData(this.route.snapshot.params.id);
     this.loadSleepingArrData(this.route.snapshot.params.id);
