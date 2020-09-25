@@ -135,11 +135,11 @@
 }
 
 .galNavBtnBack {
-  margin: 100px 10%;
+  margin: 105px 10%;
 }
 
 .galNavBtnForward {
-  margin: -290px 14% 100px 80%;
+  margin: -294px 14% 100px 80%;
 }
 
 /* words under photos */
@@ -232,8 +232,6 @@ all buttons same */
     width: 70%;
     max-height: 300px;
     margin: 10px;
-    padding:10px;
+    padding: 10px;
   }
-
-
 }

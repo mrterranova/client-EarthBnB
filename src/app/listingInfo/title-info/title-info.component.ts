@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-title-info',
@@ -6,19 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title-info.component.css']
 })
 export class TitleInfoComponent implements OnInit {
-  title: string = 'Title of Listing, Interpolated and also stuff - /awesome';
-  rating: string = '⭐ 4.86 (68)';
-  hostLevel: string = 'Superhost';
-  listingLocation: string = 'Morongo Valley, California, United States';
+  // tslint:disable-next-line: no-input-rename
+  @Input('listingdata') listingData: Data;
 
-  constructor() { }
+  public title: string = 'Title of Listing, Interpolated and also stuff - /awesome';
+  public rating: string = '⭐ 4.86 (68)';
+  public hostLevel: string = 'Superhost';
+  public listingLocation: string = 'Morongo Valley, California, United States';
 
-  getListing = () => {
-    console.log('getListing() fired from OnInit!');
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    this.getListing();
+    this.getListings();
+  }
+
+  getListings = () => {
+    console.log(`oninitfromtitle-infocomponent`);
   }
 
 }

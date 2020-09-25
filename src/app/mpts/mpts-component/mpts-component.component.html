@@ -5,16 +5,15 @@
       <span class="mpts-page-count">
         <!-- Page number logic -->
         <span id="pgnum1">1</span>
-        / <span id="pgnum2">5</span></span
+        / <span id="pgnum2"></span></span
       >
       <!-- Button to scroll left - Please see ts file for logic -->
-      <button class="mpts-pg-btn mpts-pg-btn-left">
+      <button class="mpts-pg-btn mpts-pg-btn-left" (click)="scrollLeft()">
         <svg
           viewBox="0 0 18 18"
           role="presentation"
           aria-hidden="true"
           focusable="false"
-          (click)="scrollLeft()"
           style="height: 10px; width: 10px; display: block; fill: currentcolor"
         >
           <path
@@ -23,13 +22,12 @@
         </svg>
       </button>
       <!-- Button to scroll right - Please see ts file for logic -->
-      <button class="mpts-pg-btn mpts-pg-btn-right">
+      <button class="mpts-pg-btn mpts-pg-btn-right" (click)="scrollRight()">
         <svg
           viewBox="0 0 18 18"
           role="presentation"
           aria-hidden="true"
           focusable="false"
-          (click)="scrollRight()"
           style="height: 10px; width: 10px; display: block; fill: currentcolor"
         >
           <path
@@ -59,4 +57,4 @@
     </div>
   </div>
 </div>
-<hr/>
+<hr style="margin-top: 3px;"/>

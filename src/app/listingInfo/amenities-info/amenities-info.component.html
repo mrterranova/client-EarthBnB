@@ -1,49 +1,50 @@
 <div class="container">
   <div class="header">
-    <div class="amenityRow">
-      <div class="icon">
-        icon
-      </div>
-      <div class="p">
-        Wifi
-      </div>
+    <h3>Amenities</h3>
+  </div>
+  <div class="amenityRow">
+    <div class="icon">
+      icon
     </div>
-    <div class="amenityRow">
-      <div class="icon">
-        icon
-      </div>
-      <div class="p">
-        Wifi
-      </div>
+    <div class="p">
+      {{ !amenitiesData.laptopFriendly ? 'laptop friendly' : '' }}
     </div>
-    <div class="amenityRow">
-      <div class="icon">
-        icon
-      </div>
-      <div class="p">
-        Wifi
-      </div>
+  </div>
+  <div class="amenityRow">
+    <div class="icon">
+      icon
     </div>
-    <div class="amenityRow">
-      <div class="icon">
-        icon
-      </div>
-      <div class="p">
-        Wifi
-      </div>
+    <div class="p">
+      {{ !amenitiesData.cableTv ? 'cable tv' : '' }}
     </div>
-    <div class="amenityRow">
-      <div class="icon">
-        icon
-      </div>
-      <div class="p">
-        Wifi
-      </div>
+  </div>
+  <div class="amenityRow">
+    <div class="icon">
+      icon
     </div>
-    <div class="showMore">
-      <div class="button">
-        <button>Show all 37 amenities</button>
-      </div>
+    <div class="p">
+      {{ !amenitiesData.airConditioning ? 'air conditioning' : '' }}
+    </div>
+  </div>
+  <div class="amenityRow">
+    <div class="icon">
+      icon
+    </div>
+    <div class="p">
+      {{ !amenitiesData.essentials ? 'essentials' : '' }}
+    </div>
+  </div>
+  <div class="amenityRow">
+    <div class="icon">
+      icon
+    </div>
+    <div class="p">
+      {{ !amenitiesData.longTermStaysAllowed ? 'long term stays allowed' : '' }}
+    </div>
+  </div>
+  <div class="showMore">
+    <div class="button">
+      <button>Show all 37 amenities</button>
     </div>
   </div>
 </div>

@@ -1,29 +1,42 @@
 <div class="listingOuterContainer">
-  <!-- <p>aoli - listing info container for other components.</p> -->
+  <!-- I think lines 3,4-14 need to be separated from this component -->
+  <!-- <p>listingData.title = {{ listingData.title }}</p> -->
   <div class="listingInnerContainer">
-    <div class="infoSection">
-      <app-title-info></app-title-info>
+    <!-- <div class="infoSection">
+      <app-title-info
+        [listingdata]="listingData"
+      ></app-title-info>
     </div>
     <div class="infoSection">
-      <app-stay-descriptor></app-stay-descriptor>
-    </div>
+      <app-stay-descriptor
+        [listingdata]="listingData"
+      ></app-stay-descriptor>
+    </div> -->
 
     <!-- need photo gallery here so page flows / looks correct -->
-    <div class="photoGallery">
+    <!-- <div class="photoGallery">
       <app-brian-photo></app-brian-photo>
-    </div>
-    
+    </div> -->
+    <div style="width:100%;">
     <div class="infoSection">
-      <app-quick-info></app-quick-info>
+
+      <app-quick-info
+      [listingdata]="listingData"
+      ></app-quick-info>
     </div>
     <div class="infoSection">
-      <app-bio-blurb-info></app-bio-blurb-info>
+      <app-bio-blurb-info
+      [listingdata]="listingData"
+      ></app-bio-blurb-info>
     </div>
     <div class="infoSection">
       <app-sleeping-arrangements-info></app-sleeping-arrangements-info>
     </div>
     <div class="infoSection">
-      <app-amenities-info></app-amenities-info>
+      <app-amenities-info
+        [amenitiesdata]="amenitiesData"
+      ></app-amenities-info>
     </div>
   </div>
+</div>
 </div>
