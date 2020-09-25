@@ -17,7 +17,9 @@ export class FooterComponent implements OnInit {
   public location;
   public locates = {};
   public lArr = [];
+  public sameArr;
   public state = "";
+  public locsLength;
 
   ngOnInit(): void {
     this.getLocate(this.route.snapshot.params.id);
@@ -27,57 +29,67 @@ export class FooterComponent implements OnInit {
   getLocate(id: number) {
     this.mptsService.getLocate(id).subscribe( loc => {
       this.location = loc;
-      this.fullStateName(this.location.state_territory)
+      this.fullStateName(this.location.state_territory);
+      this.getSameStateLocates(this.location);
     });
   }
 
   getLocates() {
     this.mptsService.getLocates().subscribe((data) => {
       this.locates = data;
-     });
-   }
+      this.locsLength = Object.keys(data).length;
+    });
+  }
 
-   fullStateName( state ) {
-     switch (state){
-       case "AL":
-         this.state = "Alabama";
-         break;
-       case "AK":
-         this.state = "Alaska";
-         break;
-       case "FL":
-         this.state = "Florida";
-         break;
-       case "GA":
-         this.state = "Georgia";
-         break;
-       case "CO":
-         this.state = "Colorado";
-         break;
-       case "NY":
-         this.state = "New York";
-         break;
-       case "CA":
-         this.state = "California";
-         break;
-       case "MO":
-         this.state = "Missouri";
-       case "VT":
-         this.state = "Vermont";
-         break;
-       case "SD":
-         this.state = "South Dakota";
-         break;
-       case "TN":
-         this.state = "Tennessee";
-         break;
-       case "WY":
-         this.state = "Wyoming";
-         break;
-       case "TX":
-         this.state = "Texas";
-         break;
-     }
-   }
-  
+  getSameStateLocates(location) {
+    this.mptsService.getLocates().subscribe((data) => {
+      this.lArr = Object.values(data);
+      this.sameArr = this.lArr.filter(loc => loc.state_territory === location.state_territory && loc.id !== location.id);
+      // console.log(this.sameArr);
+    });
+  }
+
+  fullStateName( state ) {
+    switch (state){
+      case "AL":
+        this.state = "Alabama";
+        break;
+      case "AK":
+        this.state = "Alaska";
+        break;
+      case "FL":
+        this.state = "Florida";
+        break;
+      case "GA":
+        this.state = "Georgia";
+        break;
+      case "CO":
+        this.state = "Colorado";
+        break;
+      case "NY":
+        this.state = "New York";
+        break;
+      case "CA":
+        this.state = "California";
+        break;
+      case "MO":
+        this.state = "Missouri";
+      case "VT":
+        this.state = "Vermont";
+        break;
+      case "SD":
+        this.state = "South Dakota";
+        break;
+      case "TN":
+        this.state = "Tennessee";
+        break;
+      case "WY":
+        this.state = "Wyoming";
+        break;
+      case "TX":
+        this.state = "Texas";
+        break;
+    }
+  }
+
 }

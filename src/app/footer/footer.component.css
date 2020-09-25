@@ -1,15 +1,57 @@
 .footer-container {
    padding: 50px;
 }
+
+.state-span:hover {
+  cursor: pointer;
+  color: dimgrey;
+}
+
+.join-family {
+  color: dimgrey;
+  text-decoration: underline;
+}
+
+.join-family:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.housing-options {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+.housing-options:hover {
+  cursor: pointer;
+}
+
 .footer-table1 {
     width:90vw;
 }
+
+.footer-table1 td {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+.footer-table1 td:hover {
+  cursor: pointer;
+}
+
 .container {
     margin-top: 100px;
 }
 .footer-table2 {
     width:90vw;
 }
+
+.footer-table2 td:hover {
+  color: dimgrey;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .footer-tag-left {
     float: left;
 }
