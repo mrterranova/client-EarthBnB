@@ -14,7 +14,7 @@ export class BrianTtdComponent implements OnInit {
   public state;
   public num = 10;
   public len = 0;
-  public freeText = '';
+  public freeText = 'This is Free !';
 
   constructor(
     private ttdService: PhotosService,
@@ -31,7 +31,7 @@ export class BrianTtdComponent implements OnInit {
       this.location = data;
       this.findingState(data);
     });
-    // console.log(this.locByState);
+    console.log(this.locByState);
   }
 
   findingState(state) {
@@ -104,15 +104,15 @@ export class BrianTtdComponent implements OnInit {
   }
 
   fullHeart(id) {
-    document.getElementById('heartBWL' + id).style.fill = '#59ff59';
     console.log('clicked heart');
+    document.getElementById('heartBWL' + id).style.fill = '#59ff59';
   }
 
   // freebie(){
-  //   if(this.todos.price === 0){
+  //   if(this.todo.price === 0){
   //     this.freeText = "This is Free !"
   //   } else {
-  //     this.freeText = " From $  " + this.todos.price +" / per person"
+  //     this.freeText = " From $  " + this.todo.price +" / per person"
   //   }
   // }
 }

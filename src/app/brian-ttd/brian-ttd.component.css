@@ -13,6 +13,11 @@
   margin:0 1%;
 } */
 
+#pag-ttd-clickable {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
 .inner-ttd-container {
   margin: 0 0 0 90px;
   max-height: 500px;
@@ -62,17 +67,23 @@
   width: 20px;
 }
 
-#pag-ttd-clickable {
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-
 .slideRightSome {
   margin: 0 0 0 80px;
 }
 
 .smidgeRight {
   margin: 10px 0 0 20px;
+}
+
+.ttd-pg-btn-left,
+.ttd-pg-btn-right {
+  border-radius: 50%;
+  padding: 4px 10px;
+  margin: 0 12px;
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
 
 @media screen and (max-width: 850px) {
