@@ -55,10 +55,17 @@
 .footer-tag-left {
     float: left;
 }
+
+/* sorry couldn't help it ... needed this to be on one line and
+ not have the gram logo by itself under 
+ changed floater tag right width to 30% from 20%  */
+
 .footer-tag-right {
     float:right;
-    width:20%;
+    width:30%;
 }
 .footer-money {
     float: left;
 }
+
+
