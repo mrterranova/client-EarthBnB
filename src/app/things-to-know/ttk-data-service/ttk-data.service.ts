@@ -11,4 +11,8 @@ export class TtkDataService {
     return this.http.get(`http://localhost:8080/ttk/1`);
   }
 
+  getLoc(id:number) {
+    return this.http.get(`http://localhost:8080/api/v1/mpts/` + id)
+  }
+
 }

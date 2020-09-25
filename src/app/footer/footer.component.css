@@ -77,8 +77,14 @@
     float: left;
     display: flex;
 }
+
+/* sorry couldn't help it ... needed this to be on one line and
+ not have the gram logo by itself under 
+ changed floater tag right width to 30% from 20%  */
+
 .footer-tag-right {
     float:right;
+<<<<<<< HEAD
     width:50%;
     display: flex;
     justify-content: flex-end;
@@ -92,6 +98,9 @@
 .globe-english-us {
   flex: 2;
   padding: 10px;
+=======
+    width:30%;
+>>>>>>> 02c04d6f8201747ec84a438c9f37c3762c0061b7
 }
 
 .english-us-words {
@@ -101,3 +110,5 @@
 .footer-money {
     text-decoration: underline;
 }
+
+

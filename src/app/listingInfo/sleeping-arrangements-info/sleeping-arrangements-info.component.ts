@@ -12,6 +12,8 @@ export class SleepingArrangementsInfoComponent implements OnInit {
   public location; 
   public sleep;
   public sleeparr=[];
+  public bedcounter;
+
 
   constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class SleepingArrangementsInfoComponent implements OnInit {
     arrangements.map( arrange => {
       if (arrange.location == this.location.id){
         this.sleeparr.push(arrange)
+        this.bedcounter = this.sleeparr[0].bedcount;
       }
     })
   }

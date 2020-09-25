@@ -52,6 +52,7 @@ import { HeaderComponent } from './header/header.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CalenderComponent } from './calender/calender.component';
 import { MainpgComponent } from './mainpg/mainpg.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 @NgModule({
@@ -94,6 +95,7 @@ import { MainpgComponent } from './mainpg/mainpg.component';
     CalenderComponent,
     BrianTtdComponent,
     MainpgComponent,
+    ReservationComponent,
   ],
   imports: [ 
     FormsModule,  
