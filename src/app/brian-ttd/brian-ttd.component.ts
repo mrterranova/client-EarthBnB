@@ -29,7 +29,7 @@ export class BrianTtdComponent implements OnInit {
       this.location = data;
       this.findingState(data);
     });
-    console.log(this.locByState);
+    // console.log(this.locByState);
   }
 
   findingState(state) {
@@ -58,7 +58,7 @@ export class BrianTtdComponent implements OnInit {
     var count = parseInt(document.getElementById('pgnumb1').innerHTML) - 1;
     //attentiong more dynamic features - it isn't functioning(would have to revisit later)
     if (window.innerWidth == 1248) {
-      console.log('-', window.innerWidth);
+      // console.log('-', window.innerWidth);
       count = parseInt(document.getElementById('pgnumb2').innerHTML);
       document.getElementById('pag-ttd-clickable').scrollLeft = 292;
       //if the count reachs 0 then change the page count to the number of pages and scroll to the last page -hardcoded.
@@ -70,7 +70,7 @@ export class BrianTtdComponent implements OnInit {
   }
 
   sRight() {
-    console.log('Scrolling Right');
+    // console.log('Scrolling Right');
     //More dynamic solution but not fully fleshed out
     // document.getElementById("pag-mpts-clickable").scrollLeft += window.innerWidth-175;
 

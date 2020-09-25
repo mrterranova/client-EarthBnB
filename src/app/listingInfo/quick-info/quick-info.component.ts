@@ -22,10 +22,16 @@ export class QuickInfoComponent implements OnInit {
    this.getHostMessage(this.route.snapshot.params.id)
  }
  getLoc(id: number){
-   this.tlService.getLoc(id).subscribe(data => {this.location = data});
+   this.tlService.getLoc(id).subscribe(data => {
+     this.location = data;
+     console.log(data);
+    });
  }
  getHostMessage(id: number){
-   this.tlService.getHostMessage(id).subscribe(data =>{ this.hostmessage = data; this.spaceDiv(this.hostmessage.hostspace);})
+   this.tlService.getHostMessage(id).subscribe(data =>{ 
+     this.hostmessage = data; 
+     this.spaceDiv(this.hostmessage.hostspace);
+    })
 
  }
  spaceDiv(host){
