@@ -12,8 +12,9 @@ export class BrianTtdComponent implements OnInit {
   public location = {};
   public locByState = [];
   public state;
-  public num = 78;
+  public num = 10;
   public len = 0;
+  public freeText = '';
 
   constructor(
     private ttdService: PhotosService,
@@ -22,6 +23,7 @@ export class BrianTtdComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLocationByID(this.route.snapshot.params.id);
+    // this.freebie();
   }
 
   getLocationByID(id: number) {
@@ -51,20 +53,20 @@ export class BrianTtdComponent implements OnInit {
 
   sLeft() {
     //More dynamic solution but not fully fleshed out
-    // document.getElementById("pag-mpts-clickable").scrollLeft -= window.innerWidth-175;
-    document.getElementById('pag-ttd-clickable').scrollLeft -= 248;
+
+    document.getElementById('pag-ttd-clickable').scrollLeft -= 392;
 
     //this moves on computers full screen - hard coded solution
     var count = parseInt(document.getElementById('pgnumb1').innerHTML) - 1;
-    //attentiong more dynamic features - it isn't functioning(would have to revisit later)
+
     if (window.innerWidth == 1248) {
       console.log('-', window.innerWidth);
       count = parseInt(document.getElementById('pgnumb2').innerHTML);
-      document.getElementById('pag-ttd-clickable').scrollLeft = 292;
+      document.getElementById('pag-ttd-clickable').scrollLeft = 392;
       //if the count reachs 0 then change the page count to the number of pages and scroll to the last page -hardcoded.
     } else if (count === 0) {
       count = parseInt(document.getElementById('pgnumb2').innerHTML);
-      document.getElementById('pag-ttd-clickable').scrollLeft = 2992;
+      document.getElementById('pag-ttd-clickable').scrollLeft = 3992;
     }
     document.getElementById('pgnumb1').innerHTML = count + '';
   }
@@ -72,10 +74,8 @@ export class BrianTtdComponent implements OnInit {
   sRight() {
     console.log('Scrolling Right');
     //More dynamic solution but not fully fleshed out
-    // document.getElementById("pag-mpts-clickable").scrollLeft += window.innerWidth-175;
-
     //this moves on computers full screen - hard coded solution
-    document.getElementById('pag-ttd-clickable').scrollLeft += 448;
+    document.getElementById('pag-ttd-clickable').scrollLeft += 392;
     // keeps track of the page numbering through variable count
     var count = 1 + parseInt(document.getElementById('pgnumb1').innerHTML);
     //if the count reaches the end of the document, then make sure the page number does not exceed the number of pages
@@ -98,6 +98,16 @@ export class BrianTtdComponent implements OnInit {
   }
 
   endPgCount(pgcount) {
-    document.getElementById('pgnumb2').innerHTML = Math.ceil(pgcount) + '';
+    document.getElementById('pgnumb2').innerHTML = Math.ceil(pgcount - 21) + '';
+    console.log('page count down HERE !!!!');
+    console.log(pgcount);
   }
+
+  // freebie(){
+  //   if(this.todos.price === 0){
+  //     this.freeText = "This is Free !"
+  //   } else {
+  //     this.freeText = " From $  " + this.todos.price +" / per person"
+  //   }
+  // }
 }

@@ -1,41 +1,45 @@
 <div class="ttd-container">
   <div class="ttd-btn-container">
-    <span class="mpts-page-count">
-      <!-- Page number logic -->
-      <span id="pgnumb1">1</span>
-      / <span id="pgnumb2"></span></span
-    >
-    <button class="ttd-pg-btn-left" (click)="sLeft()">Left</button> 
-    <button class=ttd-pg-btn-right (click)="sRight()">Right</button>
+    <!-- Page number logic -->
+    <span id="pgnumb1">1</span>
+    / <span id="pgnumb2"></span>
+
+    <button class="ttd-pg-btn-left" (click)="sLeft()">Left</button>
+    <button class="ttd-pg-btn-right" (click)="sRight()">Right</button>
   </div>
   <div
     class="clickable"
-    style="overflow-x: auto; width: 87vw"
+    style="overflow-x: auto; width: 94vw"
     id="pag-ttd-clickable"
   >
-  <h3 class="slideRightSome" >Things to do nearby</h3>
-  <div class="inner-ttd-container" *ngFor="let todo of locByState" [ngStyle]="{ width: dynamicWidth() }">
+    <h3 class="slideRightSome">Things to do nearby</h3>
     <div
-      class="card"
-      id="card-ttd"
-      style="width: 18rem; margin-right: 1.5rem; float: left"
+      class="inner-ttd-container"
+      *ngFor="let todo of locByState"
+      [ngStyle]="{ width: dynamicWidth() }"
     >
-      <img
-        class="card-img-top"
-        id="ttd-img"
-        src="{{ todo.img }}"
-        alt="Card image cap"
-      />
-      <h5 class="smidgeRight" > * {{todo.rating}} ({{todo.reviews}})</h5>
-      <div class="card-body">
-        <h5 class="card-title">{{todo.title}}</h5>
-        <p class="card-text">
-          {{todo.info}}
-        </p>
-        <h6>From $ {{todo.price}} / per person</h6>
+      <div
+        class="card"
+        id="card-ttd"
+        style="width: 18rem; margin-right: 1.5rem; float: left"
+      >
+        <img
+          class="card-img-top"
+          id="ttd-img"
+          src="{{ todo.img }}"
+          alt="Card image cap"
+        />
+        <h5 class="smidgeRight">* {{ todo.rating }} ({{ todo.reviews }})</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{ todo.title }}</h5>
+          <p class="card-text">
+            {{ todo.info }}
+          </p>
+          <h6>From $ {{ todo.price }} / per person</h6>
+          <!-- <h6>{{this.freeText}}</h6> -->
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
 <hr />

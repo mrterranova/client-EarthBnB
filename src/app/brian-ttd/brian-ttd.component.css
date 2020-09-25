@@ -6,8 +6,12 @@
 }
 
 .ttd-btn-container {
-  float: right;
+  position: absolute;
+  margin: 40px 10px 10px 1050px;
 }
+/* .ttd-pg-btn-right{
+  margin:0 1%;
+} */
 
 .inner-ttd-container {
   margin: 0 0 0 90px;
@@ -21,8 +25,8 @@
 }
 
 #ttd-img {
-  height: 450px;
-  max-width: 340px;
+  height: 350px;
+  max-width: 300px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -42,4 +46,18 @@
 
 .smidgeRight {
   margin: 10px 0 0 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .ttd-container {
+    width: 90%;
+    margin: 2%;
+  }
+
+  #ttd-img,
+  #card-ttd,
+  .card-body {
+    height: auto;
+    width: 70%;
+  }
 }
