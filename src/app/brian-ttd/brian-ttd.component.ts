@@ -23,7 +23,6 @@ export class BrianTtdComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLocationByID(this.route.snapshot.params.id);
-    // this.freebie();
   }
 
   getLocationByID(id: number) {
@@ -73,7 +72,7 @@ export class BrianTtdComponent implements OnInit {
 
   sRight() {
     // console.log('Scrolling Right');
-    //More dynamic solution but not fully fleshed out
+
     //this moves on computers full screen - hard coded solution
     document.getElementById('pag-ttd-clickable').scrollLeft += 420;
     // keeps track of the page numbering through variable count
@@ -90,7 +89,7 @@ export class BrianTtdComponent implements OnInit {
     document.getElementById('pgnumb1').innerHTML = count + '';
   }
 
-  //trying out dynamic styling - it works!
+  //trying out dynamic styling - it works mostly!
   dynamicWidth() {
     // console.log(this.len / 4);
     this.endPgCount(this.len / 4);
@@ -104,15 +103,7 @@ export class BrianTtdComponent implements OnInit {
   }
 
   fullHeart(id) {
-    console.log('clicked heart');
+    // console.log('clicked heart');
     document.getElementById('heartBWL' + id).style.fill = '#59ff59';
   }
-
-  // freebie(){
-  //   if(this.todo.price === 0){
-  //     this.freeText = "This is Free !"
-  //   } else {
-  //     this.freeText = " From $  " + this.todo.price +" / per person"
-  //   }
-  // }
 }

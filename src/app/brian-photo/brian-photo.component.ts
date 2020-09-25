@@ -14,7 +14,7 @@ export class BrianPhotoComponent implements OnInit {
   slideIndex = 1;
   wordIndex = 1;
   pics: any;
-  // pics = [];
+
 
   constructor(
     private photosService: PhotosService,
@@ -112,6 +112,8 @@ export class BrianPhotoComponent implements OnInit {
     x[this.slideIndex - 1].style.display = 'block';
     // console.log(x);
   }
+
+  /// smae as pics functions but seperate
 
   plusWords(t) {
     this.showTextWords((this.wordIndex += t));
