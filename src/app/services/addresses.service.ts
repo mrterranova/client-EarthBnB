@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AddressesService {
-  key = 'AIzaSyCe7klwWKP3V8BVXkaP990AM1dvHrDyvl0';
+  key = 'xxx';
 
   constructor(private http: HttpClient) {}
 
