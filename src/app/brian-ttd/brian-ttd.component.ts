@@ -107,3 +107,6 @@ export class BrianTtdComponent implements OnInit {
     document.getElementById('heartBWL' + id).style.fill = '#59ff59';
   }
 }
+
+
+/// that's all folks
