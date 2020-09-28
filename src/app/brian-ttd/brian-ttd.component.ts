@@ -97,7 +97,7 @@ export class BrianTtdComponent implements OnInit {
   }
 
   endPgCount(pgcount) {
-    document.getElementById('pgnumb2').innerHTML = Math.ceil(pgcount - 23) + '';
+    document.getElementById('pgnumb2').innerHTML = Math.ceil(pgcount - 41) + '';
     // console.log('page count down HERE !!!!');
     // console.log(pgcount);
   }
@@ -107,3 +107,6 @@ export class BrianTtdComponent implements OnInit {
     document.getElementById('heartBWL' + id).style.fill = '#59ff59';
   }
 }
+
+
+/// that's all folks
