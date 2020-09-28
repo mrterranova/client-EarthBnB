@@ -9,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SleepingArrangementsInfoComponent implements OnInit {
   //global variables
-  private location; 
-  private sleep;
+  public location; 
+  public sleep;
   public sleeparr=[];
+  public bedcounter;
+
 
   constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
   ngOnInit(): void {
@@ -25,7 +27,6 @@ export class SleepingArrangementsInfoComponent implements OnInit {
 
   getSleep(){
     this.tlService.getSleep().subscribe(data => {
-      console.log("sleep", data)
       this.sleep = data;
       this.pushSleep(data)
     })
@@ -34,8 +35,8 @@ export class SleepingArrangementsInfoComponent implements OnInit {
   pushSleep( arrangements ){
     arrangements.map( arrange => {
       if (arrange.location == this.location.id){
-        console.log("arrange", arrange)
         this.sleeparr.push(arrange)
+        this.bedcounter = this.sleeparr[0].bedcount;
       }
     })
   }

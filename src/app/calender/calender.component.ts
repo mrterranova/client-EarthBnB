@@ -19,6 +19,7 @@ export class CalenderComponent implements OnInit {
   public namesOfDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   public weeks: Array<CalendarDate[]> = [];
   public weeks2: Array<CalendarDate[]> = [];
+  public windowSize: number = window.innerWidth;
 
   public selectedDate;
   public show: boolean;

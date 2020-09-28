@@ -1,11 +1,11 @@
 
-<h2>Select check-in date</h2>
+<h2 id="calendar">Select check-in date</h2>
 <p>Add your travel dates for exact pricing</p>
 <div class="calendar__wrapper">
-    <div class="calendar__input-wrapper" (click)="show = !show">
+    <!-- <div class="calendar__input-wrapper" (click)="show = !show">
         <input readonly class="calendar__input" [(ngModel)]="selectedDate">
         <img class="icon_calendar" [src]="'assets/img/calendar-icon.png'" alt="calendar icon" />
-    </div>
+    </div> -->
     <div class="dualCalenderHolder">
         <div class="calendar calender0" #calendar>
             <div class="calendar__navs">
@@ -43,17 +43,17 @@
                 </div>
             </div>
         </div>
-        <div class="calendar calender1" #calendar>
-            <div class="calendar__navs">
+        <!-- <div class="calendar calender1" #calendar *ngIf="windowSize >= 1200"> -->
+            <!-- <div class="calendar__navs">
                 <div class="calendar__month-nav">
                     <div class="emptydiv"></div>
                     <span>
                         {{nextlyMonth.format('MMMM')}}
                         {{currentDate.format('YYYY')}}
-                    </span>
+                    </span> -->
                     <!-- right button -->
-                    <button class="calendar__nav-btn" (click)="nextMonth()">&gt;</button>
-                </div>
+                    <!-- <button class="calendar__nav-btn" (click)="nextMonth()">&gt;</button> -->
+                <!-- </div>
             </div>
             <div class="calendar__month">
                 <div class="calendar__day-names">
@@ -75,7 +75,7 @@
                         </ng-container>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
     </div>
 </div>

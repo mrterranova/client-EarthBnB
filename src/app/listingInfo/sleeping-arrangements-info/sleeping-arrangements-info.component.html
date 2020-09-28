@@ -1,8 +1,8 @@
-<div class="container" style="height: 320px;" *ngIf="sleeparr[0].bedcount != 0">
+<div class="container" style="height: 320px;" *ngIf="bedcounter != 0">
   <hr/>
   <div class="child" style="margin-bottom: 27px; margin-top: 50px;"><h4 style="font-weight: bold;">Sleeping arrangements</h4></div>
   <div class="child" *ngFor="let sleepa of sleeparr">
-    <div class="card" style="width: 200px; float:left; padding: 33px; margin-right: .5rem;">
+    <div class="card" style="width: 180px; float:left; padding: 33px; margin-right: .5rem;">
       <div class="icon">
         <div class="queenking" *ngIf="sleepa.category=='q1' || sleepa.category =='k1'">
         <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height:24px; width:24px; fill: currentColor;">
@@ -65,9 +65,10 @@
       </div>
     </div>
     <div class="bedroom" style="margin-top: 30px;">
-      <span style="font-size: 18px; font-weight: bolder;">
+      <span style="font-size: 15px; font-weight: bolder;">
         {{sleepa.roomtype}}
       </span>
+    <br />
     <div class="bedDescriptor">
         {{sleepa.bedcount}} {{sleepa.bedtype}}
     </div>

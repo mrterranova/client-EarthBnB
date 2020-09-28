@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { TitlelistingService } from '../titlelisting-services/titlelisting.service'
+
 
 @Component({
   selector: 'app-bio-blurb-info',
@@ -7,10 +9,9 @@ import { Data } from '@angular/router';
   styleUrls: ['./bio-blurb-info.component.css']
 })
 export class BioBlurbInfoComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('listingdata') listingData: Data;
+  public amenities;
 
-  constructor() { }
+  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BrianTtdComponent } from './brian-ttd.component';
+import { ReservationComponent } from './reservation.component';
 
-describe('BrianTtdComponent', () => {
-  let component: BrianTtdComponent;
-  let fixture: ComponentFixture<BrianTtdComponent>;
+describe('ReservationComponent', () => {
+  let component: ReservationComponent;
+  let fixture: ComponentFixture<ReservationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BrianTtdComponent ]
+      declarations: [ ReservationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BrianTtdComponent);
+    fixture = TestBed.createComponent(ReservationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,8 +22,4 @@ describe('BrianTtdComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  // it should but it isn't so skip ya now learn ya later
 });
-
-
-
