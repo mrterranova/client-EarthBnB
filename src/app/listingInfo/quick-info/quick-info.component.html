@@ -38,9 +38,19 @@
   <hr/>
   <p>{{mainbody}}</p>
   <h5>The Space</h5>
-  <div *ngFor="let space of spacediv">
-    <p>{{space}}</p>
+  <div>
+    <span *ngFor="let trunc of truncated">
+        <p>{{trunc}}</p>
+    </span>
+      <span *ngIf="buttonName">....<button style="background: none;border:none;text-decoration: underline;" (click)="toggle()">read more</button></span>
+      <span *ngIf = "other">
+        <span *ngFor="let nottrunc of notTruncated">
+          <p>{{nottrunc}}</p>
+        </span>
+      </span>
   </div>
-  <h5>Other things to note</h5>
-  <p>{{othernotes}}</p>
+  <span *ngIf="other">
+    <h5>Other things to note</h5>
+    <p>{{othernotes}}</p>
+  </span>
 </div>

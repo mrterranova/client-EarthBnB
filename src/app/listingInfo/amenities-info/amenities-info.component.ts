@@ -40,6 +40,7 @@ public lockOnBedroomDoor;
 public smokeAlarm;
 public lockBox;
 public privatetext;
+public notIncluded =[];
 
   constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
 
