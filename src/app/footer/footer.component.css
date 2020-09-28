@@ -1,5 +1,26 @@
+.other-options-header {
+  margin-bottom: 2rem;
+}
+
 .footer-container {
-   padding: 50px;
+   padding: 0 0 4em 0;
+}
+
+.footer-container a {
+  color: dimgrey;
+}
+
+.same-state-links-container {
+  margin-top: 2em;
+}
+
+.flex-on-these-fools {
+  display: flex;
+  flex-direction: row;
+}
+
+.same-state-link {
+  padding-right: 4em;
 }
 
 .state-span:hover {
@@ -27,7 +48,7 @@
 }
 
 .footer-table1 {
-    width:90vw;
+    width:100vw;
 }
 
 .footer-table1 td {
@@ -54,18 +75,32 @@
 
 .footer-tag-left {
     float: left;
+    display: flex;
 }
-
-/* sorry couldn't help it ... needed this to be on one line and
- not have the gram logo by itself under 
- changed floater tag right width to 30% from 20%  */
 
 .footer-tag-right {
     float:right;
-    width:30%;
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.footer-tag-right> * {
+    flex: 1;
+    padding:.2em;
+}
+
+.globe-english-us {
+  flex: 2;
+  padding: 10px;
+}
+
+.english-us-words {
+  text-decoration: underline;
+}
+
 .footer-money {
-    float: left;
+    text-decoration: underline;
 }
 
 
