@@ -14,7 +14,6 @@ export class QuickInfoComponent implements OnInit {
  public reviews;
  public revCount = 0;
  public hostmessage;
- public spacediv = [];
  public roomspace;
  public house;
  public entirehouse;
@@ -25,7 +24,12 @@ export class QuickInfoComponent implements OnInit {
  public mainbody;
  public othernotes;
  public superhost;
-
+ public truncated;
+ public notTruncated;
+ public show: boolean = false;
+ public buttonName: any = true;
+ public other: any = false;
+ 
  constructor(private tlService: TitlelistingService, private route: ActivatedRoute) { }
  ngOnInit(): void {
    this.getLoc(this.route.snapshot.params.id);
@@ -36,7 +40,7 @@ export class QuickInfoComponent implements OnInit {
      this.location = data;
      this.roomspace = this.location.roomspace;
      this.host = this.location.host;
-    this.superhost = this.location.superhost;
+     this.superhost = this.location.superhost;
     });
  }
  getHostMessage(id: number){
@@ -50,11 +54,25 @@ export class QuickInfoComponent implements OnInit {
     this.othernotes = this.hostmessage.othernotes;
      this.spaceDiv(this.hostmessage.hostspace);
     })
+  }
+  
+  spaceDiv(host){
+    var newtrunc = host.slice(0, 500);
+    this.truncated = newtrunc.split("<br/>"); 
+    var moreread = host.slice(500, host.length);
+    this.notTruncated =  moreread.split("<br/>");
+  }
 
- }
- spaceDiv(host){
-  this.spacediv =  host.split("<br/>");
- }
-
+  toggle(){
+    this.show = !this.show;
+    if (this.show){
+      this.buttonName = false;
+      this.other = true;
+    }
+    else {
+      this.buttonName=true;
+      this.other = false;
+    }
+  }
 
 }
