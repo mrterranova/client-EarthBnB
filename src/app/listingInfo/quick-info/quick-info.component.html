@@ -39,8 +39,8 @@
   <p>{{mainbody}}</p>
   <h5>The Space</h5>
   <div>
-    <span *ngFor="let trunc of truncated">
-        <p>{{trunc}}</p>
+    <span>
+        <p>{{truncated}}</p>
     </span>
       <span *ngIf="buttonName">....<button style="background: none;border:none;text-decoration: underline;" (click)="toggle()">read more</button></span>
       <span *ngIf = "other">
