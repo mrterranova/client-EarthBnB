@@ -20,7 +20,10 @@ describe('BrianPhotoComponent', () => {
 
 ///////////////////////////
 /////////////////////////
-  // don't know why these fail now that it's getting fake data fro  our api - will research if time permits
+
+  // don't know why these fail now that it's getting the data from our api 
+  // will research when time permits
+
 /////////////////////////
 ///////////////////////////
 
@@ -33,6 +36,8 @@ describe('BrianPhotoComponent', () => {
   // });
 
   // Unit test for specific text element "Like magic words from Amazin app testing"
+  // this element is now hidden so this test below is trash
+
 
   // it('shoud display brian-photo works! in a p tag', () => {
   //   // we are accessing the "p" tag 

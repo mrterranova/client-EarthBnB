@@ -22,4 +22,8 @@ describe('BrianTtdComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  // it should but it isn't so skip ya now learn ya later
 });
+
+
+
