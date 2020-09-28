@@ -29,3 +29,8 @@
   border-radius: 100px;
   object-fit: cover;
 }
+
+#titlebar {
+  font-size: 22px;
+  font-weight: bolder;
+}

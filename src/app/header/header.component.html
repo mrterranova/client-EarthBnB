@@ -33,7 +33,6 @@
                 <div class="greenbubble">
                   <div
                     class="_i8zuk7"
-                    data-icon="true"
                     data-testid="little-search-icon"
                   ></div>
                 </div>
@@ -56,84 +55,67 @@
                         role="tablist"
                         aria-label="What can we help you find?"
                       >
-                        <label
-                          for="search-block-tab-false-STAYS"
-                          class="_3hmsj"
-                        >
-                          <input
-                            class="_1ai7zse"
-                            type="radio"
-                            id="search-block-tab-false-STAYS"
-                            data-testid="radio-tab-search-block-tab-false-STAYS"
-                            name="refinement_paths[]"
-                            role="tab"
-                            aria-selected="true"
-                            value="/homes"
-                            checked=""
-                          />
-                          <span class="_17gwvodj" data-text="true"
-                            >Places to stay</span
+                        <div>
+                          <label
+                            for="search-block-tab-false-STAYS"
+                            class="_3hmsj"
                           >
-                        </label>
-                        <label
-                          for="search-block-tab-false-EXPERIENCES"
-                          class="_3hmsj"
-                        >
-                          <input
-                            class="_1ai7zse"
-                            type="radio"
-                            id="search-block-tab-false-EXPERIENCES"
-                            data-testid="radio-tab-search-block-tab-false-EXPERIENCES"
-                            name="refinement_paths[]"
-                            role="tab"
-                            aria-selected="false"
-                            value="/experiences"
-                          />
-                          <span class="_17gwvodj" data-text="true"
-                            >Experiences</span
+                            <input
+                              (click)="exp = false"
+                              class="_1ai7zse"
+                              type="radio"
+                              id="search-block-tab-false-STAYS"
+                              data-testid="radio-tab-search-block-tab-false-STAYS"
+                              name="refinement_paths[]"
+                              role="tab"
+                              aria-selected="true"
+                              value="/homes"
+                              checked=""
+                            />
+                            <span class="_17gwvodj" data-text="true">
+                              Places to stay
+                            </span>
+                          </label>
+                        </div>
+                        <div>
+                          <label
+                            for="search-block-tab-false-EXPERIENCES"
+                            class="_3hmsj"
                           >
-                        </label>
+                            <input
+                              (click)="exp = true"
+                              class="_1ai7zse"
+                              type="radio"
+                              id="search-block-tab-false-EXPERIENCES"
+                              data-testid="radio-tab-search-block-tab-false-EXPERIENCES"
+                              name="refinement_paths[]"
+                              role="tab"
+                              aria-selected="false"
+                              value="/experiences"
+                            />
+                            <span class="_17gwvodj" data-text="true"
+                              >Experiences</span
+                            >
+                          </label>
+                        </div>
                       </div>
                     </fieldset>
                     <div class="_urq7mym" data-panel-bounds="true">
-                      <div class="_1c7nvmy">
-                        <div class="_1jkbosm7">
-                          <div>
-                            <div class="_4w946cw">
-                              <label
-                                class="_n3o7pji"
-                                for="bigsearch-query-detached-query"
-                              >
-                                <div class="_gor68n">
-                                  <div class="_fmav2so">Location</div>
-                                  <input
-                                    class="_1xq16jy"
-                                    aria-autocomplete="list"
-                                    aria-expanded="false"
-                                    autocomplete="off"
-                                    autocorrect="off"
-                                    spellcheck="false"
-                                    id="bigsearch-query-detached-query"
-                                    role="combobox"
-                                    name="query"
-                                    placeholder="Where are you going?"
-                                    required=""
-                                    data-testid="structured-search-input-field-query"
-                                    value=""
-                                  />
-                                </div>
-                              </label>
-                              <span id="Koan-query__description" class="_krjbj"
-                                >Navigate forward to access suggested
-                                results</span
-                              >
-                              <span
-                                aria-atomic="true"
-                                aria-live="polite"
-                                role="status"
-                                class="_krjbj"
-                              >
-                              </span>
+                      <div *ngIf="!exp" class="_1c7nvmy">
+                        <div class="_13b3a37">
+                          <div class="_43mycv"></div>
+                          <div class="_j8gg2a">
+                            <div
+                              role="button"
+                              tabindex="0"
+                              class="_dk4a5kc"
+                              aria-expanded="false"
+                              data-testid="structured-search-input-field-split-dates-1"
+                            >
+                              <div class="_seuyf">
+                                <div class="_wtz1co">Location</div>
+                                <div class="_uh2dzp">Where are you going?</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -190,34 +172,69 @@
                               type="button"
                             >
                               <div class="_1hb5o3s">
-                                <div class="_14lk9e14">
-                                  <svg
-                                    viewBox="0 0 32 32"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-hidden="true"
-                                    role="presentation"
-                                    focusable="false"
-                                    style="
-                                      display: block;
-                                      fill: none;
-                                      height: 16px;
-                                      width: 16px;
-                                      stroke: currentcolor;
-                                      stroke-width: 4;
-                                      overflow: visible;
-                                    "
-                                  >
-                                    <g fill="none">
-                                      <path
-                                        d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"
-                                      ></path>
-                                    </g>
-                                  </svg>
+                                <div class="greenbubble">
+                                  <div
+                                    class="_i8zuk7"
+                                    data-testid="little-search-icon"
+                                  ></div>
                                 </div>
-                                <div class="_c5qlo1f">Search</div>
                               </div>
                             </button>
                           </div>
+                        </div>
+                      </div>
+                      <div *ngIf="exp" class="_1c7nvmy">
+                        <div class="_13b3a37">
+                          <div class="_43mycv"></div>
+                          <div class="_j8gg2a">
+                            <div
+                              role="button"
+                              tabindex="0"
+                              class="_dk4a5kc"
+                              aria-expanded="false"
+                              data-testid="structured-search-input-field-split-dates-1"
+                            >
+                              <div class="_seuyf">
+                                <div class="_wtz1co">Location</div>
+                                <div class="_uh2dzp">Where are you going?</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="_13b3a37">
+                          <div class="_43mycv"></div>
+                          <div class="_j8gg2a">
+                            <div
+                              role="button"
+                              tabindex="0"
+                              class="_dk4a5kc"
+                              aria-expanded="false"
+                              data-testid="structured-search-input-field-split-dates-1"
+                            >
+                              <div class="_seuyf">
+                                <div class="_wtz1co">Date</div>
+                                <div class="_uh2dzp">
+                                  Add when you want to go
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="_w64aej">
+                          <button
+                            class="_sxfp92z"
+                            aria-expanded="false"
+                            type="button"
+                          >
+                            <div class="_1hb5o3s">
+                              <div class="greenbubble">
+                                <div
+                                  class="_i8zuk7"
+                                  data-testid="little-search-icon"
+                                ></div>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -241,12 +258,11 @@
                   aria-label="Language and currency"
                 >
                   <div class="_iglww7">
-                    <div class="_z5mecy" aria-hidden="true">
+                    <div class="_z5mecy" >
                       <div class="_xpkakx">
                         <svg
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
                           role="presentation"
                           focusable="false"
                           style="
@@ -283,7 +299,7 @@
                 </button>
               </div>
             </div>
-            <div class="_3hmsj">
+            <div>
               <div class="_167wsvl">
                 <button
                   type="button"
@@ -317,11 +333,7 @@
                     </svg>
                   </div>
                   <div class="_1sfnwgq" aria-hidden="true">
-                    <img
-                      class="_1wzp0xs"
-                      src="../assets/img/user.png"
-                      alt=""
-                    />
+                    <img class="_1wzp0xs" src="../assets/img/user.png" alt="" />
                   </div>
                   <!-- <div class="_nyj4ph4" aria-label="1 notification">1</div> -->
                 </button>
