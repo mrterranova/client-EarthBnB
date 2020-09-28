@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   scrollTop:number = 0;
   search:boolean = false;
+  exp:boolean = false;
 
 
   constructor() {
