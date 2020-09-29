@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root',
@@ -10,15 +11,15 @@ export class AddressesService {
   constructor(private http: HttpClient) {}
 
   getAddresses() {
-    return this.http.get('http://localhost:8080/api/v1/map');
+    return this.http.get(environment.apiUrl+'/api/v1/map');
   }
 
   getAddressById(id: number) {
-    return this.http.get(`http://localhost:8080/api/v1/map/` + id);
+    return this.http.get(environment.apiUrl+`/api/v1/map/` + id);
   }
 
   getDescriptionById(id: number) {
-    return this.http.get(`http://localhost:8080/api/v1/mpts/` + id);
+    return this.http.get(environment.apiUrl+`/api/v1/mpts/` + id);
   }
 
   getPointsOfInterest(lat: number, lon: number) {

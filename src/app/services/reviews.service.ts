@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -9,7 +10,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class ReviewsService {
-  serverConnection: string = `http://localhost:8080/api/v1/reviews/`;
+  serverConnection: string = environment.apiUrl+`/api/v1/reviews/`;
   constructor(private http: HttpClient) {}
 
   getReviews() {
