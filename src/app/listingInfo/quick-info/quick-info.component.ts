@@ -59,8 +59,7 @@ export class QuickInfoComponent implements OnInit {
   spaceDiv(host){
     var newtrunc = host.split("<br/>"); 
     this.truncated = newtrunc[0];
-    var moreread = newtrunc.slice(1);
-    this.notTruncated = moreread;
+    this.notTruncated = newtrunc.slice(1);
   }
 
   toggle(){
