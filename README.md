@@ -3,9 +3,9 @@
 This project is based off of popular Bed and Breakfast online applications. This application has all major components for being able to view a particular location, popular sites surrounding that location, viewing amenities, rooms available and more.
 
 ## Technology
-  -Server: Java/Springboot
-  -Client: AngularJS
-  -Database: MySQL
+  * Server: Java/Springboot
+  * Client: AngularJS
+  * Database: MySQL
 
 ## Development server
 
