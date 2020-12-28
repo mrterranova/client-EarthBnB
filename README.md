@@ -6,6 +6,11 @@ This project is based off of popular Bed and Breakfast online applications. This
   * Server: Java/Springboot
   * Client: AngularJS
   * Database: MySQL
+  
+## Personal Contributions
+  * Other destinations
+  * Footer
+  * Title, Amenities, & House Descriptions
 
 ## Development server
 
